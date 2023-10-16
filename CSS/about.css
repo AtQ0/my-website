@@ -1,0 +1,18 @@
+body {
+    background-color: lightyellow;
+    height: fit-content;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+main p {
+    padding: 20px 5vw;
+
+}

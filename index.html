@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Atko Babic: Home</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Atko Babic">
+    <meta name="description" content="Museum Website">
+    <meta name="generator" content="Visual Studio Code 1.74.2">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- import swiper via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+    <!-- import styles from local css file -->
+    <link rel="stylesheet" href="./CSS/global.css">
+</head>
+
+<body id="theBod">
+    <header>
+        <div id="container-menu" class="container-menu">
+            <div class="container-close-menu-btn">
+            </div>
+            <div class="wrapper-menu">
+                <ul class="links">
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="www.google.se">ABOUT</a></li>
+                    <li><a href="./about.html">PROJECTS</a></li>
+                    <li><a href="www.google.se">RESUME</a></li>
+                    <li><a href="www.google.se">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="starting-slide" class="starting-slide">
+            <div id="text-wrapper-starting-slide" class="text-wrapper-starting-slide">
+                <span class="top-part-of-top-logo-in-starting-slide">ATKO</span>
+                <span class="bottom-part-of-top-logo-in-starting-slide">BABIC</span>
+            </div>
+        </div>
+
+        <nav id="navbar">
+            <div id="hamburger-container" class="hamburger-container">
+                <svg id="svg-burger" class="svg-burger" x="0px" y="0px" viewBox="0 0 5.4 3.5">
+                    <rect class="rectA" x="1.0" y="0.7" fill="black" width="4" height="0.4" rx="0.25" ry="0.25" />
+                    <rect class="rectB" x="0.2" y="1.6" fill="black" width="4" height="0.4" rx="0.25" ry="0.25" />
+                    <rect class="rectC" x="1.0" y="2.5" fill="black" width="4" height="0.4" rx="0.25" ry="0.25" />
+                </svg>
+            </div>
+
+            <div id="top-logo-container" class="top-logo-container">
+                <span class="top-part-of-top-logo">ATKO</span>
+                <span class="bottom-part-of-top-logo">BABIC</span>
+            </div>
+
+            <ul id="left-links-in-nav" class="left-links-in-nav">
+                <li><a href="https://www.google.com">ABOUT</a></li>
+                <li><a href="./about.html">PROJECTS</a></li>
+            </ul>
+
+            <ul id="right-links-in-nav" class="right-links-in-nav">
+                <li><a href="https://www.google.com">RESUME</a></li>
+                <li><a href="https://www.google.com">CONTACT</a></li>
+            </ul>
+
+            <div class="location-container">
+                <svg class="location-icon-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="18"
+                    viewBox="0 0 14 18">
+                    <path
+                        d="M7.26 18h-.45l-.088-.036h-.001c-.257-.114-.475-.302-.626-.54l-4.752-6.709C.693 9.782.298 8.694.199 7.56c-.154-1.429.15-2.87.87-4.115S2.886 1.218 4.202.639c2.58-1.118 5.094-.765 7.27 1.02 1.349 1.093 2.206 2.678 2.381 4.405a6.74 6.74 0 0 1-1.26 4.836l-4.592 6.48c-.154.26-.387.465-.664.585L7.26 18zm-.24-8.501h-.025a2.64 2.64 0 0 1-2.573-2.633c.008-.695.292-1.357.789-1.843s1.164-.755 1.859-.75a2.64 2.64 0 0 1 2.578 2.625c-.006.693-.286 1.355-.778 1.841s-1.157.761-1.85.759h0z"
+                        fill="var(--header-color, #000000)" fill-rule="evenodd"></path>
+                    <defs></defs>
+                </svg>
+            </div>
+        </nav>
+
+        <div class="top-slogan-container" id="top-slogan-container">
+            <div class="top-slogan-wrapper" id="top-slogan-wrapper">
+                <h1 class="top-slogan" id="top-slogan">ENTHUSIASTIC</h1>
+            </div>
+        </div>
+        <h1 class="bottom-slogan">DEVELOPER</h1>
+
+        <!--
+            ENTHUSIASTIC
+            DEVELOPER
+
+            //DEVELOPING IMPACTFUL SOLUTIONS
+
+            IMPACTFUL
+            SOLUTIONS
+        -->
+    </header>
+
+    <main>
+
+        <div class="container-about">
+            <h2>ABOUT</h2>
+            <div class="top-or-left-container-for-image">
+                <div class="image-frame">
+                    <picture class="profile-image-about>
+                        <!-- Define different image sources based on min-device-pixel-ratio -->
+                        <source media=" (max-width: 375px)" srcset="./Media/Images/Portrait2.jpg">
+                        <source media="(max-width: 768px)" srcset="./Media/Images/Portrait2.jpg">
+                        <source media="(max-width: 980px)" srcset="./Media/Images/Portrait2.jpg">
+
+                        <!-- Fallback image for devices that don't match any media query -->
+                        <img class="profile-image-about" src="./Media/Images/Portrait2.jpg"
+                            alt="A beautiful renaissance building covered in sunlight">
+                    </picture>
+                </div>
+            </div>
+
+            <section class="about-content-wrapper">
+                <p class="about-paragraph1">At CharlVoss Museum, we are more than just a repository of art and
+                    culture; we are custodians of
+                    inspiration and champions of joyful exhibitions. Our mission is to immerse visitors in a world
+                    where creativity knows no bounds and where the beauty of art transcends time and space.
+                </p>
+                <p class="about-paragraph2">
+                    We envision CharlVoss as a sanctuary for art enthusiasts, a place where the confluence of
+                    diverse artistic expressions enriches the human experience. With "Inspiring Art. Joyful
+                    Exhibitions" as our guiding philosophy, we aim to ignite the flames of imagination and curiosity
+                    in every visitor.
+                </p>
+                <span>
+                    <a href="./about.html">Find out more</a>
+                </span>
+            </section>
+        </div>
+
+        <div class="projects">
+            <section class="wrapper-whats-on">
+                <h2>PROJECTS</h2>
+                <p>
+                    Explore some of the latest web sites,<br>
+                    apps, and games, that I have created.
+                </p>
+
+                <!-- Slider main container -->
+                <div class="container-swiper">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="./Media/Images/UXSketch.jpg"
+                                    alt="Face sculptures of clay, from an exhibition">
+                            </div>
+                            <div class="swiper-slide"><img src="./Media/Images/apps4.jpg" alt="A woman paiting">
+                            </div>
+                            <div class="swiper-slide"><img src="./Media/Images/Gaming.jpg"
+                                    alt="A hand pressing again a blue object, used in an exhibition of light"></div>
+                            <div class="swiper-slide"><img src="./Media/Images/UXSketch.jpg"
+                                    alt="A mysterious person standing in the dark, surrounded by all kind of lights">
+                            </div>
+                            <div class="swiper-slide"><img src="./Media/Images/apps4.jpg"
+                                    alt="A lady standing next to a statue, during a guided tour"></div>
+                            <div class="swiper-slide"><img src="./Media/Images/Gaming.jpg"
+                                    alt="A female standing with her back towards us exploring an optic show"></div>
+                            <div class="swiper-slide"><img src="./Media/Images/UXSketch.jpg"
+                                    alt="Three clay sculptures used in an exhibition"></div>
+                            <div class="swiper-slide"><img src="./Media/Images/apps4.jpg"
+                                    alt="A read haired woman hugs a rabbit that sits on her shoulder and basks in the sunlight">
+                            </div>
+                            <div class="swiper-slide"><img src="./Media/Images/Gaming.jpg"
+                                    alt="A read haired woman hugs a rabbit that sits on her shoulder and basks in the sunlight">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <h5 class="activity">WEB SITE</h5><br>
+                    <h5 id="swiper-description-header">"VISAGE VISIONS: EXPLORING THE ART OF FACES"</h5>
+                    <p id="swiper-description">
+                        Embark on an artistic journey through diverse interpretations of faces, from classic paintings
+                        to immersive installations and sculptures.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <section class="container-visit-us">
+            <h2>CONTACT</h2>
+
+        </section>
+
+        <!-- SHOULD INCLUDE A SHORT DESCRIPTION and an infinite carousel with nes/blog posts and then beneath should be a sign up for newsletters.
+
+        -->
+        <section class="news">
+            <h2>BLOG</h2>
+
+        </section>
+
+
+
+    </main>
+
+    <footer>
+
+
+        <section class="container-newsletter">
+            <h2>NEWSLETTER</h2>
+        </section>
+
+        <section class="container-contact">
+            <h2>CONTACT ME</h2>
+
+        </section>
+
+        <section class="container-short-about-footer">
+            <h2>SHORT ABOUT ME</h2>
+
+            <hr>
+
+            <div class="social-media-container">
+
+
+            </div>
+        </section>
+
+        <!--Will change div to section later on, when more content is populated-->
+        <div class="other">
+
+        </div>
+
+    </footer>
+    <!-- import swiper via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./JavaScript/script.js"></script>
+</body>
+
+</html>
