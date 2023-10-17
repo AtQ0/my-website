@@ -54,11 +54,11 @@ const navbar = document.getElementById("navbar");
 var recentScrollPos = window.pageYOffset;
 window.onscroll = function () {
     let lastScrollPos = window.pageYOffset;
-    if (recentScrollPos > lastScrollPos) {
-        navbar.style.top = "0";
+    if (lastScrollPos > recentScrollPos && lastScrollPos > 160) {
+        navbar.style.top = "-120px";
     }
     else {
-        navbar.style.top = "-120px";
+        navbar.style.top = "0";
     }
     recentScrollPos = lastScrollPos;
 }
@@ -177,7 +177,10 @@ function manageLinksInNavInRelationToMenu() {
 /*SELECT ELEMENTS FROM DOM*/
 const topSloganContainer = document.getElementById("top-slogan-container");
 const topSlogan = document.getElementById("top-slogan");
+const bottomSlogan = document.getElementById("bottom-slogan");
 const options = {};
+let callFunctionToMoveTopSloganOnce;
+let isMessageInTopSloganAlternated = false;
 let callFunctionToMoveTopSlogan;
 
 /*New observer with a callback and options*/
@@ -186,35 +189,105 @@ const observerForSlogan = new IntersectionObserver(function (entries, observer) 
     //For every observed observer entry
     entries.forEach(entry => {
 
-        console.log(entry);
         //If div is inside of viewport, activate interval that manages animation
         if (entry.isIntersecting === true) {
 
+            /*======================================*/
+            /*= FIRST TIME ANIMATION OF TOP SLOGAN =*/
+            /*======================================*/
+            //If first time intersecting, animate div, once, quicker (2000) than ordinarily
+            callFunctionToMoveTopSloganOnce = setInterval(moveTopSloganOnce, 2500);
 
-            callFunctionToMoveTopSlogan = setInterval(moveTopSlogan, 4000);
+            function moveTopSloganOnce() {
 
-            function moveTopSlogan() {
-
+                //Animte top slogan down
                 topSlogan.classList.remove("class-for-top-slogan-animating-back-up");
                 topSlogan.classList.add("class-for-top-slogan-animating-down");
 
+                //Animate bottom slogan up
+                bottomSlogan.classList.remove("class-for-bottom-slogan-animating-back-down");
+                bottomSlogan.classList.add("class-for-bottom-slogan-animating-up");
 
-                //Remove class after 4seconds, to revoke animation again
+                //Remove class after after delay, to revoke animation again
                 setTimeout(function () {
 
                     /*CHANGE CONTENT INSIDE OF TOP SLOGAN EVERY SECOND TIME*/
-                    /*FOR THAT PURPOSE USE AN IF STATEMENT WITH A BOOLEAN*/
+                    if (!isMessageInTopSloganAlternated) {
+                        topSlogan.textContent = "IMPACTFUL";
+                        bottomSlogan.textContent = "SOLUTIONS";
+                        isMessageInTopSloganAlternated = true;
+                    }
+                    else {
+                        topSlogan.textContent = "ENTHUSIASTIC";
+                        bottomSlogan.textContent = "DEVELOPER"
+                        isMessageInTopSloganAlternated = false;
+                    }
 
+                    //Animate top slogan back up
                     topSlogan.classList.remove("class-for-top-slogan-animating-down");
                     topSlogan.classList.add("class-for-top-slogan-animating-back-up");
 
+                    //Animate bottom slogan back down
+                    bottomSlogan.classList.remove("class-for-bottom-slogan-animating-up");
+                    bottomSlogan.classList.add("class-for-bottom-slogan-animating-back-down");
 
                 }, 500);
-            }
+
+                //Turn of Interval managing animation after one animation
+                clearInterval(callFunctionToMoveTopSloganOnce);
+            };
+
+
+            /*=======================================*/
+            /*= SUBSEQUENT ANIMATIONS OF TOP SLOGAN =*/
+            /*=======================================*/
+
+            //Delay the subsequent animations to make space between first and subsequent
+            setTimeout(function () {
+
+                callFunctionToMoveTopSlogan = setInterval(moveTopSlogan, 5000);
+
+                function moveTopSlogan() {
+
+                    //Animte top slogan down
+                    topSlogan.classList.remove("class-for-top-slogan-animating-back-up");
+                    topSlogan.classList.add("class-for-top-slogan-animating-down");
+
+                    //Animate bottom slogan up
+                    bottomSlogan.classList.remove("class-for-bottom-slogan-animating-back-down");
+                    bottomSlogan.classList.add("class-for-bottom-slogan-animating-up");
+
+                    //Remove class after after delay, to revoke animation again
+                    setTimeout(function () {
+
+                        /*CHANGE CONTENT INSIDE OF TOP SLOGAN EVERY SECOND TIME*/
+                        /*FOR THAT PURPOSE USE AN IF STATEMENT WITH A BOOLEAN*/
+
+                        if (isMessageInTopSloganAlternated) {
+                            topSlogan.innerText = "ENTHUSIASTIC";
+                            bottomSlogan.innerText = "DEVELOPER";
+                            isMessageInTopSloganAlternated = false;
+                        }
+                        else {
+                            topSlogan.innerText = "IMPACTFUL";
+                            bottomSlogan.innerText = "SOLUTIONS";
+                            isMessageInTopSloganAlternated = true;
+                        }
+
+                        //Animate top slogan back up
+                        topSlogan.classList.remove("class-for-top-slogan-animating-down");
+                        topSlogan.classList.add("class-for-top-slogan-animating-back-up");
+
+                        //Animate bottom slogan back down
+                        bottomSlogan.classList.remove("class-for-bottom-slogan-animating-up");
+                        bottomSlogan.classList.add("class-for-bottom-slogan-animating-back-down");
+
+                    }, 500);
+                }
+            }, 2000);
         }
-        //If div is outside the viewport, stop the itnerval and the animation
+        //If div is outside the viewport, stop the interval and the animation
         else {
-            console.log("it´s in here");
             clearInterval(callFunctionToMoveTopSlogan);
             topSlogan.classList.remove("class-for-top-slogan-animating-down");
         }

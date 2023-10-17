@@ -317,23 +317,18 @@ header h1 {
 /*========================*/
 
 .top-slogan-container {
-    background-color: lightblue;
-    padding: 10px;
     height: fit-content;
     margin-top: 30vw;
-    margin-bottom: 1.0vw;
+    margin-bottom: 0.01vw;
 }
 
 .top-slogan-wrapper {
-    background-color: orange;
     overflow: hidden;
-    padding: 5px;
-    /*DELETE THIS*/
 }
 
 .top-slogan {
-    background-color: red;
-
+    padding: 1.4px;
+    user-select: none;
 }
 
 
@@ -343,7 +338,7 @@ header h1 {
 
 
 .class-for-top-slogan-animating-down {
-    transform: translateY(130%);
+    transform: translateY(135%);
 }
 
 .class-for-top-slogan-animating-back-up {
@@ -354,8 +349,32 @@ header h1 {
     transform: translateY(0%);
 }
 
+/*TOP Bottom slogan*/
+.bottom-slogan-wrapper {
+    overflow: hidden;
+}
 
-/*ANIMATE*/
+.bottom-slogan {
+    padding: 1.25px;
+    user-select: none;
+}
+
+.class-for-bottom-slogan-animating-up {
+    transition: transform 0.75s;
+}
+
+.class-for-bottom-slogan-animating-up {
+    transform: translateY(-135%);
+}
+
+.class-for-bottom-slogan-animating-back-down {
+    transition: transform 0.75s;
+}
+
+.class-for-bottom-slogan-animating-back-down {
+    transform: translateY(0%);
+}
+
 
 
 /*=====================*/
@@ -416,6 +435,7 @@ header h1 {
     font-size: 8vw;
     margin-top: 5vw;
     position: absolute;
+    user-select: none;
 }
 
 
@@ -627,6 +647,14 @@ footer {
 
 }
 
+/*Media query just for font-size of Startding Slide*/
+
+@media screen and (min-width: 601px) {
+    .text-wrapper-starting-slide span {
+        font-size: 58px;
+        line-height: 49px;
+    }
+}
 
 @media screen and (min-width: 769px) {
 
