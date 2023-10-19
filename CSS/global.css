@@ -70,13 +70,21 @@ h6 {
 @font-face {
     font-family: "TwCen";
     src: url("../Media/Fonts/Tw\ Cen\ MT\ W01\ Light.ttf") format("opentype");
-    font-weight: normal;
+    font-weight: light;
     font-style: normal;
 }
 
+@font-face {
+    font-family: "TwCen-Medium";
+    src: url("../Media/Fonts/Tw\ Cen\ MT\ W01\ Medium.ttf") format("opentype");
+    font-weight: medium;
+    font-style: normal;
+}
+
+
 body {
     font-family: TwCen;
-    font-size: 16px;
+    font-size: 4.72vw;
 }
 
 h1,
@@ -375,16 +383,15 @@ header h1 {
     transform: translateY(0%);
 }
 
+/*=================================*/
+/*===== INTRO / WORK WITH ME ======*/
+/*=================================*/
 
-
-/*=====================*/
-/*===== ABOUT US ======*/
-/*=====================*/
-
-
-.container-about {
+.intro-and-work-with-me {
     background-color: #7C8CA8;
-    /*Or use #9E86B9*/
+    /*#837357*/
+    /*#7C8CA8*/
+    width: 100%;
     height: fit-content;
     display: flex;
     position: relative;
@@ -392,21 +399,46 @@ header h1 {
     align-items: center;
     text-align: center;
     padding-bottom: 10vw;
-    padding-top: 6vw;
+    padding-top: 3vw;
+}
+
+.first-paragraph-in-intro {
+    font-family: TwCen-Medium;
+    margin-top: 10vw;
+    font-size: 6vw;
+    margin-bottom: 3vw;
+}
+
+.second-paragraph-in-intro {
+    padding: 10vw;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 5px;
 }
 
 .image-frame {
-    background-color: orange;
-    padding: 5px;
-    padding-bottom: 1px;
+    background-color: #F6AE2D;
+    padding: 1.5vw;
+    padding-bottom: 1.5vw;
     margin: 10vw;
+    margin-top: 0;
+    transition: padding 0.5s, padding-bottom 0.5s;
+    cursor: pointer;
 }
+
+
+.image-frame:hover {
+    padding: 3vw;
+}
+
 
 .top-or-left-container-for-image {
     width: 100%;
     height: 100%;
-    margin-top: 16vw;
+    margin-top: 10vw;
 }
+
+
 
 .profile-image-about {
     width: 100%;
@@ -414,29 +446,67 @@ header h1 {
     object-fit: cover;
 }
 
-.about-paragraph1 {
-    margin-top: 15px;
-    margin-bottom: 20px;
+
+.lets-work-together-btn {
+    margin-top: 0px;
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+    background-color: #F6AE2D;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-bottom: 8vw;
 }
 
-.about-paragraph2 {
-    margin-bottom: 8vw;
+.third-paragraph-in-intro {
+    font-size: 4vw;
+    padding-bottom: 8vw;
+}
+
+/*=====================*/
+/*===== ABOUT US ======*/
+/*=====================*/
+
+
+.container-about {
+    background-color: #927598;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-content-wrapper {
     padding: 10vw;
     padding-top: 0px;
     padding-bottom: 0vw;
+    margin-bottom: 10vw;
     text-align: center;
+
 }
 
 .container-about h2 {
-    margin-bottom: 5px;
-    font-size: 8vw;
-    margin-top: 5vw;
-    position: absolute;
-    user-select: none;
+    font-size: 50px;
+    margin-top: 10vw;
 }
+
+.about-paragraph1 {
+    margin-top: 25px;
+    margin-bottom: 8vw;
+}
+
+.about-paragraph2 {
+    margin-bottom: 8vw;
+}
+
+.about-paragraph3 {
+    margin-bottom: 8vw;
+}
+
+
 
 
 /*========================*/
@@ -449,7 +519,7 @@ header h1 {
     justify-content: center;
 }
 
-.wrapper-whats-on {
+.wrapper-projects {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -457,13 +527,13 @@ header h1 {
     height: fit-content;
 }
 
-.wrapper-whats-on h2 {
+.wrapper-projects h2 {
     font-size: 50px;
     margin-top: 10vw;
 }
 
 
-.wrapper-whats-on p {
+.wrapper-projects p {
     margin-top: 5px;
     margin-bottom: 5vw;
 }
@@ -529,38 +599,50 @@ header h1 {
 }
 
 
-/*====================*/
-/*===== VISIT US =====*/
-/*====================*/
+
+/*=====================*/
+/*===== REFERENCE =====*/
 
 
-.container-visit-us {
+
+
+/*=====================*/
+/*====== CONTACT ======*/
+/*=====?===============*/
+
+
+.contact {
     background-color: #C5A79C;
     height: fit-content;
     padding: 5vw;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: orange;
+    background-color: #7C8CA8;
+    height: 100vh;
 }
 
 
-.container-visit-us h2 {
+.contact h2 {
     font-size: 50px;
-    margin-bottom: 5vw;
+    margin-top: 10vw;
 }
 
 
-.news {
-    background-color: #7695BE;
+.references {
+    background-color: #927598;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: content-box;
+}
+
+.references h2 {
+    font-size: 50px;
+    margin-top: 10vw;
 }
 
 /*===== FOOTER =====*/
@@ -570,30 +652,6 @@ footer {
     background-color: #D06474;
     display: flex;
     flex-direction: column;
-}
-
-.container-newsletter {
-    width: 100%;
-    height: 30vh;
-    background-color: hotpink;
-}
-
-.container-contact {
-    width: 100%;
-    height: 30vh;
-    background-color: orange;
-}
-
-.container-short-about-footer {
-    width: 100%;
-    height: 30vh;
-    background-color: yellow;
-}
-
-.other {
-    width: 100%;
-    height: 10vh;
-    background-color: green;
 }
 
 
@@ -625,25 +683,17 @@ footer {
     }
 
 
+    body {
+        font-family: TwCen;
+        font-size: 23.5px;
+    }
+
+
 
     /*===================*/
     /*====== ABOUT ======*/
     /*===================*/
 
-    .top-or-left-container-for-image {
-        background-color: #7C8CA8;
-        flex: 1;
-        width: auto;
-        height: auto;
-    }
-
-    .about-paragraph2 {
-        margin-bottom: 5vw;
-    }
-
-    .container-about {
-        padding-bottom: 6vw;
-    }
 
 }
 
@@ -659,10 +709,6 @@ footer {
 @media screen and (min-width: 769px) {
 
 
-    body {
-        font-family: TwCen;
-        font-size: 2vw;
-    }
 
 
     /*==== NAV ====*/
@@ -703,63 +749,29 @@ footer {
         margin-bottom: 5px;
     }
 
-    /*==================*/
-    /*==== ABOUT US ====*/
-    /*==================*/
+    /*===============*/
+    /*==== ABOUT ====*/
+    /*===============*/
 
-    .container-about {
-        height: fit-content;
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: center;
-        text-align: center;
-        padding-bottom: 0px;
-        padding-top: 0px;
-        background-color: #837357;
-    }
-
-    .top-or-left-container-for-image {
-        margin: 0;
-    }
-
-    .about-content-wrapper {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        padding-top: 0vw;
-    }
-
-    .container-about h2 {
-        font-size: 6vw;
-    }
-
-    .about-content-wrapper span {
-        text-decoration: underline;
-    }
 
     /*=====================*/
     /*===== PROJECTS ======*/
     /*=====================*/
 
 
-    .wrapper-whats-on h2 {
+    .wrapper-projects h2 {
         font-size: 6vw;
     }
 
 
-    /*===== VISIT US =====*/
+    /*===== CONTACT =====*/
 
-    .container-visit-us {
+    .contact {
         padding-top: 3vw;
         margin-bottom: 3vw;
     }
 
-    .container-visit-us h2 {
+    .contact h2 {
         font-size: 6vw;
         margin-bottom: 3vw;
     }
@@ -769,13 +781,6 @@ footer {
 
 @media screen and (min-width: 980px) {
 
-
-
-
-    body {
-        font-family: TwCen;
-        font-size: 20.5px;
-    }
 
     header h1 {
         font-family: Raisonne;
@@ -795,7 +800,7 @@ footer {
     /*===================*/
     /*===== PROJECTS ====*/
     /*===================*/
-    .wrapper-whats-on h2 {
+    .wrapper-projects h2 {
 
         margin-top: 100px;
     }
@@ -809,32 +814,6 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 8fr 1fr;
         padding-bottom: 50px;
-    }
-
-    .container-newsletter {
-        grid-row: 1/2;
-        grid-column: 1/2;
-        background-color: hotpink;
-
-    }
-
-    .container-contact {
-        grid-row: 1/2;
-        grid-column: 2/3;
-        background-color: orange;
-
-    }
-
-    .container-short-about-footer {
-        grid-column: 3/4;
-        grid-row: 1/2;
-        background-color: yellow;
-    }
-
-    .other {
-        grid-column: 1/4;
-        grid-row: 2/3;
-        background-color: green;
     }
 
 }
