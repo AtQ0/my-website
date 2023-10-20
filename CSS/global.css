@@ -84,7 +84,7 @@ h6 {
 
 body {
     font-family: TwCen;
-    font-size: 4.72vw;
+    font-size: 4.5vw;
 }
 
 h1,
@@ -186,34 +186,36 @@ nav {
     height: 10.5vw;
 }
 
-.location-container {
+
+
+.hamburger-container {
+    height: fit-content;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 30px;
     cursor: pointer;
     position: absolute;
-    right: 0;
-    margin-right: 4.5vw;
+    left: 0;
+    margin-left: 4vw;
 }
 
-.location-icon-svg {
-    min-width: 16px;
-    min-height: 22px;
-    width: 2vw;
-    height: 2.5vw;
-    max-width: 20px;
-    max-height: 24px;
+.svg-burger {
+    min-width: 35px;
+    width: 5vw;
+    max-width: 45px;
     margin: 3px;
 }
 
-/*=== SCALE on location ======*/
+/*==== ANIMATION FOR BURGER MENU ====*/
 
-.location-container {
+.rectB {
     transition: transform 0.25s;
 }
 
-.location-container:hover {
-    transform: scale(1.15);
+.hamburger-container:hover .rectB {
+    transform: translateX(0.8px);
 }
 
 .top-logo-container {
@@ -246,35 +248,40 @@ nav {
     display: none;
 }
 
-.hamburger-container {
-    height: fit-content;
-    width: fit-content;
+
+.location-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 30px;
     cursor: pointer;
     position: absolute;
-    left: 0;
-    margin-left: 4vw;
+    right: 0;
+    margin-right: 4.5vw;
 }
 
-.svg-burger {
-    min-width: 35px;
-    width: 5vw;
-    max-width: 45px;
+.location-icon-svg {
+    min-width: 16px;
+    min-height: 22px;
+    width: 2vw;
+    height: 2.5vw;
+    max-width: 20px;
+    max-height: 24px;
     margin: 3px;
 }
 
-/*==== ANIMATION FOR BURGER MENU ====*/
+/*=== SCALE on location ======*/
 
-.rectB {
+.location-container {
     transition: transform 0.25s;
 }
 
-.hamburger-container:hover .rectB {
-    transform: translateX(0.8px);
+.location-container:hover {
+    transform: scale(1.15);
 }
+
+
+
+
 
 /*==== MENU ====*/
 .container-menu {
@@ -424,6 +431,15 @@ header h1 {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    padding: 1.5vw;
+}
+
+.image-frame .profile-image-about {
+    transition: transform 0.35s;
+}
+
+.image-frame:hover .profile-image-about {
+    transform: scale(0.96);
 }
 
 .top-or-left-container-for-image {
@@ -432,17 +448,10 @@ header h1 {
     margin-top: 10vw;
 }
 
-
 .profile-image-about {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    margin: 1vw;
-    transition: margin 0.35s;
-}
-
-.profile-image-about:hover {
-    margin: 2.5vw;
 }
 
 .lets-work-together-btn {
@@ -504,9 +513,6 @@ header h1 {
 .about-paragraph3 {
     margin-bottom: 8vw;
 }
-
-
-
 
 /*========================*/
 /*======= PROJECTS =======*/
@@ -712,8 +718,8 @@ footer {
 
     /*==== NAV ====*/
 
-    .location-container {
-        margin-left: 4vw;
+    .hamburger-container {
+        margin-right: 4vw;
     }
 
 
@@ -736,9 +742,11 @@ footer {
         top: 27px;
     }
 
-    .hamburger-container {
-        margin-right: 4vw;
+    .location-container {
+        margin-left: 4vw;
     }
+
+
 
     /*==== TOP SLOGAN =====*/
 
