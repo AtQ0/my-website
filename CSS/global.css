@@ -474,7 +474,7 @@ header h1 {
 }
 
 /*=====================*/
-/*===== ABOUT US ======*/
+/*======= ABOUT =======*/
 /*=====================*/
 
 
@@ -519,35 +519,25 @@ header h1 {
 /*========================*/
 
 .projects {
-    background-color: #A75D88;
-    display: flex;
-    justify-content: center;
-}
-
-.wrapper-projects {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    height: fit-content;
+    margin-bottom: 14vw;
 }
 
-.wrapper-projects h2 {
+.projects h2 {
     font-size: 50px;
     margin-top: 10vw;
 }
 
 
-.wrapper-projects p {
-    margin-top: 5px;
-    margin-bottom: 5vw;
+.projects-paragraph1 {
+    margin-top: 25px;
+    margin-bottom: 8vw;
 }
 
-#swiper-description {
-    margin-top: 5px;
-    margin-bottom: 20px;
-    height: 60px;
+.activity {
+    margin-top: 5vw;
 }
+
 
 
 /*=======================*/
@@ -561,19 +551,6 @@ header h1 {
     height: fit-content;
     align-items: center;
     max-height: 700px;
-}
-
-.container-swiper h5 {
-    margin-top: 5px;
-}
-
-.container-swiper p {
-    margin-bottom: 30px;
-    margin-top: 10px;
-    width: 75%;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
 }
 
 .swiper {
@@ -694,6 +671,10 @@ footer {
     }
 
 
+    .third-paragraph-in-intro {
+        font-size: 20px;
+    }
+
 
     /*===================*/
     /*====== ABOUT ======*/
@@ -766,10 +747,6 @@ footer {
     /*=====================*/
 
 
-    .wrapper-projects h2 {
-        font-size: 6vw;
-    }
-
 
     /*===== CONTACT =====*/
 
@@ -800,17 +777,15 @@ footer {
     /*===================*/
     /*====== ABOUT ======*/
     /*===================*/
-    .about-paragraph2 {
-        margin-bottom: 2vw;
-    }
+
 
     /*===================*/
     /*===== PROJECTS ====*/
     /*===================*/
-    .wrapper-projects h2 {
 
-        margin-top: 100px;
-    }
+
+
+
 }
 
 
@@ -821,6 +796,23 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 8fr 1fr;
         padding-bottom: 50px;
+    }
+
+
+}
+
+@media screen and (min-width: 1620px) {
+
+    .container-swiper {
+        max-height: 650px;
+    }
+
+}
+
+@media screen and (min-width: 1720px) {
+
+    .container-swiper {
+        max-height: 750px;
     }
 
 }
