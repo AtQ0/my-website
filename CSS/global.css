@@ -584,13 +584,40 @@ header h1 {
 
 /*=====================*/
 /*===== REFERENCE =====*/
+/*=====================*/
 
 
+
+.references {
+    background-color: #927598;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: content-box;
+
+}
+
+
+.reference-swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.reference-swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /*=====================*/
 /*====== CONTACT ======*/
-/*=====?===============*/
+/*=====================*/
 
 
 .contact {
@@ -612,20 +639,6 @@ header h1 {
 }
 
 
-.references {
-    background-color: #927598;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: content-box;
-}
-
-.references h2 {
-    font-size: 50px;
-    margin-top: 10vw;
-}
 
 /*===== FOOTER =====*/
 footer {
@@ -672,7 +685,7 @@ footer {
 
 
     .third-paragraph-in-intro {
-        font-size: 20px;
+        font-size: px;
     }
 
 

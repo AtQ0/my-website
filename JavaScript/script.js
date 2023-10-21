@@ -529,3 +529,29 @@ function previousDescription() {
         counter--;
     }
 }
+
+
+/*SWIPER IN REFERENCES */
+
+
+const referenceSwiper = new Swiper('.reference-swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.reference-swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.reference-swiper-button-next',
+        prevEl: '.reference-swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.reference-swiper-scrollbar',
+    },
+});
