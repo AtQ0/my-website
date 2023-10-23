@@ -299,13 +299,13 @@ const observerForSlogan = new IntersectionObserver(function (entries, observer) 
 observerForSlogan.observe(topSloganContainer);
 
 
-/*============================================*/
-/*================ SWIPER.JS =================*/
-/*============================================*/
+/*===========================================*/
+/*========= SWIPER.JS IN PROJECTS ===========*/
+/*===========================================*/
 
 
 /* Initilize siper */
-const swiper = new Swiper('.swiper', {
+const projectsSwiper = new Swiper('.projects-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -516,7 +516,7 @@ function previousDescription() {
         activity.innerHTML = "EXHIBITION";
         swiperHeader.innerHTML = '"RADIANT PERSPECTIVES: LIGHT, GEOMETRY AND ART"';
         swiperDescription.innerHTML = "A compelling exhibition which focus on the interplay between light, geometry, and artistic expression.";
-        counter = 3;
+        counter--;
     }
     else if (counter === 3) {
         swiperHeader.innerHTML = '"CANVAS CONNECTIONS: PAINTING SOCIAL"';
@@ -531,27 +531,19 @@ function previousDescription() {
 }
 
 
-/*SWIPER IN REFERENCES */
+/*=============================================*/
+/*========= SWIPER.JS IN REFERENCES ===========*/
+/*=============================================*/
 
-
-const referenceSwiper = new Swiper('.reference-swiper', {
+const referencesSwiper = new Swiper('.references-swiper', {
     // Optional parameters
-    direction: 'vertical',
-    loop: true,
+    direction: 'horizontal',
+
 
     // If we need pagination
     pagination: {
-        el: '.reference-swiper-pagination',
+        el: '.swiper-pagination',
+        clickable: true,
     },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.reference-swiper-button-next',
-        prevEl: '.reference-swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.reference-swiper-scrollbar',
-    },
 });

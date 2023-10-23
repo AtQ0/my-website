@@ -518,14 +518,18 @@ header h1 {
 /*======= PROJECTS =======*/
 /*========================*/
 
+
+
 .projects {
+    padding-top: 10vw;
+    padding-bottom: 14vw;
     text-align: center;
-    margin-bottom: 14vw;
+    background-color: #A75D88;
+    height: 101vh;
 }
 
 .projects h2 {
     font-size: 50px;
-    margin-top: 10vw;
 }
 
 
@@ -536,6 +540,13 @@ header h1 {
 
 .activity {
     margin-top: 5vw;
+    margin-bottom: 3vw;
+}
+
+#swiper-description {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 5vw;
 }
 
 
@@ -550,7 +561,7 @@ header h1 {
     flex-direction: column;
     height: fit-content;
     align-items: center;
-    max-height: 700px;
+    max-height: 600px;
 }
 
 .swiper {
@@ -558,9 +569,14 @@ header h1 {
     width: 100%;
     height: 90vw;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 500px;
     background-color: #A75D88;
 }
+
+/* .swiper-slide {
+    background-color: orange;
+
+} */
 
 .swiper-slide img {
     width: 100%;
@@ -590,30 +606,48 @@ header h1 {
 
 .references {
     background-color: #927598;
-    height: 100%;
-    width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-sizing: content-box;
-
-}
-
-
-.reference-swiper-container {
-    width: 100%;
-    height: 100%;
-}
-
-.reference-swiper-slide {
+    padding-top: 10vw;
+    padding-bottom: 18vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
     text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+.references h2 {
+    font-size: 50px;
+    margin-bottom: 3vw;
+}
+
+
+.references-swiper {
+    width: 100%;
+    max-width: 500px;
+    height: 90vw;
+    max-height: 500px;
+    background-color: lightcoral;
+    /* background-color: #6d8a67; */
+}
+
+/*======================*/
+/*== SWIPER REFERNCES ==*/
+/*======================*/
+
+.slides-in-references-swiper {
+    padding-top: 15vw;
+}
+
+.slides-in-references-swiper h4 {
+    font-family: TwCen-Medium;
+
+    margin-bottom: 10vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+
+}
 
 /*=====================*/
 /*====== CONTACT ======*/
@@ -642,12 +676,67 @@ header h1 {
 
 /*===== FOOTER =====*/
 footer {
-    width: 100%;
-    height: 60vh;
+    height: 40vh;
     background-color: #D06474;
     display: flex;
     flex-direction: column;
+    padding-left: 8vw;
+    padding-right: 8vw;
 }
+
+
+
+.top-footer-with-logo {
+    width: 100%;
+    height: fit-content;
+    margin-top: 3vw;
+}
+
+.top-footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-footer-logo-container span {
+    font-family: Raisonne;
+    font-size: 7vw;
+    margin: 0;
+    padding: 0;
+    line-height: 5.5vw;
+    cursor: pointer;
+}
+
+.bottom-part-of-top-footer-logo {
+    transform: rotateX(180deg);
+    transform: scale(-1);
+}
+
+
+.middle-footer-with-links {
+    display: flex;
+    justify-content: center;
+}
+
+.middle-footer-with-links ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+
+}
+
+
+footer hr {
+    background-color: #000;
+    height: 1px;
+    border: none;
+}
+
+
 
 
 /*============================================*/
@@ -677,16 +766,12 @@ footer {
         line-height: 28px;
     }
 
-
     body {
         font-family: TwCen;
         font-size: 23.5px;
     }
 
 
-    .third-paragraph-in-intro {
-        font-size: px;
-    }
 
 
     /*===================*/
@@ -694,6 +779,15 @@ footer {
     /*===================*/
 
 
+
+    /*===================*/
+    /*====== FOOTER ======*/
+    /*===================*/
+
+    .top-footer-logo-container span {
+        font-size: 35px;
+        line-height: 28px;
+    }
 }
 
 /*Media query just for font-size of Startding Slide*/
@@ -763,16 +857,6 @@ footer {
 
     /*===== CONTACT =====*/
 
-    .contact {
-        padding-top: 3vw;
-        margin-bottom: 3vw;
-    }
-
-    .contact h2 {
-        font-size: 6vw;
-        margin-bottom: 3vw;
-    }
-
 
 }
 
@@ -802,17 +886,7 @@ footer {
 }
 
 
-@media screen and (min-width: 1020px) {
-
-    footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 8fr 1fr;
-        padding-bottom: 50px;
-    }
-
-
-}
+@media screen and (min-width: 1020px) {}
 
 @media screen and (min-width: 1620px) {
 
