@@ -737,6 +737,12 @@ footer hr {
 }
 
 
+.github-container-for-footer svg {
+    width: fit-content;
+    height: fit-content;
+
+}
+
 
 
 /*============================================*/
