@@ -468,9 +468,9 @@ const projectsSwiper = new Swiper('.projects-swiper', {
 
 
 
-/*======================================================================*/
-/*============ POPULATE EXHIBITION SWIPER WITH DESCRIPTION =============*/
-/*======================================================================*/
+/*=====================================================*/
+/*==== POPULATE EXHIBITION SWIPER WITH DESCRIPTION ====*/
+/*=====================================================*/
 
 const swiperBtnNext = document.querySelector(".swiper-button-next");
 const swiperBtnPrev = document.querySelector(".swiper-button-prev");
@@ -482,6 +482,9 @@ const swiperDescription = document.getElementById("swiper-description");
 swiperBtnNext.addEventListener("click", nextDescription);
 let counter = 1;
 function nextDescription() {
+
+
+    console.log(counter);
 
     if (counter === 1) {
         activity.innerHTML = "ACTIVITY";
@@ -507,6 +510,8 @@ function nextDescription() {
         swiperDescription.innerHTML = "GUIDED TOUR";
         counter++;
     }
+
+    console.log(counter);
 }
 
 swiperBtnPrev.addEventListener("click", previousDescription);
