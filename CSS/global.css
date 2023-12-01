@@ -228,10 +228,10 @@ nav {
 
 .top-logo-container span {
     font-family: Raisonne;
-    font-size: 7vw;
+    font-size: 5vw;
     margin: 0;
     padding: 0;
-    line-height: 5.5vw;
+    line-height: 3.9vw;
     cursor: pointer;
 }
 
@@ -329,7 +329,7 @@ header h1 {
 
 .top-slogan-container {
     height: fit-content;
-    margin-top: 30vw;
+    margin-top: 25vw;
     margin-bottom: 0.01vw;
 }
 
