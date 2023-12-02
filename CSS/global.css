@@ -518,8 +518,8 @@ header h1 {
 }
 
 .about-paragraph1 {
-    margin-top: 8px;
-    margin-bottom: 6vw;
+    margin-top: 4vw;
+    margin-bottom: 8vw;
     font-family: TwCen;
     font-weight: bold;
 }
