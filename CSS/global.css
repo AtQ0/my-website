@@ -468,13 +468,15 @@ header h1 {
     margin-top: 8vw;
     height: fit-content;
     width: fit-content;
-    padding: 20px;
+    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: #F6AE2D;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    margin-bottom: 12vw;
+    margin-bottom: 9vw;
     cursor: pointer;
     transition: background-color 0.35s;
 }
@@ -506,9 +508,8 @@ header h1 {
     padding: 10vw;
     padding-top: 0px;
     padding-bottom: 0vw;
-    margin-bottom: 10vw;
+    margin-bottom: 12vw;
     text-align: center;
-
 }
 
 .container-about h2 {
@@ -517,8 +518,8 @@ header h1 {
 }
 
 .about-paragraph1 {
-    margin-top: 25px;
-    margin-bottom: 8vw;
+    margin-top: 8px;
+    margin-bottom: 6vw;
     font-family: TwCen;
     font-weight: bold;
 }
