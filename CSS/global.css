@@ -432,7 +432,7 @@ header h1 {
 }
 
 .image-frame:hover {
-    background-color: #FE9000;
+    background-color: #F1A157;
 }
 
 .image-frame .profile-image-about {
@@ -482,7 +482,7 @@ header h1 {
 }
 
 .lets-work-together-btn:hover {
-    background-color: #FE9000;
+    background-color: #F1A157;
 }
 
 .third-paragraph-in-intro {
@@ -496,7 +496,7 @@ header h1 {
 
 
 .container-about {
-    background-color: #F4AC45;
+    background-color: lightcoral;
     width: 100%;
     display: flex;
     flex-direction: column;
