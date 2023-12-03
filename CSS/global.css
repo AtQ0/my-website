@@ -648,7 +648,7 @@ header h1 {
 }
 
 .references p {
-    margin-top: 4vw;
+    margin-top: 3vw;
     margin-bottom: 6vw;
 }
 
@@ -659,6 +659,7 @@ header h1 {
     max-height: 500px;
     background-color: #927598;
     /* background-color: #6d8a67; */
+    padding-bottom: 5vw;
 }
 
 /*======================*/
@@ -672,8 +673,8 @@ header h1 {
 .slides-in-references-swiper h4 {
     font-family: TwCen-Medium;
     margin-bottom: 10vw;
-    margin-left: 4vw;
-    margin-right: 4vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 /*=====================*/
