@@ -647,6 +647,11 @@ header h1 {
     margin-bottom: 3vw;
 }
 
+.references p {
+    margin-top: 4vw;
+    margin-bottom: 6vw;
+}
+
 .references-swiper {
     width: 100%;
     max-width: 500px;
