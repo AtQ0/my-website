@@ -652,11 +652,13 @@ header h1 {
     margin-top: 8vw;
     width: 100%;
     max-width: 500px;
-    height: 90vw;
+    height: fit-content;
     max-height: 500px;
     background-color: #927598;
     /* background-color: #6d8a67; */
     background-color: orange;
+    padding-bottom: 3vw;
+
 }
 
 /*======================*/
@@ -672,6 +674,15 @@ header h1 {
     margin-bottom: 7vw;
     margin-left: 5vw;
     margin-right: 5vw;
+    background-color: lightblue;
+}
+
+.wrapper-name-and-title {
+    background-color: red;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 10vw;
+
 }
 
 /*=====================*/
