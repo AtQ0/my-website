@@ -648,7 +648,7 @@ header h1 {
 }
 
 .references p {
-    margin-top: 3vw;
+    margin-top: 4vw;
     margin-bottom: 6vw;
 }
 
@@ -659,7 +659,6 @@ header h1 {
     max-height: 500px;
     background-color: #927598;
     /* background-color: #6d8a67; */
-    padding-bottom: 5vw;
 }
 
 /*======================*/
