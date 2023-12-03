@@ -647,12 +647,6 @@ header h1 {
     margin-bottom: 3vw;
 }
 
-.references p {
-    margin-top: 4vw;
-    margin-bottom: 6vw;
-    background-color: orange;
-}
-
 .references-swiper {
     width: 100%;
     max-width: 500px;
@@ -660,7 +654,7 @@ header h1 {
     max-height: 500px;
     background-color: #927598;
     /* background-color: #6d8a67; */
-    padding-bottom: 10vw;
+    padding-bottom: 2vw;
 }
 
 /*======================*/
