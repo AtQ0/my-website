@@ -506,7 +506,7 @@ header h1 {
 
 .about-content-wrapper {
     padding: 10vw;
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 0vw;
     margin-bottom: 12vw;
     text-align: center;
