@@ -647,14 +647,19 @@ header h1 {
     margin-bottom: 3vw;
 }
 
+.wrapper-name-and-title {
+    margin-bottom: 40vw;
+}
+
 .references-swiper {
+    margin-top: 8vw;
     width: 100%;
     max-width: 500px;
     height: 90vw;
     max-height: 500px;
     background-color: #927598;
     /* background-color: #6d8a67; */
-    padding-bottom: 2vw;
+    background-color: orange;
 }
 
 /*======================*/
