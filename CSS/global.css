@@ -496,7 +496,7 @@ header h1 {
 
 
 .container-about {
-    background-color: lightcoral;
+    background-color: #D06474;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -630,7 +630,7 @@ header h1 {
 
 
 .references {
-    background-color: #927598;
+    background-color: #A75D88;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -652,7 +652,7 @@ header h1 {
     max-width: 500px;
     height: 90vw;
     max-height: 500px;
-    background-color: lightcoral;
+    background-color: #927598;
     /* background-color: #6d8a67; */
 }
 
