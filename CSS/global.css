@@ -647,9 +647,6 @@ header h1 {
     margin-bottom: 3vw;
 }
 
-.wrapper-name-and-title {
-    margin-bottom: 40vw;
-}
 
 .references-swiper {
     margin-top: 8vw;
@@ -667,12 +664,12 @@ header h1 {
 /*======================*/
 
 .slides-in-references-swiper {
-    padding-top: 15vw;
+    padding-top: 12vw;
 }
 
 .slides-in-references-swiper h4 {
     font-family: TwCen-Medium;
-    margin-bottom: 10vw;
+    margin-bottom: 7vw;
     margin-left: 5vw;
     margin-right: 5vw;
 }
