@@ -478,11 +478,18 @@ header h1 {
     border-bottom-right-radius: 100px;
     margin-bottom: 9vw;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: background-color 0.35s;
 }
 
 .lets-work-together-btn:hover {
     background-color: #F1A157;
+}
+
+.lets-work-together-btn:hover p {
+    font-weight: 700, transition all;
 }
 
 .third-paragraph-in-intro {
@@ -644,12 +651,14 @@ header h1 {
 
 .references h2 {
     font-size: 13.5vw;
-    margin-bottom: 3vw;
+    margin-bottom: 6vw;
 }
 
+.first-reference-paragraph {
+    margin-bottom: 6vw;
+}
 
 .references-swiper {
-    margin-top: 8vw;
     width: 100%;
     max-width: 500px;
     height: fit-content;
@@ -703,6 +712,39 @@ header h1 {
     font-size: 13.5vw;
 
 }
+
+.first-contact-paragraph {
+    margin-top: 6vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.contact span::after {
+    content: "\a";
+    white-space: pre;
+}
+
+.send-contact-btn {
+    margin-top: 8vw;
+    height: fit-content;
+    width: fit-content;
+    padding: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #F6AE2D;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-bottom: 9vw;
+    cursor: pointer;
+    transition: background-color 0.35s;
+}
+
+.send-contact-btn:hover {
+    background-color: #F1A157;
+}
+
 
 /*===== FOOTER =====*/
 footer {
