@@ -52,14 +52,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const navbar = document.getElementById("navbar");
 var recentScrollPos = window.pageYOffset;
+console.log(recentScrollPos);
+
 window.onscroll = function () {
+
     let lastScrollPos = window.pageYOffset;
-    if (lastScrollPos > recentScrollPos && lastScrollPos > 160) {
-        navbar.style.top = "-120px";
+
+    let recentSrollPosWithBuffer = recentScrollPos + 10;
+
+    if (lastScrollPos > recentSrollPosWithBuffer) {
+
+        // navbar.style.top = "-120px";
+
+        // navbar.style.opacity = "0";
+
     }
-    else {
-        navbar.style.top = "0";
-    }
+
+
     recentScrollPos = lastScrollPos;
 }
 
@@ -110,7 +119,7 @@ hamburger.addEventListener("click", () => {
         let delay = 500;
         setTimeout(function () {
             navbar.style.backgroundColor = "#A75D88";
-            navbar.style.top = "0px";
+            navbar.style.top = "-10px";
             navbar.style.opacity = "1";
 
             //Lock scroll
@@ -132,7 +141,7 @@ hamburger.addEventListener("click", () => {
         let newDelay = 500;
         setTimeout(function () {
             navbar.style.backgroundColor = "#D06474";
-            navbar.style.top = "0px";
+            navbar.style.top = "-10px";
             navbar.style.opacity = "1";
 
             if (window.innerWidth > 768) {

@@ -180,13 +180,11 @@ nav {
     padding-top: 20px;
     padding-bottom: 10px;
     position: fixed;
-    top: 0;
+    top: -10px;
     z-index: 4;
-    transition: top 0.5s, opacity 0.5s;
+    transition: top 1s, opacity 0.5s;
     height: 10.5vw;
-    transform: translateY(-10px);
 }
-
 
 
 .hamburger-container {
