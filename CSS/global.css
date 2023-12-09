@@ -177,13 +177,14 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
     position: fixed;
     top: 0;
     z-index: 4;
     transition: top 0.5s, opacity 0.5s;
     height: 10.5vw;
+    transform: translateY(-10px);
 }
 
 
