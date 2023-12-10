@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     startingSlide.style.display = "flex";
 
     //create a contast that is used for delaying adding of the class, after page reload
-    const delayInMilliseconds = 700;
+    const delayInMilliseconds = 1000;
 
     //add new class after a certain delay
     setTimeout(function () {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(function () {
         startingSlide.style.display = "none";
-    }, 1800);
+    }, 2800);
 
 });
 
@@ -36,7 +36,7 @@ const logoStartingSlide = document.getElementById("text-wrapper-starting-slide")
 document.addEventListener("DOMContentLoaded", function () {
 
     //create a contast that is used for delaying adding of the class, after page reload
-    const delayTimeForFadeOutOfLogoInStartingSlide = 350;
+    const delayTimeForFadeOutOfLogoInStartingSlide = 500;
 
     //add new class after a certain delay
     setTimeout(function () {
@@ -50,27 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /*======= APPEARANCE/DISSAPEARANCE OF NAV ON SCROLL ========*/
 /*==========================================================*/
 
-const navbar = document.getElementById("navbar");
-var recentScrollPos = window.pageYOffset;
-console.log(recentScrollPos);
 
-window.onscroll = function () {
-
-    let lastScrollPos = window.pageYOffset;
-
-    let recentSrollPosWithBuffer = recentScrollPos + 10;
-
-    if (lastScrollPos > recentSrollPosWithBuffer) {
-
-        // navbar.style.top = "-120px";
-
-        // navbar.style.opacity = "0";
-
-    }
-
-
-    recentScrollPos = lastScrollPos;
-}
 
 /*==============================================*/
 /*=========== MAKE LOGO ACT AS LINK ============*/
@@ -109,8 +89,9 @@ hamburger.addEventListener("click", () => {
         slidingMenu.style.left = "0px";
 
         //fade out and animate navbar upwards
+        navbar.style.top = "-35%";
         navbar.style.opacity = "0";
-        navbar.style.top = "-120px";
+        navbar.style.transition = "top 1s, opacity 0.5s";
 
         leftLinksInNav.style.display = "none";
         rightLinksInNav.style.display = "none";
@@ -118,12 +99,13 @@ hamburger.addEventListener("click", () => {
         //Fade in, and animate back, navbar, after 0.5s (500ms)
         let delay = 500;
         setTimeout(function () {
-            navbar.style.backgroundColor = "#A75D88";
+            navbar.style.backgroundColor = "transparent";
             navbar.style.top = "-10px";
             navbar.style.opacity = "1";
+            navbar.style.transition = "top 1s, opacity 2s";
 
-            //Lock scroll
-            body.style.overflow = "hidden";
+            //Blur background
+
 
         }, delay);
 
@@ -131,11 +113,12 @@ hamburger.addEventListener("click", () => {
         isClickedHamburger = true;
     }
     else if (isClickedHamburger === true) {
-        slidingMenu.style.left = "-120%";
+        slidingMenu.style.left = "-70%";
 
         //fade out and animate navbar
+        navbar.style.top = "-35%";
         navbar.style.opacity = "0";
-        navbar.style.top = "-120px";
+        navbar.style.transition = "top 1s, opacity 0.5s";
 
         //Fade in, and animate back, navbar after 0.5s (500ms)
         let newDelay = 500;
@@ -143,14 +126,15 @@ hamburger.addEventListener("click", () => {
             navbar.style.backgroundColor = "#D06474";
             navbar.style.top = "-10px";
             navbar.style.opacity = "1";
+            navbar.style.transition = "top 1s, opacity 2s";
 
             if (window.innerWidth > 768) {
                 leftLinksInNav.style.display = "flex";
                 rightLinksInNav.style.display = "flex"
             }
 
-            //Unlock scroll
-            body.style.overflow = "visible";
+            //Un-blur background
+
 
         }, newDelay);
 

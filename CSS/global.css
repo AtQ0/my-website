@@ -108,6 +108,7 @@ header {
     flex-direction: column;
     justify-content: end;
     align-items: center;
+    position: relative;
 }
 
 /*=============================*/
@@ -136,7 +137,7 @@ header {
     position: absolute;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s linear;
+    transition: opacity 0.35s linear;
 }
 
 /*=== FADE-OUT CLASS FOR LOGO IN STARTING SLIDE ===*/
@@ -158,7 +159,7 @@ header {
 
 /*==== ANIMATE THE SLIDING OF STARTING SLIDE ====*/
 .new-starting-slide-class-for-animation {
-    transition: transform 1s;
+    transition: transform 1.5s;
 }
 
 .new-starting-slide-class-for-animation {
@@ -177,10 +178,10 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    position: fixed;
-    top: -10px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    position: absolute;
+    top: -65px;
     z-index: 4;
     transition: top 1s, opacity 0.5s;
     height: 10.5vw;
@@ -285,10 +286,10 @@ nav {
     align-items: start;
     position: fixed;
     z-index: 4;
-    width: 100%;
+    width: 60%;
     height: 100vh;
     top: 0;
-    left: -120%;
+    left: -70%;
     background-color: #A75D88;
     padding-left: 35px;
     padding-top: 180px;
