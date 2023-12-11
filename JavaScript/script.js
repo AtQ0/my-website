@@ -46,6 +46,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+/*==========================================================*/
+/*============= APPEARANCE OF NAV ON PAGE LOAD =============*/
+/*==========================================================*/
+document.addEventListener("DOMContentLoaded", function () {
+
+    const delayForAppearenceOfNavbar = 1200;
+    let navbar = document.getElementById("navbar");
+
+    setTimeout(function () {
+
+        navbar.style.top = "-10px"
+        navbar.style.opacity = "1";
+
+
+    }, delayForAppearenceOfNavbar)
+
+});
+
+
+
 /*==========================================================*/
 /*======= APPEARANCE/DISSAPEARANCE OF NAV ON SCROLL ========*/
 /*==========================================================*/
@@ -68,6 +89,25 @@ function logoHomeLink() {
     window.location.href = url;
 }
 
+
+/*==================================================*/
+/*======= SLIDE RECTB WHEN BURGER IS HOVERED =======*/
+/*==================================================*/
+
+let hamburgerWrapper = document.querySelector(".hamburger-container");
+let rectB = document.querySelector(".rectB");
+
+hamburgerWrapper.addEventListener("mouseover", () => {
+    rectB.style.transform = "translateX(0px)"
+});
+
+hamburgerWrapper.addEventListener("mouseout", () => {
+    rectB.style.transform = "translateX(-5px)"
+});
+
+
+
+
 /*==================================================*/
 /*======= SLIDE MENU WHEN BURGER IS CLICKED ========*/
 /*==================================================*/
@@ -75,58 +115,67 @@ function logoHomeLink() {
 //GET ELEMENT FROM DOM
 const hamburger = document.getElementById("hamburger-container");
 const slidingMenu = document.getElementById("container-menu");
-const body = document.getElementById("theBod");
+const main = document.getElementById("theMain");
 const leftLinksInNav = document.getElementById("left-links-in-nav");
 const rightLinksInNav = document.getElementById("right-links-in-nav");
-var isClickedHamburger = false;
+let isHamburgerClickedOnce = false;
 
 //SET A CLICK EVENT ON constant
 hamburger.addEventListener("click", () => {
 
-    if (isClickedHamburger === false) {
+    if (isHamburgerClickedOnce === false) {
 
-        //Animate menu div from right to left
-        slidingMenu.style.left = "0px";
-
-        //fade out and animate navbar upwards
-        navbar.style.top = "-35%";
-        navbar.style.opacity = "0";
-        navbar.style.transition = "top 1s, opacity 0.5s";
-
-        leftLinksInNav.style.display = "none";
-        rightLinksInNav.style.display = "none";
-
-        //Fade in, and animate back, navbar, after 0.5s (500ms)
-        let delay = 500;
+        //Fade out and turn of menu-links in the top
+        leftLinksInNav.style.opacity = "0";
+        rightLinksInNav.style.opacity = "0";
+        const displayNoneDelay = 500;
         setTimeout(function () {
-            navbar.style.backgroundColor = "transparent";
-            navbar.style.top = "-10px";
-            navbar.style.opacity = "1";
-            navbar.style.transition = "top 1s, opacity 2s";
-
-            //Blur background
+            leftLinksInNav.style.pointerEvents = "none";
+            rightLinksInNav.style.pointerEvents = "none";
+        }, displayNoneDelay)
 
 
-        }, delay);
+        //Turn on display (flex) and animate menu from left to right
+        slidingMenu.style.display = "flex";
+        setTimeout(function () {
+            slidingMenu.style.left = "0px";
+        }, 10);
+
+
+        //Animate hamburger to an X
+        let rectB = document.querySelector(".rectB");
+        rectB.style.transform = "translateX(0px)";
+
+
+
+        //Blur background
+        setTimeout(function () {
+            main.style.filter = "blur(5px)";
+        }, 750);
 
         //Set boolean as true, so that it can be used for going back
-        isClickedHamburger = true;
+        isHamburgerClickedOnce = true;
     }
-    else if (isClickedHamburger === true) {
+    else if (isHamburgerClickedOnce === true) {
+
+        //Move menu back and turn of its display
         slidingMenu.style.left = "-70%";
+        setTimeout(function () {
+            slidingMenu.style.display = "none";
 
-        //fade out and animate navbar
-        navbar.style.top = "-35%";
-        navbar.style.opacity = "0";
-        navbar.style.transition = "top 1s, opacity 0.5s";
+        }, 1000);
 
-        //Fade in, and animate back, navbar after 0.5s (500ms)
+        //Turn on menu-links in the top and fade them in
+        leftLinksInNav.style.pointerEvents = "auto";
+        rightLinksInNav.style.pointerEvents = "auto";
+        leftLinksInNav.style.opacity = "1";
+        rightLinksInNav.style.opacity = "1";
+
+
         let newDelay = 500;
         setTimeout(function () {
-            navbar.style.backgroundColor = "#D06474";
-            navbar.style.top = "-10px";
-            navbar.style.opacity = "1";
-            navbar.style.transition = "top 1s, opacity 2s";
+
+            //Animate back X to a burger
 
             if (window.innerWidth > 768) {
                 leftLinksInNav.style.display = "flex";
@@ -139,7 +188,7 @@ hamburger.addEventListener("click", () => {
         }, newDelay);
 
 
-        isClickedHamburger = false;
+        isHamburgerClickedOnce = false;
     }
 
     //ADD ABOVE SO THAT EITHER MENU IS FIXED OF BODY SCROLL IS LOCKED (Overflow hidden?)
@@ -151,7 +200,7 @@ hamburger.addEventListener("click", () => {
 /*==== ADDITIONAL RESIZE FUNCTION TO AMEND DISPLAY BUG TO LINKS IN NAV =====*/
 window.onresize = manageLinksInNavInRelationToMenu;
 function manageLinksInNavInRelationToMenu() {
-    if (window.innerWidth >= 769 && isClickedHamburger === false) {
+    if (window.innerWidth >= 769 && isHamburgerClickedOnce === false) {
         leftLinksInNav.style.display = "flex";
         rightLinksInNav.style.display = "flex";
     }

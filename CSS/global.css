@@ -181,17 +181,21 @@ nav {
     padding-top: 15px;
     padding-bottom: 5px;
     position: absolute;
-    top: -65px;
-    z-index: 4;
-    transition: top 1s, opacity 0.5s;
+    top: -70px;
+    z-index: 5;
+    opacity: 0;
+    transition: top 2s, opacity 3s;
     height: 10.5vw;
 }
 
 
 .hamburger-container {
     height: fit-content;
+    min-height: 20px;
     width: fit-content;
+    min-width: 35px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-right: 30px;
@@ -199,23 +203,62 @@ nav {
     position: absolute;
     left: 0;
     margin-left: 4vw;
+    z-index: 4;
+    background-color: lightblue;
 }
 
-.svg-burger {
-    min-width: 35px;
-    width: 5vw;
-    max-width: 45px;
-    margin: 3px;
+.hamburger-wrapper {
+    background-color: orange;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
 }
+
+.rectA {
+    width: 25px;
+    height: 2.5px;
+    background-color: black;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 85px;
+    border-bottom-right-radius: 85px;
+    border-bottom-left-radius: 85px;
+}
+
+
+.rectB {
+    width: 25px;
+    height: 2.5px;
+    background-color: black;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 85px;
+    border-bottom-right-radius: 85px;
+    border-bottom-left-radius: 85px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    transform: translateX(-5px);
+
+}
+
+.rectC {
+    width: 25px;
+    height: 2.5px;
+    background-color: black;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 85px;
+    border-bottom-right-radius: 85px;
+    border-bottom-left-radius: 85px;
+}
+
+
 
 /*==== ANIMATION FOR BURGER MENU ====*/
 
 .rectB {
-    transition: transform 0.25s;
+    transition: transform 0.25s, opacity 1s;
 }
 
-.hamburger-container:hover .rectB {
-    transform: translateX(0.8px);
+.move-rectB-to-the-right-on-mousover {
+    transform: translateX(0px);
 }
 
 .top-logo-container {
@@ -224,6 +267,8 @@ nav {
     position: absolute;
     justify-content: center;
     align-items: center;
+    z-index: 4;
+    user-select: none;
 }
 
 .top-logo-container span {
@@ -242,10 +287,12 @@ nav {
 
 .left-links-in-nav {
     display: none;
+    transition: opacity 1s;
 }
 
 .right-links-in-nav {
     display: none;
+    transition: opacity 1s;
 }
 
 
@@ -281,7 +328,7 @@ nav {
 
 /*==== MENU ====*/
 .container-menu {
-    display: flex;
+    display: none;
     justify-content: start;
     align-items: start;
     position: fixed;
@@ -384,6 +431,15 @@ header h1 {
 
 .class-for-bottom-slogan-animating-back-down {
     transform: translateY(0%);
+}
+
+
+/*=================================*/
+/*============= MAIN ==============*/
+/*=================================*/
+
+main {
+    transition: filter 1.25s;
 }
 
 /*=================================*/
