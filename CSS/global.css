@@ -209,9 +209,12 @@ nav {
 
 .hamburger-wrapper {
     background-color: orange;
+    min-height: 12.5px;
+    min-width: 25px;
     padding-top: 1px;
     padding-bottom: 1px;
     padding-left: 5px;
+    position: relative;
 }
 
 .rectA {
@@ -236,7 +239,6 @@ nav {
     margin-top: 2.5px;
     margin-bottom: 2.5px;
     transform: translateX(-5px);
-
 }
 
 .rectC {
@@ -247,6 +249,50 @@ nav {
     border-top-right-radius: 85px;
     border-bottom-right-radius: 85px;
     border-bottom-left-radius: 85px;
+}
+
+.rectD {
+    width: 25px;
+    height: 2.5px;
+    background-color: blue;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 85px;
+    border-bottom-right-radius: 85px;
+    border-bottom-left-radius: 85px;
+    display: none;
+    position: absolute;
+    top: 1px;
+    transition: transform 0.75s;
+}
+
+.rectE {
+    width: 25px;
+    height: 2.5px;
+    background-color: orangered;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 85px;
+    border-bottom-right-radius: 85px;
+    border-bottom-left-radius: 85px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    display: none;
+    position: absolute;
+    top: 3.5px;
+    transition: opacity 1s;
+}
+
+.rectF {
+    width: 25px;
+    height: 2.5px;
+    background-color: green;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 85px;
+    border-bottom-right-radius: 85px;
+    border-bottom-left-radius: 85px;
+    display: none;
+    position: absolute;
+    top: 11px;
+    transition: transform 0.75s;
 }
 
 
@@ -314,6 +360,52 @@ nav {
     max-width: 20px;
     max-height: 24px;
     margin: 3px;
+}
+
+/*==== ANIMATION FOR X of the burger MENU ====*/
+
+
+/*Align divs*/
+.animate-rectD-downwards-towards-rectE {
+    transition: top 0.5s;
+    top: 6px;
+}
+
+.animate-rectF-upwards-towards-rectE {
+    transition: top 0.5s;
+    top: 6px;
+}
+
+/*dis-Align divs*/
+
+.animate-rectD-back-upwards-again {
+    transition: top 2s;
+    top: -5px;
+}
+
+
+
+
+
+/*Rotate rectD and rectF back and forth*/
+.rotate-rectD {
+    transition: transform 0.5s;
+    transform: rotate(-45deg);
+}
+
+.rotate-rectF {
+    transition: transform 0.5s;
+    transform: rotate(45deg);
+}
+
+.rotate-back-rectD {
+    transition: transform 0.5s;
+    transform: rotate(0deg);
+}
+
+.rotate-back-rectF {
+    transition: transform 0.5s;
+    transform: rotate(0deg);
 }
 
 /*=== SCALE on location ======*/

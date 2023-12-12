@@ -143,15 +143,38 @@ hamburger.addEventListener("click", () => {
 
 
         //Animate hamburger to an X
-        let rectB = document.querySelector(".rectB");
+        const rectA = document.querySelector(".rectA");
+        const rectB = document.querySelector(".rectB");
+        const rectC = document.querySelector(".rectC");
+        const rectD = document.querySelector(".rectD");
+        const rectE = document.querySelector(".rectE");
+        const rectF = document.querySelector(".rectF");
+
+        //Align rectB vertically with rectA and rectC prior hiding it
         rectB.style.transform = "translateX(0px)";
 
+        //Hide original hamburger rectangles
+        rectA.style.display = "none";
+        rectB.style.display = "none";
+        rectC.style.display = "none";
 
+        //show temporary hamburger rectangles
+        rectD.style.display = "block";
+        rectE.style.display = "block";
+        rectF.style.display = "block";
 
-        //Blur background
+        //Align rectD & rectF with rectE, and fade out rectE
         setTimeout(function () {
-            main.style.filter = "blur(5px)";
-        }, 750);
+            rectD.classList.add("animate-rectD-downwards-towards-rectE");
+            rectF.classList.add("animate-rectF-upwards-towards-rectE");
+            rectE.style.opacity = "0";
+        }, 10);
+
+        //Rotate rectD and rectF
+        setTimeout(function () {
+            rectD.classList.add("rotate-rectD");
+            rectF.classList.add("rotate-rectF");
+        }, 500);
 
         //Set boolean as true, so that it can be used for going back
         isHamburgerClickedOnce = true;
@@ -172,18 +195,31 @@ hamburger.addEventListener("click", () => {
         rightLinksInNav.style.opacity = "1";
 
 
+        //Rotate rectD and rectF back
+        const rectD = document.querySelector(".rectD");
+        const rectF = document.querySelector(".rectF");
+        rectD.classList.remove("rotate-rectD");
+        rectD.classList.add("rotate-back-rectD");
+        rectF.classList.remove("rotate-rectF");
+        rectF.classList.add("rotate-back-rectF");
+
+        setTimeout(function () {
+            rectD.classList.remove("animate-rectD-downwards-towards-rectE");
+            rectD.classList.add("animate-rectD-back-upwards-again");
+        }, 2000);
+
+
+
+
+
         let newDelay = 500;
         setTimeout(function () {
-
-            //Animate back X to a burger
 
             if (window.innerWidth > 768) {
                 leftLinksInNav.style.display = "flex";
                 rightLinksInNav.style.display = "flex"
             }
-
             //Un-blur background
-
 
         }, newDelay);
 
