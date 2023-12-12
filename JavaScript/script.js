@@ -196,6 +196,9 @@ hamburger.addEventListener("click", () => {
 
 
         //Rotate rectD and rectF back
+        const rectA = document.querySelector(".rectA");
+        const rectB = document.querySelector(".rectB");
+        const rectC = document.querySelector(".rectC");
         const rectD = document.querySelector(".rectD");
         const rectE = document.querySelector(".rectE");
         const rectF = document.querySelector(".rectF");
@@ -210,14 +213,32 @@ hamburger.addEventListener("click", () => {
 
         setTimeout(function () {
             rectF.style.display = "none";
-            rectG.style.display = "inline"
+            rectG.style.display = "block";
             rectE.style.top = "-1.5px";
             rectD.style.transition = "transform 0.75s, top 0.75s";
             rectD.style.transform = "translateY(5px)";
 
 
+            setTimeout(function () {
+
+                rectA.style.display = "block";
+                rectB.style.display = "block";
+                rectC.style.display = "block";
+
+                rectD.style.display = "none";
+                rectE.style.display = "none";
+                rectG.style.display = "none";
+
+
+                rectD.classList.remove("rotate-back-rectD");
+                rectF.classList.remove("rotate-back-rectF");
+
+
+            }, 800);
+
 
         }, 800);
+
 
 
 
