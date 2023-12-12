@@ -262,7 +262,7 @@ nav {
     display: none;
     position: absolute;
     top: 1px;
-    transition: transform 0.75s;
+    transition: transform 0.75s, top 0.75s;
 }
 
 .rectE {
@@ -278,7 +278,7 @@ nav {
     display: none;
     position: absolute;
     top: 3.5px;
-    transition: opacity 1s;
+    transition: opacity 1s, top 0.75s;
 }
 
 .rectF {
@@ -292,7 +292,22 @@ nav {
     display: none;
     position: absolute;
     top: 11px;
-    transition: transform 0.75s;
+    transition: transform 0.75s, top 2.5s;
+}
+
+.rectG {
+    width: 25px;
+    height: 2.5px;
+    background-color: white;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 85px;
+    border-bottom-right-radius: 85px;
+    border-bottom-left-radius: 85px;
+    display: none;
+    position: absolute;
+    top: 6px;
+    transition: transform 0.75s, top 2.5s;
+    display: none;
 }
 
 
@@ -378,10 +393,7 @@ nav {
 
 /*dis-Align divs*/
 
-.animate-rectD-back-upwards-again {
-    transition: top 2s;
-    top: -5px;
-}
+
 
 
 
