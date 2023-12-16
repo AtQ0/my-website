@@ -243,7 +243,7 @@ nav {
     border-top-right-radius: 85px;
     border-bottom-right-radius: 85px;
     border-bottom-left-radius: 85px;
-    transition: margin-right 0.5s, left 0.5s, transform 0.5s;
+    transition: margin-right 0.25s, left 0.25s, transform 0.5s;
     margin-right: 10px;
     position: absolute;
     top: 6px;

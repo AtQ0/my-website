@@ -116,19 +116,23 @@ hamburger.addEventListener("click", () => {
         hamburger.removeEventListener("mouseover", mouseoverHandlarForBurger);
         hamburger.removeEventListener("mouseout", mouseoutHandlerForBurger);
 
-        rectA.classList.add("align-rectA");
-        rectC.classList.add("align-rectC");
-
-        //Make rectB invisible for the coming X-rotation
         setTimeout(function () {
-            rectB.style.opacity = "0";
-        }, 500);
+            rectA.classList.add("align-rectA");
+            rectC.classList.add("align-rectC");
 
-        //Rotate rectA and rectC to form an X
-        setTimeout(function () {
-            rectA.style.transform = "rotate(45deg)";
-            rectC.style.transform = "rotate(-45deg)";
-        }, 500);
+            //Make rectB invisible for the coming X-rotation
+            setTimeout(function () {
+                rectB.style.opacity = "0";
+            }, 500);
+
+            //Rotate rectA and rectC to form an X
+            setTimeout(function () {
+                rectA.style.transform = "rotate(45deg)";
+                rectC.style.transform = "rotate(-45deg)";
+            }, 500);
+
+        }, 200)
+
 
         //Slide out the hamburger menu
 
@@ -165,7 +169,8 @@ hamburger.addEventListener("click", () => {
             hamburger.addEventListener("mouseover", mouseoverHandlarForBurger);
             hamburger.addEventListener("mouseout", mouseoutHandlerForBurger);
 
-        }, 800);
+        }, 900);
+
 
         //Slide back the hamburger menu, out of view
 
