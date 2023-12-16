@@ -94,17 +94,6 @@ function logoHomeLink() {
 /*======= SLIDE RECTB WHEN BURGER IS HOVERED =======*/
 /*==================================================*/
 
-let hamburgerWrapper = document.querySelector(".hamburger-container");
-let rectB = document.querySelector(".rectB");
-
-hamburgerWrapper.addEventListener("mouseover", () => {
-    rectB.style.transform = "translateX(0px)"
-});
-
-hamburgerWrapper.addEventListener("mouseout", () => {
-    rectB.style.transform = "translateX(-5px)"
-});
-
 
 
 
@@ -113,11 +102,14 @@ hamburgerWrapper.addEventListener("mouseout", () => {
 /*==================================================*/
 
 //GET ELEMENT FROM DOM
-const hamburger = document.getElementById("hamburger-container");
+const hamburger = document.querySelector(".hamburger-wrapper");
 const slidingMenu = document.getElementById("container-menu");
 const main = document.getElementById("theMain");
 const leftLinksInNav = document.getElementById("left-links-in-nav");
 const rightLinksInNav = document.getElementById("right-links-in-nav");
+const rectA = document.querySelector(".rectA");
+const rectB = document.querySelector(".rectB");
+const rectC = document.querySelector(".rectC");
 let isHamburgerClickedOnce = false;
 
 //SET A CLICK EVENT ON constant
@@ -125,147 +117,90 @@ hamburger.addEventListener("click", () => {
 
     if (isHamburgerClickedOnce === false) {
 
-        //Fade out and turn of menu-links in the top
-        leftLinksInNav.style.opacity = "0";
-        rightLinksInNav.style.opacity = "0";
-        const displayNoneDelay = 500;
+        //Instruct rectB to staticly stay on the onHover position
+        rectB.classList.add("stop-rectB-on-right-position");
+
+        hamburger.removeEventListener("mouseover", mouseoverHandlarForBurger);
+        hamburger.removeEventListener("mouseout", mouseoutHandlerForBurger);
+
+        //Vertically align rectA & rectC with rectB
+        rectA.classList.add("align-rectA");
+        rectC.classList.add("align-rectC");
+
+        //Make rectB invisible for the coming X-rotation
         setTimeout(function () {
-            leftLinksInNav.style.pointerEvents = "none";
-            rightLinksInNav.style.pointerEvents = "none";
-        }, displayNoneDelay)
+            rectB.style.opacity = "0";
+        }, 300);
 
-
-        //Turn on display (flex) and animate menu from left to right
-        slidingMenu.style.display = "flex";
+        //Rotate rectA and rectC to form an X
         setTimeout(function () {
-            slidingMenu.style.left = "0px";
-        }, 10);
-
-
-        //Animate hamburger to an X
-        const rectA = document.querySelector(".rectA");
-        const rectB = document.querySelector(".rectB");
-        const rectC = document.querySelector(".rectC");
-        const rectD = document.querySelector(".rectD");
-        const rectE = document.querySelector(".rectE");
-        const rectF = document.querySelector(".rectF");
-
-        //Align rectB vertically with rectA and rectC prior hiding it
-        rectB.style.transform = "translateX(0px)";
-
-        //Hide original hamburger rectangles
-        rectA.style.display = "none";
-        rectB.style.display = "none";
-        rectC.style.display = "none";
-
-        //show temporary hamburger rectangles
-        rectD.style.display = "block";
-        rectE.style.display = "block";
-        rectF.style.display = "block";
-
-        //Align rectD & rectF with rectE, and fade out rectE
-        setTimeout(function () {
-            rectD.classList.add("animate-rectD-downwards-towards-rectE");
-            rectF.classList.add("animate-rectF-upwards-towards-rectE");
-            rectE.style.opacity = "0";
-        }, 10);
-
-        //Rotate rectD and rectF
-        setTimeout(function () {
-            rectD.classList.add("rotate-rectD");
-            rectF.classList.add("rotate-rectF");
+            rectA.style.transform = "rotate(45deg)";
+            rectC.style.transform = "rotate(-45deg)";
         }, 500);
+
+        //Slide out the hamburger menu
+
+        //Hide menu links in navbar
+        leftLinksInNav.style.display = "none";
+        rightLinksInNav.style.display = "none";
 
         //Set boolean as true, so that it can be used for going back
         isHamburgerClickedOnce = true;
     }
-    else if (isHamburgerClickedOnce === true) {
+    else {
 
-        //Move menu back and turn of its display
-        slidingMenu.style.left = "-70%";
+        //Rotate back rectA & rectC from an X to a line
+        rectA.style.transform = "rotate(0deg)";
+        rectC.style.transform = "rotate(0deg)";
+
+        //Bring back opacity of rectB
         setTimeout(function () {
-            slidingMenu.style.display = "none";
+            rectB.style.opacity = "1";
+        }, 300);
 
-        }, 1000);
-
-        //Turn on menu-links in the top and fade them in
-        leftLinksInNav.style.pointerEvents = "auto";
-        rightLinksInNav.style.pointerEvents = "auto";
-        leftLinksInNav.style.opacity = "1";
-        rightLinksInNav.style.opacity = "1";
-
-
-        //Rotate rectD and rectF back
-        const rectA = document.querySelector(".rectA");
-        const rectB = document.querySelector(".rectB");
-        const rectC = document.querySelector(".rectC");
-        const rectD = document.querySelector(".rectD");
-        const rectE = document.querySelector(".rectE");
-        const rectF = document.querySelector(".rectF");
-        const rectG = document.querySelector(".rectG");
-        rectD.classList.remove("rotate-rectD");
-        rectD.classList.add("rotate-back-rectD");
-        rectF.classList.remove("rotate-rectF");
-        rectF.classList.add("rotate-back-rectF");
-        rectE.style.opacity = "1";
-
+        //Un-align rectA & rectC from rectB
+        setTimeout(function () {
+            rectA.classList.remove("align-rectA");
+            rectC.classList.remove("align-rectC");
+        }, 500);
 
 
         setTimeout(function () {
-            rectF.style.display = "none";
-            rectG.style.display = "block";
-            rectE.style.top = "-1.5px";
-            rectD.style.transition = "transform 0.75s, top 0.75s";
-            rectD.style.transform = "translateY(5px)";
+            //Bring back rectB to it´s mouseout position
+            rectB.style.marginRight = "10px";
 
-
-            setTimeout(function () {
-
-                rectA.style.display = "block";
-                rectB.style.display = "block";
-                rectC.style.display = "block";
-
-                rectD.style.display = "none";
-                rectE.style.display = "none";
-                rectG.style.display = "none";
-
-
-                rectD.classList.remove("rotate-back-rectD");
-                rectF.classList.remove("rotate-back-rectF");
-
-
-            }, 800);
-
+            //Add Hover effect on hamburger
+            hamburger.addEventListener("mouseover", mouseoverHandlarForBurger);
+            hamburger.addEventListener("mouseout", mouseoutHandlerForBurger);
 
         }, 800);
 
+        //Slide back the hamburger menu, out of view
 
 
-
-
-
-
-
+        //Show menu-links in nav, if screen is not mobile
         let newDelay = 500;
         setTimeout(function () {
-
             if (window.innerWidth > 768) {
                 leftLinksInNav.style.display = "flex";
                 rightLinksInNav.style.display = "flex"
             }
-            //Un-blur background
-
         }, newDelay);
 
 
         isHamburgerClickedOnce = false;
     }
-
-    //ADD ABOVE SO THAT EITHER MENU IS FIXED OF BODY SCROLL IS LOCKED (Overflow hidden?)
-
-
-    //ADD HERE code so that hamburger transforms its shape to X
 });
+
+function mouseoverHandlarForBurger() {
+    // Add your mouseover event code here
+    rectB.style.marginRight = "0px";
+}
+
+function mouseoutHandlerForBurger() {
+    // Add your mouseout event code here
+    rectB.style.marginRight = "10px";
+}
 
 /*==== ADDITIONAL RESIZE FUNCTION TO AMEND DISPLAY BUG TO LINKS IN NAV =====*/
 window.onresize = manageLinksInNavInRelationToMenu;

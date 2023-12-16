@@ -214,6 +214,10 @@ nav {
     padding-top: 1px;
     padding-bottom: 1px;
     padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
@@ -225,6 +229,9 @@ nav {
     border-top-right-radius: 85px;
     border-bottom-right-radius: 85px;
     border-bottom-left-radius: 85px;
+    transition: transform 0.5s, top 0.5s;
+    position: absolute;
+    top: 1px;
 }
 
 
@@ -236,9 +243,10 @@ nav {
     border-top-right-radius: 85px;
     border-bottom-right-radius: 85px;
     border-bottom-left-radius: 85px;
-    margin-top: 2.5px;
-    margin-bottom: 2.5px;
-    transform: translateX(-5px);
+    transition: margin-right 0.5s, left 0.5s, transform 0.5s;
+    margin-right: 10px;
+    position: absolute;
+    top: 6px;
 }
 
 .rectC {
@@ -249,78 +257,31 @@ nav {
     border-top-right-radius: 85px;
     border-bottom-right-radius: 85px;
     border-bottom-left-radius: 85px;
-}
-
-.rectD {
-    width: 25px;
-    height: 2.5px;
-    background-color: blue;
-    border-top-left-radius: 85px;
-    border-top-right-radius: 85px;
-    border-bottom-right-radius: 85px;
-    border-bottom-left-radius: 85px;
-    display: none;
-    position: absolute;
-    top: 1px;
-    transition: transform 0.75s, top 0.75s;
-}
-
-.rectE {
-    width: 25px;
-    height: 2.5px;
-    background-color: orangered;
-    border-top-left-radius: 85px;
-    border-top-right-radius: 85px;
-    border-bottom-right-radius: 85px;
-    border-bottom-left-radius: 85px;
-    margin-top: 2.5px;
-    margin-bottom: 2.5px;
-    display: none;
-    position: absolute;
-    top: 3.5px;
-    transition: opacity 1s, top 0.75s;
-}
-
-.rectF {
-    width: 25px;
-    height: 2.5px;
-    background-color: green;
-    border-top-left-radius: 85px;
-    border-top-right-radius: 85px;
-    border-bottom-right-radius: 85px;
-    border-bottom-left-radius: 85px;
-    display: none;
+    transition: transform 0.5s, top 0.5s;
     position: absolute;
     top: 11px;
-    transition: transform 0.75s, top 2.5s;
 }
-
-.rectG {
-    width: 25px;
-    height: 2.5px;
-    background-color: white;
-    border-top-left-radius: 85px;
-    border-top-right-radius: 85px;
-    border-bottom-right-radius: 85px;
-    border-bottom-left-radius: 85px;
-    display: none;
-    position: absolute;
-    top: 6px;
-    transition: transform 0.75s, top 2.5s;
-    display: none;
-}
-
 
 
 /*==== ANIMATION FOR BURGER MENU ====*/
 
-.rectB {
-    transition: transform 0.25s, opacity 1s;
+.hamburger-wrapper:hover .animate-rectB {
+    margin-right: 0;
 }
 
-.move-rectB-to-the-right-on-mousover {
-    transform: translateX(0px);
+.stop-rectB-on-right-position {
+    margin-right: 0;
 }
+
+.align-rectA {
+    top: 6px;
+}
+
+.align-rectC {
+    top: 6px;
+}
+
+/*=== TOP LOGO ===*/
 
 .top-logo-container {
     display: flex;
@@ -375,49 +336,6 @@ nav {
     max-width: 20px;
     max-height: 24px;
     margin: 3px;
-}
-
-/*==== ANIMATION FOR X of the burger MENU ====*/
-
-
-/*Align divs*/
-.animate-rectD-downwards-towards-rectE {
-    transition: top 0.5s;
-    top: 6px;
-}
-
-.animate-rectF-upwards-towards-rectE {
-    transition: top 0.5s;
-    top: 6px;
-}
-
-/*dis-Align divs*/
-
-
-
-
-
-
-
-/*Rotate rectD and rectF back and forth*/
-.rotate-rectD {
-    transition: transform 0.5s;
-    transform: rotate(-45deg);
-}
-
-.rotate-rectF {
-    transition: transform 0.5s;
-    transform: rotate(45deg);
-}
-
-.rotate-back-rectD {
-    transition: transform 0.5s;
-    transform: rotate(0deg);
-}
-
-.rotate-back-rectF {
-    transition: transform 0.5s;
-    transform: rotate(0deg);
 }
 
 /*=== SCALE on location ======*/
