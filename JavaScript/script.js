@@ -116,14 +116,13 @@ hamburger.addEventListener("click", () => {
         hamburger.removeEventListener("mouseover", mouseoverHandlarForBurger);
         hamburger.removeEventListener("mouseout", mouseoutHandlerForBurger);
 
-        //Vertically align rectA & rectC with rectB
         rectA.classList.add("align-rectA");
         rectC.classList.add("align-rectC");
 
         //Make rectB invisible for the coming X-rotation
         setTimeout(function () {
             rectB.style.opacity = "0";
-        }, 300);
+        }, 500);
 
         //Rotate rectA and rectC to form an X
         setTimeout(function () {
