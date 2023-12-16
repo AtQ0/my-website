@@ -204,11 +204,11 @@ nav {
     left: 0;
     margin-left: 4vw;
     z-index: 4;
-    background-color: lightblue;
+
 }
 
 .hamburger-wrapper {
-    background-color: orange;
+
     min-height: 12.5px;
     min-width: 25px;
     padding-top: 1px;
