@@ -110,6 +110,12 @@ hamburger.addEventListener("click", () => {
 
     if (isHamburgerClickedOnce === false) {
 
+        //Compensate vertical pos of rectB if js onHover is not activated yet
+        //It activates when user the first time hovers in/out of hamburger wrapper
+        if (!rectB.classList.contains("hamburgerJSHoverActivated")) {
+            rectB.style.marginRight = "0px";
+        }
+
         //Instruct rectB to staticly stay on the onHover position
         rectB.classList.add("stop-rectB-on-right-position");
 
@@ -131,19 +137,27 @@ hamburger.addEventListener("click", () => {
                 rectC.style.transform = "rotate(-45deg)";
             }, 300);
 
-        }, 200)
+        }, 200);
 
 
         //Slide out the hamburger menu
 
+        //Lower opacity of menu links in navbar
+
+
+
         //Hide menu links in navbar
-        leftLinksInNav.style.display = "none";
-        rightLinksInNav.style.display = "none";
+        // leftLinksInNav.style.display = "none";
+        // rightLinksInNav.style.display = "none";
+
 
         //Set boolean as true, so that it can be used for going back
         isHamburgerClickedOnce = true;
     }
     else {
+
+        //Remove class that indicates if hamburger JS onHover is activated
+        rectB.classList.remove("hamburgerJSHoverActivated");
 
         //Rotate back rectA & rectC from an X to a line
         rectA.style.transform = "rotate(0deg)";
@@ -170,27 +184,23 @@ hamburger.addEventListener("click", () => {
 
 
         setTimeout(function () {
-            //Bring back rectB to it´s mouseout position
-            // rectB.style.marginRight = "10px";
-
             //Add Hover effect on hamburger
             hamburger.addEventListener("mouseover", mouseoverHandlarForBurger);
             hamburger.addEventListener("mouseout", mouseoutHandlerForBurger);
-
         }, 1000);
 
 
         //Slide back the hamburger menu, out of view
 
 
-        //Show menu-links in nav, if screen is not mobile
-        let newDelay = 500;
-        setTimeout(function () {
-            if (window.innerWidth > 768) {
-                leftLinksInNav.style.display = "flex";
-                rightLinksInNav.style.display = "flex"
-            }
-        }, newDelay);
+        //Bring back menu-links in nav, if screen is not mobile
+        // let newDelay = 500;
+        // setTimeout(function () {
+        //     if (window.innerWidth > 768) {
+        //         leftLinksInNav.style.display = "flex";
+        //         rightLinksInNav.style.display = "flex"
+        //     }
+        // }, newDelay);
 
 
         isHamburgerClickedOnce = false;
@@ -198,8 +208,12 @@ hamburger.addEventListener("click", () => {
 });
 
 function mouseoverHandlarForBurger() {
-    // Add your mouseover event code here
+    //Add your mouseover event code here
     rectB.style.marginRight = "0px";
+
+    //Add a class to rectB to indicate that js onHover is now activated
+    //It activates when user the first time hovers in/out of hamburger wrapper
+    rectB.classList.add("HamburgerJSHoverActivated");
 }
 
 function mouseoutHandlerForBurger() {
