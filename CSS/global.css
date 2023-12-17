@@ -184,8 +184,13 @@ nav {
     top: -70px;
     z-index: 5;
     opacity: 0;
-    transition: top 2s, opacity 3s;
+    transition: top 1.75s, opacity 3s;
     height: 10.5vw;
+}
+
+.animateNavOnPageLoad {
+    top: -10px;
+    opacity: 1;
 }
 
 
@@ -263,7 +268,7 @@ nav {
 }
 
 
-/*==== ANIMATION FOR BURGER MENU ====*/
+/*==== ANIMATION FOR BURGER RECTB ====*/
 
 .hamburger-wrapper:hover .animate-rectB {
     margin-right: 0;
@@ -350,21 +355,23 @@ nav {
 
 /*==== MENU ====*/
 .container-menu {
-    display: none;
+    display: block;
+    /*display needs to be set to none*/
     justify-content: start;
     align-items: start;
     position: fixed;
     z-index: 4;
     width: 60%;
+    max-width: 280px;
     height: 100vh;
     top: 0;
-    left: -70%;
+    left: -120%;
     background-color: #A75D88;
     padding-left: 35px;
     padding-top: 180px;
 
     /*Used for sliding animation prompted by JS*/
-    transition: background-color 0.75s, left 0.75s;
+    transition: background-color 0.75s, left 1s;
 }
 
 .wrapper-menu {
@@ -390,6 +397,16 @@ header h1 {
     width: fit-content;
     height: fit-content;
     line-height: 10vw;
+}
+
+/*===== ANIMATION OF MENU ======*/
+
+.moveMenuInView {
+    left: 0;
+}
+
+.moveMenuOutofView {
+    left: -120%;
 }
 
 /*========================*/

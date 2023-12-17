@@ -56,11 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let navbar = document.getElementById("navbar");
 
     setTimeout(function () {
-
-        navbar.style.top = "-10px"
-        navbar.style.opacity = "1";
-
-
+        navbar.classList.add("animateNavOnPageLoad")
+        // navbar.style.top = "-10px"
+        // navbar.style.opacity = "1";
     }, delayForAppearenceOfNavbar)
 
 });
@@ -141,15 +139,18 @@ hamburger.addEventListener("click", () => {
 
 
         //Slide out the hamburger menu
+        // slidingMenu.style.left = "0px";
+        slidingMenu.classList.remove("moveMenuOutofView");
+        slidingMenu.classList.add("moveMenuInView");
+
+        /*===================================================================*/
 
         //Lower opacity of menu links in navbar
-
-
 
         //Hide menu links in navbar
         // leftLinksInNav.style.display = "none";
         // rightLinksInNav.style.display = "none";
-
+        /*===================================================================*/
 
         //Set boolean as true, so that it can be used for going back
         isHamburgerClickedOnce = true;
@@ -191,8 +192,10 @@ hamburger.addEventListener("click", () => {
 
 
         //Slide back the hamburger menu, out of view
+        slidingMenu.classList.remove("moveMenuInView");
+        slidingMenu.classList.add("moveMenuOutofView");
 
-
+        /*===================================================================*/
         //Bring back menu-links in nav, if screen is not mobile
         // let newDelay = 500;
         // setTimeout(function () {
@@ -201,7 +204,7 @@ hamburger.addEventListener("click", () => {
         //         rightLinksInNav.style.display = "flex"
         //     }
         // }, newDelay);
-
+        /*===================================================================*/
 
         isHamburgerClickedOnce = false;
     }
