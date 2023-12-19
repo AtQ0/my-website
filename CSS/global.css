@@ -904,9 +904,10 @@ footer hr {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: lightblue;
+    height: fit-content;
+    margin-top: 2vw;
+    padding-bottom: 0;
+    background-color: orange;
 }
 
 .github-container-for-footer svg {
