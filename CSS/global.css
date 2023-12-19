@@ -906,8 +906,8 @@ footer hr {
     flex-direction: row;
     height: fit-content;
     margin-top: 2vw;
+    margin-bottom: 2vw;
     padding-bottom: 0;
-    background-color: blue;
 }
 
 .github-container-for-footer svg {
@@ -915,7 +915,6 @@ footer hr {
     height: 25PX;
     margin-right: 10px;
     margin-bottom: 0;
-    background-color: orangered;
 }
 
 .linkedin-container-for-footer svg {
@@ -923,15 +922,12 @@ footer hr {
     height: 25px;
     margin-right: 10px;
     margin-bottom: 0;
-    background-color: lightblue;
 }
 
 .location-container-for-footer svg {
     width: 20px;
     height: 25px;
     margin-bottom: 0;
-    background-color: olivedrab;
-
 }
 
 /*
