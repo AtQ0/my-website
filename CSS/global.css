@@ -370,7 +370,7 @@ nav {
     padding-top: 180px;
 
     /*Used for sliding animation prompted by JS*/
-    transition: background-color 0.75s, left 1s;
+    transition: background-color 0.75s, left 0.75s;
 }
 
 .wrapper-menu {
@@ -400,11 +400,11 @@ header h1 {
 
 /*===== ANIMATION OF MENU ======*/
 
-.moveMenuInView {
+.move-menu-in-view {
     left: 0;
 }
 
-.moveMenuOutofView {
+.move-menu-out-of-view {
     left: -120%;
 }
 
@@ -904,8 +904,8 @@ footer hr {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin-top: 2vw;
-    padding-bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .github-container-for-footer svg {
