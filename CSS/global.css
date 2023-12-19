@@ -855,6 +855,7 @@ footer {
     width: fit-content;
     height: fit-content;
     margin-top: 10px;
+    user-select: none;
 }
 
 .top-footer-logo-container {
@@ -891,6 +892,8 @@ footer {
     text-align: center;
     margin-top: 4vw;
     margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .container-divider {
