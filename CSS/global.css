@@ -846,14 +846,15 @@ footer {
     background-color: #D06474;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-left: 8vw;
     padding-right: 8vw;
 }
 
 .top-footer-with-logo {
-    width: 100%;
+    width: fit-content;
     height: fit-content;
-    margin-top: 3vw;
+    margin-top: 10px;
 }
 
 .top-footer-logo-container {
@@ -888,9 +889,13 @@ footer {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
+    margin-top: 4vw;
+    margin-bottom: 10px;
+}
 
+.container-divider {
+    height: 10px;
+    width: 100%;
 }
 
 footer hr {
@@ -1201,6 +1206,16 @@ footer hr {
     /*===================*/
     /*===== CONTACT =====*/
     /*===================*/
+
+    /*===== FOOOTER =====*/
+
+    .middle-footer-with-links ol {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 70vw;
+        max-width: 900px;
+    }
+
 
 }
 
