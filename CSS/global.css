@@ -915,6 +915,7 @@ footer hr {
     height: fit-content;
     margin-right: 10px;
     margin-bottom: 0;
+    background-color: orangered;
 }
 
 .linkedin-container-for-footer svg {
@@ -922,12 +923,14 @@ footer hr {
     height: fit-content;
     margin-right: 10px;
     margin-bottom: 0;
+    background-color: lightblue;
 }
 
 .location-container-for-footer svg {
     width: 17.8px;
     height: fit-content;
     margin-bottom: 0;
+    background-color: olivedrab;
 
 }
 
