@@ -838,6 +838,7 @@ main {
     height: 24px;
     font-family: "TwCen";
     font-size: 18px;
+    border-radius: 0;
 }
 
 .name-title {
@@ -877,6 +878,7 @@ main {
     height: 24px;
     font-family: "TwCen";
     font-size: 18px;
+    border-radius: 0;
 }
 
 .email-title {
@@ -920,6 +922,7 @@ main {
     font-family: "TwCen";
     font-size: 18px;
     transition: height 0.5s;
+    border-radius: 0;
 }
 
 .message-title {
