@@ -818,6 +818,44 @@ main {
     white-space: pre;
 }
 
+.wrapper-name {
+    background-color: orange;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 35px;
+    width: 300px;
+    padding: 5px;
+}
+
+.wrapper-name input {
+    background-color: lightblue;
+    border: none;
+    border-bottom: #000 solid 2px;
+    width: 100%;
+    outline: none;
+}
+
+.input-title {
+    position: absolute;
+    top: 20px;
+    transition: top 0.5s, font-size 0.5s;
+    pointer-events: none;
+
+}
+
+.input-name:focus+.input-title {
+    top: 5px;
+    font-size: 14px;
+}
+
+.input-name:not(:placeholder-shown)+.input-title {
+    top: 5px;
+    font-size: 14px;
+}
+
+
 .send-contact-btn {
     margin-top: 8vw;
     height: fit-content;
