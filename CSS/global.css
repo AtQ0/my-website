@@ -830,31 +830,31 @@ main {
 }
 
 .wrapper-name input {
-    background-color: lightblue;
+    background-color: transparent;
     border: none;
     border-bottom: #000 solid 2px;
     width: 100%;
     outline: none;
+    height: 24px;
 }
 
 .input-title {
     position: absolute;
-    top: 20px;
+    top: 15px;
     transition: top 0.5s, font-size 0.5s;
     pointer-events: none;
 
 }
 
 .input-name:focus+.input-title {
-    top: 5px;
-    font-size: 14px;
+    top: 2px;
+    font-size: 12px;
 }
 
 .input-name:not(:placeholder-shown)+.input-title {
-    top: 5px;
-    font-size: 14px;
+    top: 2px;
+    font-size: 12px;
 }
-
 
 .send-contact-btn {
     margin-top: 8vw;
