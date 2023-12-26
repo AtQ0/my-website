@@ -848,12 +848,7 @@ main {
     pointer-events: none;
 }
 
-.name-input:focus+.name-title {
-    top: 2px;
-    font-size: 12px;
-}
-
-.name-input:not(:placeholder-shown)+.name-title {
+.animate-name-title-when-name-tbx-is-focused {
     top: 2px;
     font-size: 12px;
 }
@@ -888,12 +883,7 @@ main {
     pointer-events: none;
 }
 
-.email-input:focus+.email-title {
-    top: 2px;
-    font-size: 12px;
-}
-
-.email-input:not(:placeholder-shown)+.email-title {
+.animate-email-title-when-email-tbx-is-focused {
     top: 2px;
     font-size: 12px;
 }
@@ -932,25 +922,15 @@ main {
     pointer-events: none;
 }
 
-
-.message-input:focus+.message-title {
+.animate-message-title-when-message-tbx-is-focused {
     top: -8px;
     font-size: 12px;
 }
 
-.message-input:not(:placeholder-shown)+.message-title {
-    top: -8px;
-    font-size: 12px;
+.animate-message-tbx-height-when-message-tbx-is-focused {
+    height: 100px !important;
+    /* Add !important to override other height settings */
 }
-
-.message-input:focus {
-    height: 100px;
-}
-
-.message-input:not(:placeholder-shown) {
-    height: 100px;
-}
-
 
 .send-contact-btn {
     margin-top: 8vw;

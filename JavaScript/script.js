@@ -601,3 +601,49 @@ const referencesSwiper = new Swiper('.references-swiper', {
     },
 
 });
+
+
+/*=============================================*/
+/*=============== CONTACT FORM ================*/
+/*=============================================*/
+const nameTbx = document.querySelector(".name-input");
+const nameLabel = document.querySelector(".name-title");
+const emailTbx = document.querySelector(".email-input");
+const emailLabel = document.querySelector(".email-title");
+const messageTbx = document.querySelector(".message-input");
+const messageLabel = document.querySelector(".message-title");
+
+//Animate nameLabel when nameTbx is focused or not
+nameTbx.addEventListener("focusin", (e) => {
+    nameLabel.classList.add("animate-name-title-when-name-tbx-is-focused");
+});
+
+nameTbx.addEventListener("focusout", (e) => {
+    if (nameTbx.getAttribute('placeholder') === "" && nameTbx.value === '') {
+        nameLabel.classList.remove("animate-name-title-when-name-tbx-is-focused");
+    }
+});
+
+//Animate emailLabel when emailTbx is focused or not
+emailTbx.addEventListener("focusin", (e) => {
+    emailLabel.classList.add("animate-email-title-when-email-tbx-is-focused");
+});
+
+emailTbx.addEventListener("focusout", (e) => {
+    if (emailTbx.getAttribute('placeholder') === "" && emailTbx.value === '') {
+        emailLabel.classList.remove("animate-email-title-when-email-tbx-is-focused");
+    }
+});
+
+//Animate MessageLabel and messageTbx height, when messageTbx is focused or not
+messageTbx.addEventListener("focusin", (e) => {
+    messageLabel.classList.add("animate-message-title-when-message-tbx-is-focused");
+    messageTbx.classList.add("animate-message-tbx-height-when-message-tbx-is-focused");
+});
+
+messageTbx.addEventListener("focusout", (e) => {
+    if (messageTbx.getAttribute('placeholder') === "" && messageTbx.value === '') {
+        messageLabel.classList.remove("animate-message-title-when-message-tbx-is-focused");
+        messageTbx.classList.remove("animate-message-tbx-height-when-message-tbx-is-focused");
+    }
+});
