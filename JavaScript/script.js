@@ -639,13 +639,11 @@ emailTbx.addEventListener("focusout", (e) => {
 messageTbx.addEventListener("focusin", (e) => {
     messageLabel.classList.add("animate-message-title-when-message-tbx-is-focused");
     messageTbx.classList.add("animate-message-tbx-height-when-message-tbx-is-focused");
-    messageTbx.style.background = "orange";
 });
 
 messageTbx.addEventListener("focusout", (e) => {
     if (messageTbx.getAttribute('placeholder') === "" && messageTbx.value === '') {
         messageLabel.classList.remove("animate-message-title-when-message-tbx-is-focused");
         messageTbx.classList.remove("animate-message-tbx-height-when-message-tbx-is-focused");
-        messageTbx.style.background = "transparent";
     }
 });
