@@ -947,6 +947,7 @@ main {
     margin-bottom: 9vw;
     cursor: pointer;
     transition: background-color 0.35s;
+    background-color: blue;
 }
 
 .send-contact-btn:hover {
