@@ -529,12 +529,18 @@ main {
     background-color: #F1A157;
 }
 
+
 .image-frame .profile-image-about {
     transition: transform 0.35s;
 }
 
 .image-frame:hover .profile-image-about {
     transform: scale(0.96);
+}
+
+.image-frame:active .profile-image-about {
+    transition: transform 0.25s;
+    transform: scale(0.93);
 }
 
 .profile-image-about {
@@ -573,9 +579,10 @@ main {
     margin-bottom: 9vw;
     cursor: pointer;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.35s;
+    transition: background-color 0.35s, transform 0.1s;
 }
 
 .lets-work-together-btn:hover {
@@ -584,60 +591,85 @@ main {
 
 .lets-work-together-btn:hover p {
     font-weight: 700, transition all;
+    user-select: none;
 }
 
 .third-paragraph-in-intro {
+    display: flex;
+    white-space: nowrap;
     font-size: 4vw;
     padding-bottom: 3vw;
+    background-color: orange;
+    width: 80%;
+    justify-content: center;
 }
 
-/*=====================*/
-/*======= ABOUT =======*/
-/*=====================*/
+.wrapper-regular-text,
+.wrapper-github,
+.wrapper-linkedin {
+    display: inline-block;
+    background-color: lightgreen;
+    position: relative;
+}
 
 
-.container-about {
-    background-color: #D06474;
+.last-dot {
+    display: inline-block;
+    background-color: lightgreen;
+    margin-left: 0;
+}
+
+.left-github-underline {
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+}
+
+
+
+/* .wrapper-link-line {
+    height: 4px;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
-.about-content-wrapper {
-    padding: 10vw;
-    padding-top: 0;
-    padding-bottom: 0vw;
-    margin-bottom: 12vw;
-    text-align: center;
+.link-line-left {
+    background-color: #000;
+    height: 1px;
+    width: 50%;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
 }
 
-.container-about h2 {
-    font-size: 13.5vw;
-    margin-top: 10vw;
+.link-line-right {
+    background-color: #000;
+    height: 1px;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s;
 }
 
-.about-paragraph1 {
-    margin-top: 4vw;
-    margin-bottom: 8vw;
-    font-family: TwCen;
-    font-weight: bold;
+.lets-work-together-btn:hover .link-line-left {
+    transform: translateX(0);
 }
 
-.about-paragraph2 {
-    margin-bottom: 8vw;
-}
+.lets-work-together-btn:hover .link-line-right {
+    transform: translateX(0);
+} */
 
-.about-paragraph3 {
-    margin-bottom: 8vw;
+
+.lets-work-together-btn:active {
+    transform: scale(0.95);
 }
 
 /*========================*/
 /*======= PROJECTS =======*/
 /*========================*/
-
-
 
 .projects {
     padding-top: 10vw;
@@ -723,6 +755,47 @@ main {
 }
 
 
+/*=====================*/
+/*======= ABOUT =======*/
+/*=====================*/
+
+
+.container-about {
+    background-color: #D06474;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content-wrapper {
+    padding: 10vw;
+    padding-top: 0;
+    padding-bottom: 0vw;
+    margin-bottom: 12vw;
+    text-align: center;
+}
+
+.container-about h2 {
+    font-size: 13.5vw;
+    margin-top: 10vw;
+}
+
+.about-paragraph1 {
+    margin-top: 4vw;
+    margin-bottom: 8vw;
+    font-family: TwCen;
+    font-weight: bold;
+}
+
+.about-paragraph2 {
+    margin-bottom: 8vw;
+}
+
+.about-paragraph3 {
+    margin-bottom: 8vw;
+}
 
 /*=====================*/
 /*===== REFERENCE =====*/
@@ -946,13 +1019,17 @@ main {
     border-bottom-right-radius: 100px;
     margin-bottom: 9vw;
     cursor: pointer;
-    transition: background-color 0.35s;
+    user-select: none;
+    transition: background-color 0.35s, transform 0.1s;
 }
 
 .send-contact-btn:hover {
     background-color: #F1A157;
 }
 
+.send-contact-btn:active {
+    transform: scale(0.95);
+}
 
 /*===== FOOTER =====*/
 footer {
