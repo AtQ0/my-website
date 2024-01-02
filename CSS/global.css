@@ -607,7 +607,6 @@ main {
 .wrapper-github,
 .wrapper-linkedin,
 .wrapper-resume {
-    background-color: lightgreen;
     display: inline-block;
     position: relative;
     overflow: hidden;
