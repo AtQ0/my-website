@@ -87,6 +87,16 @@ function logoHomeLink() {
     window.location.href = url;
 }
 
+//Do the same for logo in footer
+const logoContainerFooter = document.getElementById("top-footer-logo-container");
+
+//Add eventlistene (click-event) to the chosen element
+logoContainerFooter.addEventListener("click", () => {
+    //Set url to a constant
+    const url = "./index.html";
+    //redirect window to chosen url
+    window.location.href = url;
+});
 
 /*==================================================*/
 /*======= SLIDE MENU WHEN BURGER IS CLICKED ========*/
@@ -516,10 +526,19 @@ const projectsSwiper = new Swiper('.projects-swiper', {
 });
 
 
-
 /*=====================================================*/
 /*==== POPULATE EXHIBITION SWIPER WITH DESCRIPTION ====*/
 /*=====================================================*/
+
+
+
+
+
+stringForCreatingDynamicDivsIn
+
+
+
+//OLD STUFF BELOW NEEDS TO BE DELTED ONCE THE ABOVE IS DONE
 
 const swiperBtnNext = document.querySelector(".swiper-button-next");
 const swiperBtnPrev = document.querySelector(".swiper-button-prev");
@@ -583,6 +602,8 @@ function previousDescription() {
         counter--;
     }
 }
+
+//OLD STUFF ABOVE; NEEDS TO BE DELETED ONCE ANOTHER SOLUTION IS FOUND
 
 
 /*=============================================*/
