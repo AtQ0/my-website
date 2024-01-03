@@ -530,11 +530,25 @@ const projectsSwiper = new Swiper('.projects-swiper', {
 /*==== POPULATE EXHIBITION SWIPER WITH DESCRIPTION ====*/
 /*=====================================================*/
 
+let stringForCreatingDynamicDivs;
+const wrapperContentBelowSwiper = document.querySelector(".wrapper-content-below-swiper");
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    stringForCreatingDynamicDivs = `
+    <h5 class="activity">API WEB SITE</h5>
+    <h5 id="swiper-description-header">"TRAVEL EZ: EXPLORE CITIES BY API"</h5>
+    <p id="swiper-description">
+        Embark on an artistic journey through diverse interpretations of faces, from classic paintings
+        to immersive installations and sculptures.
+    </p>
+    `;
+
+    wrapperContentBelowSwiper.innerHTML = stringForCreatingDynamicDivs;
+
+});
 
 
-
-
-stringForCreatingDynamicDivsIn
 
 
 
