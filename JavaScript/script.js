@@ -383,68 +383,68 @@ const projectsSwiper = new Swiper('.projects-swiper', {
         },
         // When window width is greater than 400px and less than or equal to 440px
         440: {
-            slidesPerView: 1.52,
-            spaceBetween: 40,
+            slidesPerView: 1.6,
+            spaceBetween: 45,
         },
         // When window width is greater than 440px and less than or equal to 480px
         480: {
-            slidesPerView: 1.54,
-            spaceBetween: 45,
+            slidesPerView: 1.7,
+            spaceBetween: 55,
         },
         // When window width is greater than 480px and less than or equal to 520px
         520: {
-            slidesPerView: 1.56,
-            spaceBetween: 50,
+            slidesPerView: 1.8,
+            spaceBetween: 65,
         },
         // When window width is greater than 520px and less than or equal to 560px
         560: {
-            slidesPerView: 1.58,
-            spaceBetween: 55,
+            slidesPerView: 1.78,
+            spaceBetween: 75,
         },
         // When window width is greater than 560px and less than or equal to 600px
         600: {
-            slidesPerView: 1.6,
-            spaceBetween: 60,
+            slidesPerView: 1.8,
+            spaceBetween: 85,
         },
         // When window width is greater than 600px and less than or equal to 640px
         640: {
-            slidesPerView: 1.65,
-            spaceBetween: 65,
+            slidesPerView: 1.85,
+            spaceBetween: 95,
         },
         // When window width is greater than 640px and less than or equal to 680px
         680: {
-            slidesPerView: 1.7,
-            spaceBetween: 70,
+            slidesPerView: 1.9,
+            spaceBetween: 105,
         },
         // When window width is greater than 680px and less than or equal to 720px
         720: {
-            slidesPerView: 1.75,
-            spaceBetween: 75,
+            slidesPerView: 1.95,
+            spaceBetween: 115,
         },
         // When window width is greater than 720px and less than or equal to 760px
         760: {
-            slidesPerView: 1.8,
-            spaceBetween: 80,
+            slidesPerView: 2.0,
+            spaceBetween: 125,
         },
         // When window width is greater than 760px and less than or equal to 800px
         800: {
             slidesPerView: 1.85,
-            spaceBetween: 85,
+            spaceBetween: 135,
         },
         // When window width is greater than 800px and less than or equal to 840px
         840: {
             slidesPerView: 1.9,
-            spaceBetween: 90,
+            spaceBetween: 145,
         },
         // When window width is greater than 840px and less than or equal to 880px
         880: {
             slidesPerView: 1.95,
-            spaceBetween: 95,
+            spaceBetween: 155,
         },
         // When window width is greater than 880px and less than or equal to 920px
         920: {
             slidesPerView: 2.0,
-            spaceBetween: 100,
+            spaceBetween: 165,//HHHHHHH
         },
         // When window width is greater than 920px and less than or equal to 960px
         960: {
