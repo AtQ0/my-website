@@ -501,9 +501,9 @@ main {
 
 .first-paragraph-in-intro {
     font-family: TwCen-Medium;
-    margin-top: 10vw;
+    /* margin-top: 10vw; */
     font-size: 6vw;
-    margin-bottom: 3vw;
+    /* margin-bottom: 3vw; */
 }
 
 .top-or-left-container-for-image {
@@ -1353,17 +1353,19 @@ footer hr {
     .top-intro-wrapper {
         display: flex;
         justify-content: center;
-        align-items: end;
+        align-items: center;
         width: 100%;
-        height: 19vw;
+        height: 20vw;
         max-height: 450px;
         background-color: #D06474;
+        background-color: #7C8CA8;
+        background-color: #A75D88;
+
     }
 
     .bottom-intro-wrapper {
         display: flex;
         flex-direction: row;
-
     }
 
     .top-or-left-container-for-image {
@@ -1376,6 +1378,9 @@ footer hr {
     .image-frame {
         margin: 8vw;
         padding: 0.5vw;
+
+        padding: 0;
+        margin: 0;
     }
 
     .content-container-in-intro {
@@ -1383,6 +1388,8 @@ footer hr {
         margin-top: 0;
         margin-bottom: 0;
         background-color: pink;
+        background-color: #D06474;
+        background-color: #7C8CA8;
     }
 
     .second-paragraph-in-intro {
