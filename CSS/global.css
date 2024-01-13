@@ -606,7 +606,6 @@ main {
     padding-bottom: 3vw;
     width: 80%;
     justify-content: center;
-    background-color: red;
 }
 
 .wrapper-regular-text,
@@ -732,12 +731,12 @@ main {
 
 .projects h2 {
     font-size: 13.5vw;
-}
 
+}
 
 .projects-paragraph1 {
     margin-top: 18px;
-    margin-bottom: 8vw;
+    margin-bottom: 6vw;
 }
 
 .wrapper-content-below-swiper {
@@ -749,8 +748,8 @@ main {
 }
 
 .activity {
-    margin-top: 5vw;
-    margin-bottom: 3vw;
+    margin-top: 2vw;
+    margin-bottom: 2.5vw;
 }
 
 #swiper-description {
@@ -782,10 +781,10 @@ main {
     background-color: #A75D88;
 }
 
-/* .swiper-slide {
-    background-color: orange;
-
-} */
+.swiper-slide {
+    border-radius: 4px;
+    overflow: hidden;
+}
 
 .swiper-slide img {
     width: 100%;
@@ -820,23 +819,23 @@ main {
     align-items: center;
 }
 
+.container-about h2 {
+    font-size: 13.5vw;
+    margin-top: 10vw;
+    background-color: lightblue;
+}
+
 .about-content-wrapper {
     padding: 10vw;
     padding-top: 0;
     padding-bottom: 0vw;
     margin-bottom: 10vw;
     text-align: center;
-}
-
-.container-about h2 {
-    font-size: 13.5vw;
-    margin-top: 5vw;
-
+    background-color: yellow;
 }
 
 .about-paragraph1 {
     margin-top: 18px;
-
     margin-bottom: 8vw;
     font-family: TwCen;
     font-weight: bold;
@@ -1261,13 +1260,6 @@ footer hr {
         margin-bottom: 60px;
     }
 
-    /*=====================*/
-    /*======= ABOUT =======*/
-    /*=====================*/
-
-    .container-about h2 {
-        font-size: 80px;
-    }
 
     /*=====================*/
     /*===== PROJECTS ======*/
@@ -1280,6 +1272,16 @@ footer hr {
     .swiper {
         max-height: 400px;
     }
+
+    /*=====================*/
+    /*======= ABOUT =======*/
+    /*=====================*/
+
+    .container-about h2 {
+        font-size: 80px;
+    }
+
+
 
     /*=====================*/
     /*==== REFERENCESS ====*/
@@ -1448,15 +1450,30 @@ footer hr {
     }
 
     .projects-paragraph1 {
-        margin-top: 25px;
-        margin-bottom: 65px;
+        margin-bottom: 45px;
     }
+
+    .activity {
+        margin-top: 2vw;
+        margin-bottom: 3vw;
+    }
+
+    #swiper-description {
+        margin-bottom: 5vw;
+        max-width: 700px;
+    }
+
+
 
     /*===============*/
     /*==== ABOUT ====*/
     /*===============*/
 
 
+    .container-about h2 {
+        margin-top: 5vw;
+        background-color: red;
+    }
 
     /*=====================*/
     /*==== REFERENCESS ====*/
