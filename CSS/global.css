@@ -606,6 +606,7 @@ main {
     padding-bottom: 3vw;
     width: 80%;
     justify-content: center;
+    background-color: red;
 }
 
 .wrapper-regular-text,
@@ -735,7 +736,7 @@ main {
 
 
 .projects-paragraph1 {
-    margin-top: 25px;
+    margin-top: 18px;
     margin-bottom: 8vw;
 }
 
@@ -823,17 +824,19 @@ main {
     padding: 10vw;
     padding-top: 0;
     padding-bottom: 0vw;
-    margin-bottom: 12vw;
+    margin-bottom: 10vw;
     text-align: center;
 }
 
 .container-about h2 {
     font-size: 13.5vw;
-    margin-top: 10vw;
+    margin-top: 5vw;
+
 }
 
 .about-paragraph1 {
-    margin-top: 4vw;
+    margin-top: 18px;
+
     margin-bottom: 8vw;
     font-family: TwCen;
     font-weight: bold;
@@ -1439,7 +1442,7 @@ footer hr {
     /*===== PROJECTS ======*/
     /*=====================*/
     .projects {
-        padding-top: 77px;
+        padding-top: 5vw;
         padding-bottom: 10vw;
         max-height: 950px;
     }
@@ -1452,6 +1455,8 @@ footer hr {
     /*===============*/
     /*==== ABOUT ====*/
     /*===============*/
+
+
 
     /*=====================*/
     /*==== REFERENCESS ====*/
