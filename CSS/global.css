@@ -486,8 +486,6 @@ main {
 
 .intro-and-work-with-me {
     background-color: #7C8CA8;
-    /*#837357*/
-    /*#7C8CA8*/
     width: 100%;
     height: fit-content;
     display: flex;
@@ -499,11 +497,19 @@ main {
     padding-top: 3vw;
 }
 
+.top-intro-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vw;
+    width: 100%;
+    margin-top: 5vw;
+    margin-bottom: 0vw;
+}
+
 .first-paragraph-in-intro {
     font-family: TwCen-Medium;
-    /* margin-top: 10vw; */
     font-size: 6vw;
-    /* margin-bottom: 3vw; */
 }
 
 .top-or-left-container-for-image {
@@ -1354,6 +1360,8 @@ footer hr {
         height: 20vw;
         max-height: 450px;
         background-color: #7C8CA8;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .bottom-intro-wrapper {
