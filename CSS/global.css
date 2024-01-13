@@ -754,7 +754,8 @@ main {
 
 #swiper-description {
     margin-bottom: 5vw;
-    max-width: 700px;
+    width: 80vw;
+    max-width: 500px;
 }
 
 
@@ -1445,7 +1446,7 @@ footer hr {
     /*=====================*/
     .projects {
         padding-top: 5vw;
-        padding-bottom: 10vw;
+        padding-bottom: 6.25vw;
         max-height: 950px;
     }
 
@@ -1454,15 +1455,8 @@ footer hr {
     }
 
     .activity {
-        margin-top: 2vw;
-        margin-bottom: 3vw;
+        margin-bottom: 2vw;
     }
-
-    #swiper-description {
-        margin-bottom: 5vw;
-        max-width: 700px;
-    }
-
 
 
     /*===============*/

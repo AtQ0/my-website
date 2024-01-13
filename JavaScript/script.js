@@ -518,8 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <h5 class="activity">API WEB SITE</h5>
     <h5 id="swiper-description-header">"TRAVEL EZ: EXPLORE CITIES BY API"</h5>
     <p id="swiper-description">
-        Embark on an artistic journey through diverse interpretations of faces, from classic paintings
-        to immersive installations and sculptures.
+        Embark on an artistic journey through diverse interpretations of faces, from classic paintings to immersive installations and sculptures.
     </p>
     `;
 
