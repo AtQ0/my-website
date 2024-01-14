@@ -753,7 +753,6 @@ main {
     margin-bottom: 5vw;
     width: 80vw;
     max-width: 500px;
-    background-color: green;
 }
 
 
@@ -916,6 +915,7 @@ main {
     height: fit-content;
     padding: 5vw;
     padding-top: 10vw;
+    padding-bottom: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -923,14 +923,12 @@ main {
     background-color: #7C8CA8;
 }
 
-
 .contact h2 {
     font-size: 13.5vw;
-
 }
 
 .first-contact-paragraph {
-    margin-top: 6vw;
+    margin-top: 18px;
     margin-left: 5vw;
     margin-right: 5vw;
 }
@@ -1018,7 +1016,6 @@ main {
     justify-content: flex-end;
     width: 300px;
     padding: 5px;
-    margin-bottom: 20px;
 }
 
 .wrapper-message textarea {
@@ -1056,7 +1053,8 @@ main {
 }
 
 .send-contact-btn {
-    margin-top: 8vw;
+    margin-top: 11vw;
+    margin-bottom: 14vw;
     height: fit-content;
     width: fit-content;
     padding: 40px;
@@ -1067,7 +1065,6 @@ main {
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    margin-bottom: 9vw;
     cursor: pointer;
     user-select: none;
     transition: background-color 0.35s, transform 0.1s;
@@ -1286,7 +1283,6 @@ footer hr {
     .activity {
         margin-top: 50px;
         margin-bottom: 30px;
-        background-color: red;
     }
 
     #swiper-description {
@@ -1338,9 +1334,19 @@ footer hr {
     /*===== CONTACT =====*/
     /*===================*/
 
+    .contact {
+        padding-top: 60px;
+    }
+
     .contact h2 {
         font-size: 80px;
     }
+
+    .send-contact-btn {
+        margin-top: 65px;
+        margin-bottom: 84px;
+    }
+
 }
 
 
@@ -1353,7 +1359,6 @@ footer hr {
     .hamburger-container {
         margin-left: 30px;
     }
-
 
     .left-links-in-nav {
         display: flex;
@@ -1521,6 +1526,7 @@ footer hr {
     }
 
 }
+
 
 @media screen and (min-width: 980px) {
 
