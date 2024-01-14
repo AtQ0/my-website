@@ -753,6 +753,7 @@ main {
     margin-bottom: 5vw;
     width: 80vw;
     max-width: 500px;
+    background-color: green;
 }
 
 
@@ -828,7 +829,6 @@ main {
     padding-bottom: 0vw;
     margin-bottom: 14vw;
     text-align: center;
-
 }
 
 .about-paragraph1 {
@@ -867,11 +867,12 @@ main {
 
 .references h2 {
     font-size: 13.5vw;
-    margin-bottom: 6vw;
+    margin-bottom: 18px;
 }
 
 .first-reference-paragraph {
     margin-bottom: 6vw;
+    max-width: 700px;
 }
 
 .references-swiper {
@@ -1270,7 +1271,7 @@ footer hr {
 
     .projects {
         padding-top: 60px;
-        padding-bottom: 60px;
+        padding-bottom: 84px;
         max-height: 950px;
     }
 
@@ -1285,6 +1286,7 @@ footer hr {
     .activity {
         margin-top: 50px;
         margin-bottom: 30px;
+        background-color: red;
     }
 
     #swiper-description {
@@ -1294,6 +1296,10 @@ footer hr {
     /*=====================*/
     /*======= ABOUT =======*/
     /*=====================*/
+
+    .about-content-wrapper {
+        margin-bottom: 84px;
+    }
 
     .container-about h2 {
         font-size: 80px;
@@ -1317,6 +1323,12 @@ footer hr {
     /*=====================*/
     /*==== REFERENCESS ====*/
     /*=====================*/
+
+    .references {
+        padding-top: 60px;
+        padding-bottom: 104.5px;
+    }
+
     .references h2 {
         font-size: 80px;
     }
@@ -1475,32 +1487,25 @@ footer hr {
     /*===== PROJECTS ======*/
     /*=====================*/
 
-    .projects {
-        padding-top: 5vw;
-        padding-bottom: 6.25vw;
-        max-height: 950px;
-    }
-
     .projects-paragraph1 {
         margin-bottom: 45px;
     }
-
-
 
     /*===============*/
     /*==== ABOUT ====*/
     /*===============*/
 
-
     .container-about h2 {
         margin-top: 5vw;
-        background-color: red;
     }
 
     /*=====================*/
     /*==== REFERENCESS ====*/
     /*=====================*/
 
+    .first-reference-paragraph {
+        margin-bottom: 45px;
+    }
 
     /*===================*/
     /*===== CONTACT =====*/
