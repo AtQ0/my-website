@@ -1053,8 +1053,8 @@ main {
 }
 
 .send-contact-btn {
-    margin-top: 11vw;
-    margin-bottom: 14vw;
+    margin-top: 14vw;
+    margin-bottom: 16vw;
     height: fit-content;
     width: fit-content;
     padding: 40px;
@@ -1343,8 +1343,8 @@ footer hr {
     }
 
     .send-contact-btn {
-        margin-top: 65px;
-        margin-bottom: 84px;
+        margin-top: 84px;
+        margin-bottom: 95px;
     }
 
 }
