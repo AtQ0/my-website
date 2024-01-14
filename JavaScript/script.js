@@ -169,6 +169,9 @@ hamburger.addEventListener("click", () => {
         //Hamburger shall move on-scroll when menu is NOT evident
         hamburger.style.position = "static";
 
+        //Remove overlay styles to hide the dark overlay
+
+
         //Remove class that indicates if hamburger JS onHover is activated
         rectB.classList.remove("hamburgerJSHoverActivated");
 

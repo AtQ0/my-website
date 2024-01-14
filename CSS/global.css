@@ -96,7 +96,6 @@ h6 {
     font-family: Raisonne;
 }
 
-
 /*=============================*/
 /*========== HEADER ===========*/
 /*=============================*/
@@ -746,7 +745,7 @@ main {
 }
 
 .activity {
-    margin-top: 4vw;
+    margin-top: 8vw;
     margin-bottom: 5vw;
 }
 
@@ -821,16 +820,15 @@ main {
 .container-about h2 {
     font-size: 13.5vw;
     margin-top: 10vw;
-    background-color: lightblue;
 }
 
 .about-content-wrapper {
     padding: 10vw;
     padding-top: 0;
     padding-bottom: 0vw;
-    margin-bottom: 10vw;
+    margin-bottom: 14vw;
     text-align: center;
-    background-color: yellow;
+
 }
 
 .about-paragraph1 {
@@ -1233,6 +1231,12 @@ footer hr {
         max-height: 400px;
     }
 
+    /*=====================*/
+    /*======= ABOUT =======*/
+    /*=====================*/
+
+
+
     /*====================*/
     /*====== FOOTER ======*/
     /*====================*/
@@ -1264,12 +1268,27 @@ footer hr {
     /*===== PROJECTS ======*/
     /*=====================*/
 
+    .projects {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        max-height: 950px;
+    }
+
     .projects h2 {
         font-size: 80px;
     }
 
     .swiper {
         max-height: 400px;
+    }
+
+    .activity {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    #swiper-description {
+        margin-bottom: 30px;
     }
 
     /*=====================*/
@@ -1280,6 +1299,19 @@ footer hr {
         font-size: 80px;
     }
 
+
+    .about-paragraph1 {
+        margin-top: 18px;
+        margin-bottom: 35px;
+    }
+
+    .about-paragraph2 {
+        margin-bottom: 35px;
+    }
+
+    .about-paragraph3 {
+        margin-bottom: 35px;
+    }
 
 
     /*=====================*/
@@ -1442,6 +1474,7 @@ footer hr {
     /*=====================*/
     /*===== PROJECTS ======*/
     /*=====================*/
+
     .projects {
         padding-top: 5vw;
         padding-bottom: 6.25vw;
@@ -1452,9 +1485,6 @@ footer hr {
         margin-bottom: 45px;
     }
 
-    .activity {
-        margin-bottom: 2vw;
-    }
 
 
     /*===============*/
