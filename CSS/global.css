@@ -196,7 +196,6 @@ nav {
 
 .hamburger-container {
     height: fit-content;
-    min-height: 20px;
     width: fit-content;
     min-width: 35px;
     display: flex;
@@ -212,7 +211,6 @@ nav {
 }
 
 .hamburger-wrapper {
-
     min-height: 12.5px;
     min-width: 25px;
     padding-top: 1px;
@@ -748,7 +746,7 @@ main {
 }
 
 .activity {
-    margin-top: 3vw;
+    margin-top: 4vw;
     margin-bottom: 5vw;
 }
 

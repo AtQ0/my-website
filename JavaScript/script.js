@@ -116,7 +116,14 @@ let isHamburgerClickedOnce = false;
 //SET A CLICK EVENT ON constant
 hamburger.addEventListener("click", () => {
 
+    //First time hamburger is clicked
     if (isHamburgerClickedOnce === false) {
+
+        //Hamburger shall not move on-scroll when menu is evident
+        hamburger.style.position = "fixed";
+
+        //Set dark veil over background
+
 
         //Compensate vertical pos of rectB if js onHover is not activated yet
         //It activates when user the first time hovers in/out of hamburger wrapper
@@ -127,7 +134,7 @@ hamburger.addEventListener("click", () => {
         //Instruct rectB to staticly stay on the onHover position
         rectB.classList.add("stop-rectB-on-right-position");
 
-        hamburger.removeEventListener("mouseover", mouseoverHandlarForBurger);
+        hamburger.removeEventListener("mouseover", mouseoverHandlerForBurger);
         hamburger.removeEventListener("mouseout", mouseoutHandlerForBurger);
 
         setTimeout(function () {
@@ -156,7 +163,11 @@ hamburger.addEventListener("click", () => {
         //Set boolean as true, so that it can be used for going back
         isHamburgerClickedOnce = true;
     }
+    //Second time hamburger is clicked
     else {
+
+        //Hamburger shall move on-scroll when menu is NOT evident
+        hamburger.style.position = "static";
 
         //Remove class that indicates if hamburger JS onHover is activated
         rectB.classList.remove("hamburgerJSHoverActivated");
@@ -187,7 +198,7 @@ hamburger.addEventListener("click", () => {
 
         setTimeout(function () {
             //Add Hover effect on hamburger
-            hamburger.addEventListener("mouseover", mouseoverHandlarForBurger);
+            hamburger.addEventListener("mouseover", mouseoverHandlerForBurger);
             hamburger.addEventListener("mouseout", mouseoutHandlerForBurger);
         }, 1000);
 
@@ -200,7 +211,7 @@ hamburger.addEventListener("click", () => {
     }
 });
 
-function mouseoverHandlarForBurger() {
+function mouseoverHandlerForBurger() {
     //Add your mouseover event code here
     rectB.style.marginRight = "0px";
 
