@@ -674,3 +674,31 @@ messageTbx.addEventListener("focusout", (e) => {
         messageTbx.classList.remove("animate-message-tbx-height-when-message-tbx-is-focused");
     }
 });
+
+
+/*=======================================*/
+/*=============== FOOTER ================*/
+/*=======================================*/
+
+//Event that disables page-reload whenever a link is clicked
+document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            var targetId = this.getAttribute('href').substring(1);
+            var targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                var offsetTop = targetElement.offsetTop;
+
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});

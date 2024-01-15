@@ -1078,7 +1078,10 @@ main {
     transform: scale(0.95);
 }
 
-/*===== FOOTER =====*/
+/*=====================*/
+/*====== FOOTER =======*/
+/*=====================*/
+
 footer {
     height: fit-content;
     background-color: #D06474;
@@ -1117,22 +1120,52 @@ footer {
     transform: scale(-1);
 }
 
-
-.middle-footer-with-links {
-    display: flex;
-    justify-content: center;
-}
-
-.middle-footer-with-links ol {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/*======= FOOTER LINKS START =======*/
+.middle-footer-link-container {
     text-align: center;
     margin-top: 4vw;
     margin-bottom: 10px;
     cursor: pointer;
     user-select: none;
 }
+
+.middle-footer-link-container ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-footer-link-container li {
+    width: fit-content;
+    overflow: hidden;
+    position: relative;
+}
+
+.left-footer-link-underline {
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+
+.right-footer-link-underline {
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    float: right;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+}
+
+.middle-footer-link-container li:hover .left-footer-link-underline,
+.middle-footer-link-container li:hover .right-footer-link-underline {
+    transform: translateX(0);
+}
+
+/*======= FOOTER LINKS END =======*/
 
 .container-divider {
     height: 10px;
@@ -1345,6 +1378,7 @@ footer hr {
     .send-contact-btn {
         margin-top: 84px;
         margin-bottom: 95px;
+        background-color: red;
     }
 
 }
@@ -1518,7 +1552,7 @@ footer hr {
 
     /*===== FOOOTER =====*/
 
-    .middle-footer-with-links ol {
+    .middle-footer-link-container ol {
         flex-direction: row;
         justify-content: space-between;
         width: 70vw;
