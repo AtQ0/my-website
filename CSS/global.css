@@ -68,6 +68,13 @@ h6 {
 }
 
 @font-face {
+    font-family: "Raisonne-italic";
+    src: url("../Media/Fonts/Raisonne-DemiBold-italic.ttf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
     font-family: "TwCen";
     src: url("../Media/Fonts/Tw\ Cen\ MT\ W01\ Light.ttf") format("opentype");
     font-weight: light;
@@ -292,6 +299,11 @@ nav {
     align-items: center;
     z-index: 4;
     user-select: none;
+}
+
+.top-logo-container:hover .top-part-of-top-logo,
+.top-logo-container:hover .bottom-part-of-top-logo {
+    font-family: Raisonne-italic;
 }
 
 .top-logo-container span {
@@ -1105,6 +1117,16 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+
+.top-footer-logo-container:hover .top-part-of-top-footer-logo,
+.top-footer-logo-container:hover .bottom-part-of-top-footer-logo {
+    font-family: Raisonne-italic;
+}
+
+
+
+
 
 .top-footer-logo-container span {
     font-family: Raisonne;
