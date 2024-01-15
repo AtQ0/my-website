@@ -313,7 +313,7 @@ nav {
     transition: opacity 1s;
 }
 
-.right-links-in-nav {
+.right-links-in-nav-container {
     display: none;
     transition: opacity 1s;
 }
@@ -1217,7 +1217,6 @@ footer hr {
 /*===== RESPONSIVNESS FOR LARGER SCREENS =====*/
 /*============================================*/
 
-
 @media screen and (min-width: 501px) {
 
     header h1 {
@@ -1229,10 +1228,8 @@ footer hr {
         height: 53px;
     }
 
-    .top-logo-container span {
-        font-size: 35px;
-        line-height: 28px;
-    }
+
+
 
     body {
         font-family: TwCen;
@@ -1383,6 +1380,16 @@ footer hr {
 
 }
 
+/*Media query only for the topLogo*/
+@media screen and (min-width: 698px) {
+
+    .top-logo-container span {
+        font-size: 35px;
+        line-height: 28px;
+    }
+}
+
+
 
 @media screen and (min-width: 769px) {
 
@@ -1394,7 +1401,6 @@ footer hr {
         margin-left: 30px;
     }
 
-    /*NEW NAVBAR UNDER CONSTRUCTION*/
     .left-links-in-nav-container {
         display: flex;
         position: absolute;
@@ -1408,6 +1414,8 @@ footer hr {
     }
 
     .left-links-in-nav-container ol {
+        width: 25vw;
+        max-width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1415,8 +1423,7 @@ footer hr {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 25vw;
-        max-width: 300px;
+
     }
 
     .left-links-in-nav-container li {
@@ -1448,26 +1455,31 @@ footer hr {
         transform: translateX(0);
     }
 
-    /*OLD*/
-    .left-links-in-nav {
+
+    .right-links-in-nav-container {
         display: flex;
-        justify-content: space-between;
         position: absolute;
-        right: 60%;
-        top: 27px;
-        width: 25vw;
-        max-width: 300px;
+        left: 50%;
     }
 
-    .right-links-in-nav {
-        display: flex;
-        justify-content: space-between;
-        margin-left: 10vw;
-        position: absolute;
+    .right-links-in-nav-container ol {
         width: 30vw;
         max-width: 300px;
-        left: 50%;
-        top: 27px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10vw;
+    }
+
+    .right-links-in-nav-container li {
+        width: fit-content;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .right-links-in-nav-container li:hover .left-navbar-link-underline,
+    .right-links-in-nav-container li:hover .right-navbar-link-underline {
+        transform: translateX(0);
     }
 
     .location-container {
