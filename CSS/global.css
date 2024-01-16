@@ -373,7 +373,7 @@ nav {
     max-width: 280px;
     height: 100vh;
     top: 0;
-    left: -80%;
+    left: -70%;
     background-color: #A75D88;
     padding-left: 35px;
     padding-top: 180px;
@@ -474,7 +474,7 @@ header h1 {
 }
 
 .move-menu-out-of-view {
-    left: -80%;
+    left: -70%;
 }
 
 /*========================*/
@@ -1139,7 +1139,7 @@ main {
     border-bottom-right-radius: 100px;
     cursor: pointer;
     user-select: none;
-    transition: background-color 0.35s, transform 0.1s;
+    transition: background-color 0.35s, transform 0.75s;
     background-color: pink;
 }
 

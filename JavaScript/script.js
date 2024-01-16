@@ -106,8 +106,6 @@ logoContainerFooter.addEventListener("click", () => {
 const hamburger = document.querySelector(".hamburger-wrapper");
 const slidingMenu = document.getElementById("container-menu");
 const main = document.getElementById("theMain");
-const leftLinksInNav = document.getElementById("left-links-in-nav");
-const rightLinksInNav = document.getElementById("right-links-in-nav");
 const rectA = document.querySelector(".rectA");
 const rectB = document.querySelector(".rectB");
 const rectC = document.querySelector(".rectC");
@@ -207,7 +205,7 @@ hamburger.addEventListener("click", () => {
         }, 1000);
 
         //Slow down transition speed. To be used below, when sliding back menu
-        slidingMenu.style.transition = "background-color 0.75s, left 2s";
+        slidingMenu.style.transition = "background-color 0.75s, left 1.25s";
 
         //Slide back the hamburger menu, out of view
         slidingMenu.classList.remove("move-menu-in-view");
@@ -231,18 +229,6 @@ function mouseoutHandlerForBurger() {
     rectB.style.marginRight = "10px";
 }
 
-/*==== ADDITIONAL RESIZE FUNCTION TO AMEND DISPLAY BUG TO LINKS IN NAV =====*/
-window.onresize = manageLinksInNavInRelationToMenu;
-function manageLinksInNavInRelationToMenu() {
-    if (window.innerWidth >= 769 && isHamburgerClickedOnce === false) {
-        leftLinksInNav.style.display = "flex";
-        rightLinksInNav.style.display = "flex";
-    }
-    else if (window.innerWidth < 769) {
-        leftLinksInNav.style.display = "none";
-        rightLinksInNav.style.display = "none";
-    }
-}
 
 /*=========================================*/
 /*================ SLOGAN =================*/
