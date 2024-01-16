@@ -373,13 +373,13 @@ nav {
     max-width: 280px;
     height: 100vh;
     top: 0;
-    left: -120%;
+    left: -50%;
     background-color: #A75D88;
     padding-left: 35px;
     padding-top: 180px;
 
     /*Used for sliding animation prompted by JS*/
-    transition: background-color 0.75s, left 0.75s;
+    transition: background-color 0.75s, left 1s;
 }
 
 .wrapper-menu {
@@ -389,15 +389,75 @@ nav {
     font-size: 35px;
 }
 
-.links {
+.menu-links {
     display: flex;
     flex-direction: column;
     row-gap: 2vw;
 }
 
-.links li {
+.menu-links li {
+    width: fit-content;
     margin: 5px;
 }
+
+/*On hover alternative one*/
+.menu-link-about:hover {
+    font-family: Raisonne-italic;
+}
+
+.menu-link-home:hover {
+    font-family: Raisonne-italic;
+}
+
+/*On hover alternative two*/
+.menu-link-projects {
+    overflow: hidden;
+    position: relative;
+}
+
+.left-menu-link-underline {
+    background-color: black;
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+
+.right-menu-link-underline {
+    background-color: black;
+    height: 2px;
+    width: 50%;
+    float: right;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+}
+
+.menu-link-projects:hover .left-menu-link-underline,
+.menu-link-projects:hover .right-menu-link-underline {
+    transform: translateX(0);
+}
+
+.menu-link-references {
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-link-references:hover .left-menu-link-underline,
+.menu-link-references:hover .right-menu-link-underline {
+    transform: translateX(0);
+}
+
+.menu-link-contact {
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-link-contact:hover .left-menu-link-underline,
+.menu-link-contact:hover .right-menu-link-underline {
+    transform: translateX(0);
+}
+
 
 header h1 {
     font-family: Raisonne;
@@ -414,7 +474,7 @@ header h1 {
 }
 
 .move-menu-out-of-view {
-    left: -120%;
+    left: -50%;
 }
 
 /*========================*/
@@ -1397,7 +1457,6 @@ footer hr {
     .send-contact-btn {
         margin-top: 84px;
         margin-bottom: 95px;
-        background-color: red;
     }
 
 }
@@ -1533,7 +1592,7 @@ footer hr {
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 20vw;
+        height: 18.7vw;
         max-height: 450px;
         background-color: #7C8CA8;
         margin-top: 0;
@@ -1543,7 +1602,7 @@ footer hr {
     .bottom-intro-wrapper {
         display: flex;
         flex-direction: row;
-        width: 100vw;
+        width: 100%;
         padding-bottom: 8vw;
     }
 
@@ -1732,6 +1791,13 @@ footer hr {
     /*===================*/
 }
 
+
+/* @media screen and (min-width: 1265px) {
+    .image-frame {
+        height: 470px;
+        width: 470px;
+    }
+} */
 
 @media screen and (min-width: 1621px) {
 

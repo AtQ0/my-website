@@ -154,9 +154,10 @@ hamburger.addEventListener("click", () => {
 
         }, 200);
 
+        //Increse transition speed. To be used below, when sliding menu forward
+        slidingMenu.style.transition = "background-color 0.75s, left 1s";
 
         //Slide out the hamburger menu
-        // slidingMenu.style.left = "0px";
         slidingMenu.classList.remove("move-menu-out-of-view");
         slidingMenu.classList.add("move-menu-in-view");
 
@@ -205,6 +206,8 @@ hamburger.addEventListener("click", () => {
             hamburger.addEventListener("mouseout", mouseoutHandlerForBurger);
         }, 1000);
 
+        //Slow down transition speed. To be used below, when sliding back menu
+        slidingMenu.style.transition = "background-color 0.75s, left 2s";
 
         //Slide back the hamburger menu, out of view
         slidingMenu.classList.remove("move-menu-in-view");
@@ -349,6 +352,18 @@ setTimeout(function () {
     }
 }, 2000);
 
+
+/*===========================================*/
+/*======== LET'S WORK TOGETHER BTN ==========*/
+/*===========================================*/
+
+const letsWorkTogetherBtn = document.querySelector(".lets-work-together-btn");
+const contactSection = document.getElementById("contact");
+
+letsWorkTogetherBtn.addEventListener("click", () => {
+    // Scroll to the top of the anchored div
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+})
 
 
 /*===========================================*/
