@@ -152,9 +152,6 @@ hamburger.addEventListener("click", () => {
 
         }, 200);
 
-        //Increse transition speed. To be used below, when sliding menu forward
-        slidingMenu.style.transition = "background-color 0.75s, left 1s";
-
         //Slide out the hamburger menu
         slidingMenu.classList.remove("move-menu-out-of-view");
         slidingMenu.classList.add("move-menu-in-view");
@@ -204,8 +201,6 @@ hamburger.addEventListener("click", () => {
             hamburger.addEventListener("mouseout", mouseoutHandlerForBurger);
         }, 1000);
 
-        //Slow down transition speed. To be used below, when sliding back menu
-        slidingMenu.style.transition = "background-color 0.75s, left 1.25s";
 
         //Slide back the hamburger menu, out of view
         slidingMenu.classList.remove("move-menu-in-view");
