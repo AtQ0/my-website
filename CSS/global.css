@@ -1140,6 +1140,7 @@ main {
     cursor: pointer;
     user-select: none;
     transition: background-color 0.35s, transform 0.1s;
+    background-color: pink;
 }
 
 .send-contact-btn:hover {
