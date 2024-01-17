@@ -216,6 +216,7 @@ nav {
     transition: top 1.75s, opacity 3s;
     height: 10.5vw;
     overflow: hidden;
+    background-color: pink;
 }
 
 .animateNavOnPageLoad {
@@ -430,6 +431,18 @@ nav {
 }
 
 .menu-link-home:hover {
+    font-family: Raisonne-italic;
+}
+
+.menu-link-projects:hover {
+    font-family: Raisonne-italic;
+}
+
+.menu-link-references:hover {
+    font-family: Raisonne-italic;
+}
+
+.menu-link-contact:hover {
     font-family: Raisonne-italic;
 }
 
