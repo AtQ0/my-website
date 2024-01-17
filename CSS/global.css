@@ -216,7 +216,6 @@ nav {
     transition: top 1.75s, opacity 3s;
     height: 10.5vw;
     overflow: hidden;
-    background-color: blue;
 }
 
 .animateNavOnPageLoad {
@@ -389,7 +388,6 @@ nav {
 /*==== MENU ====*/
 .container-menu {
     display: flex;
-    flex-direction: column;
     /*display needs to be set to none*/
     position: fixed;
     z-index: 6;
@@ -1300,7 +1298,6 @@ footer hr {
 
     .social-media-container {
         top: 720px;
-        background-color: orange;
     }
 }
 
