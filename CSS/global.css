@@ -387,10 +387,10 @@ nav {
 
 /*==== MENU ====*/
 .container-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
     /*display needs to be set to none*/
-    justify-content: start;
-    align-items: start;
+
     position: fixed;
     z-index: 6;
     width: 60%;
@@ -401,7 +401,6 @@ nav {
     background-color: #A75D88;
     padding-left: 35px;
     padding-top: 180px;
-
     /*Used for sliding animation prompted by JS*/
     transition: background-color 0.75s, left 1s;
 }
@@ -411,6 +410,7 @@ nav {
     display: flex;
     flex-direction: column;
     font-size: 35px;
+    width: fit-content;
 }
 
 .menu-links {
@@ -482,6 +482,15 @@ nav {
     transform: translateX(0);
 }
 
+.social-media-container {
+    display: flex;
+    width: fit-content;
+    /* margin-bottom: 100px; */
+    position: absolute;
+    top: 75%;
+
+}
+
 
 header h1 {
     font-family: Raisonne;
@@ -500,6 +509,7 @@ header h1 {
 .move-menu-out-of-view {
     left: -320px;
 }
+
 
 /*========================*/
 /*====== TOP SLOGAN ======*/
