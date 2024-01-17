@@ -1172,15 +1172,10 @@ footer {
     align-items: center;
 }
 
-
 .top-footer-logo-container:hover .top-part-of-top-footer-logo,
 .top-footer-logo-container:hover .bottom-part-of-top-footer-logo {
     font-family: Raisonne-italic;
 }
-
-
-
-
 
 .top-footer-logo-container span {
     font-family: Raisonne;
@@ -1270,6 +1265,12 @@ footer hr {
     height: 25PX;
     margin-right: 10px;
     margin-bottom: 0;
+    cursor: pointer;
+    transition: transform 0.35s;
+}
+
+.github-container-for-footer:hover svg {
+    transform: scale(1.15);
 }
 
 .linkedin-container-for-footer svg {
@@ -1277,15 +1278,27 @@ footer hr {
     height: 25px;
     margin-right: 10px;
     margin-bottom: 0;
+    cursor: pointer;
+    transition: transform 0.35s;
+}
+
+
+.linkedin-container-for-footer:hover svg {
+    transform: scale(1.15);
 }
 
 .location-container-for-footer svg {
     width: 20px;
     height: 25px;
     margin-bottom: 0;
+    cursor: pointer;
+    transition: transform 0.35s;
 }
 
 
+.location-container-for-footer:hover svg {
+    transform: scale(1.15);
+}
 
 
 
