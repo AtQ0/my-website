@@ -216,7 +216,7 @@ nav {
     transition: top 1.75s, opacity 3s;
     height: 10.5vw;
     overflow: hidden;
-    background-color: pink;
+    background-color: blue;
 }
 
 .animateNavOnPageLoad {
@@ -450,7 +450,7 @@ nav {
     display: flex;
     width: fit-content;
     position: absolute;
-    top: 700px;
+    top: 160vw;
     margin-left: 8px;
 }
 
@@ -1294,6 +1294,15 @@ footer hr {
 /*============================================*/
 /*===== RESPONSIVNESS FOR LARGER SCREENS =====*/
 /*============================================*/
+
+
+@media screen and (min-width: 450px) {
+
+    .social-media-container {
+        top: 720px;
+        background-color: orange;
+    }
+}
 
 @media screen and (min-width: 501px) {
 
