@@ -390,7 +390,6 @@ nav {
     display: flex;
     flex-direction: column;
     /*display needs to be set to none*/
-
     position: fixed;
     z-index: 6;
     width: 60%;
@@ -409,6 +408,7 @@ nav {
     font-family: Raisonne;
     display: flex;
     flex-direction: column;
+    position: absolute;
     font-size: 35px;
     width: fit-content;
 }
@@ -433,64 +433,13 @@ nav {
     font-family: Raisonne-italic;
 }
 
-/*On hover alternative two*/
-.menu-link-projects {
-    overflow: hidden;
-    position: relative;
-}
-
-.left-menu-link-underline {
-    background-color: black;
-    height: 2px;
-    width: 50%;
-    position: absolute;
-    transform: translateX(-100%);
-    transition: transform 0.5s;
-}
-
-.right-menu-link-underline {
-    background-color: black;
-    height: 2px;
-    width: 50%;
-    float: right;
-    transform: translateX(100%);
-    transition: transform 0.5s;
-}
-
-.menu-link-projects:hover .left-menu-link-underline,
-.menu-link-projects:hover .right-menu-link-underline {
-    transform: translateX(0);
-}
-
-.menu-link-references {
-    overflow: hidden;
-    position: relative;
-}
-
-.menu-link-references:hover .left-menu-link-underline,
-.menu-link-references:hover .right-menu-link-underline {
-    transform: translateX(0);
-}
-
-.menu-link-contact {
-    overflow: hidden;
-    position: relative;
-}
-
-.menu-link-contact:hover .left-menu-link-underline,
-.menu-link-contact:hover .right-menu-link-underline {
-    transform: translateX(0);
-}
-
 .social-media-container {
     display: flex;
     width: fit-content;
-    /* margin-bottom: 100px; */
     position: absolute;
-    top: 75%;
-
+    top: 700px;
+    margin-left: 8px;
 }
-
 
 header h1 {
     font-family: Raisonne;
