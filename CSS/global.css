@@ -118,10 +118,13 @@ h6 {
     left: 0;
     background-color: black;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.75s;
     z-index: 6;
 }
 
+.increase-overlay-opacity {
+    opacity: 0.7;
+}
 
 /*=============================*/
 /*========== HEADER ===========*/
