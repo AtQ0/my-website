@@ -103,6 +103,8 @@ logoContainerFooter.addEventListener("click", () => {
 /*==================================================*/
 
 //GET ELEMENT FROM DOM
+const globalOverlayDiv = document.querySelector(".global-overlay");
+const localOverlayDiv = document.querySelector(".local-overlay");
 const hamburger = document.querySelector(".hamburger-wrapper");
 const slidingMenu = document.getElementById("container-menu");
 const main = document.getElementById("theMain");
@@ -119,21 +121,6 @@ hamburger.addEventListener("click", () => {
 
         onFirstHamburgerClick();
 
-        //Wait for the menu to roll out
-
-        //Hide menu if evident, and user clicks outside menu or on menu link
-        // document.addEventListener('click', function (event) {
-        //     const menuDiv = document.getElementById('container-menu');
-
-        //     //Wait for the menu to roll out
-
-        //     // Check if the clicked element is not the div or a descendant of the div
-        //     if (isHamburgerClickedOnce === true && !menuDiv.contains(event.target)) {
-        //         alert("clicked outside menu")
-        //     }
-
-        // });
-
     }
     //Second time hamburger is clicked
     else {
@@ -149,8 +136,15 @@ function onFirstHamburgerClick() {
     //Hamburger shall not move on-scroll when menu is evident
     hamburger.style.position = "fixed";
 
-    //Set dark veil over background
+    //Set dark overlay over background
+    globalOverlayDiv.style.display = "block";
+    localOverlayDiv.style.display = "block";
 
+    //Initiate opacity transition from 0 to 0.7
+    setTimeout(function () {
+        globalOverlayDiv.style.opacity = "0.7"
+        localOverlayDiv.style.opacity = "0.7";
+    }, 100)
 
     //Compensate vertical pos of rectB if js onHover is not activated yet
     //It activates when user the first time hovers in/out of hamburger wrapper
@@ -194,8 +188,15 @@ function onSecondHamburgerClick() {
     //Hamburger shall move on-scroll when menu is NOT evident
     hamburger.style.position = "static";
 
-    //Remove overlay styles to hide the dark overlay
+    //Transition opacity of overlays from 0.7 to 0
+    globalOverlayDiv.style.opacity = "0";
+    localOverlayDiv.style.opacity = "0";
 
+    //Remove overlay styles once transition has finished
+    setTimeout(function () {
+        globalOverlayDiv.style.display = "none";
+        localOverlayDiv.style.display = "none";
+    }, 500)
 
     //Remove class that indicates if hamburger JS onHover is activated
     rectB.classList.remove("hamburgerJSHoverActivated");
@@ -223,13 +224,11 @@ function onSecondHamburgerClick() {
 
     }, 400);
 
-
     setTimeout(function () {
         //Add Hover effect on hamburger
         hamburger.addEventListener("mouseover", mouseoverHandlerForBurger);
         hamburger.addEventListener("mouseout", mouseoutHandlerForBurger);
     }, 1000);
-
 
     //Slide back the hamburger menu, out of view
     slidingMenu.classList.remove("move-menu-in-view");
