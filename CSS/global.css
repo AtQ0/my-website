@@ -119,7 +119,7 @@ h6 {
     background-color: black;
     opacity: 0;
     transition: opacity 0.75s;
-    z-index: 6;
+    z-index: 5;
 }
 
 .increase-overlay-opacity {
@@ -450,7 +450,7 @@ nav {
     position: absolute;
     top: 160vw;
     margin-left: 8px;
-    background-color: white;
+    background-color: green;
 }
 
 header h1 {
