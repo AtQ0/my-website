@@ -103,7 +103,6 @@ logoContainerFooter.addEventListener("click", () => {
 /*==================================================*/
 
 //GET ELEMENT FROM DOM
-const globalOverlayDiv = document.querySelector(".global-overlay");
 const localOverlayDiv = document.querySelector(".local-overlay");
 const hamburger = document.querySelector(".hamburger-wrapper");
 const slidingMenu = document.getElementById("container-menu");
@@ -137,12 +136,10 @@ function onFirstHamburgerClick() {
     hamburger.style.position = "fixed";
 
     //Set dark overlay over background
-    globalOverlayDiv.style.display = "block";
     localOverlayDiv.style.display = "block";
 
     //Initiate opacity transition from 0 to 0.7
     setTimeout(function () {
-        globalOverlayDiv.style.opacity = "0.7"
         localOverlayDiv.style.opacity = "0.7";
     }, 100)
 
@@ -188,13 +185,11 @@ function onSecondHamburgerClick() {
     //Hamburger shall move on-scroll when menu is NOT evident
     hamburger.style.position = "static";
 
-    //Transition opacity of overlays from 0.7 to 0
-    globalOverlayDiv.style.opacity = "0";
+    //Transition opacity of overlay from 0.7 to 0
     localOverlayDiv.style.opacity = "0";
 
     //Remove overlay styles once transition has finished
     setTimeout(function () {
-        globalOverlayDiv.style.display = "none";
         localOverlayDiv.style.display = "none";
     }, 500)
 
