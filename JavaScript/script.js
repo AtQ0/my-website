@@ -117,98 +117,128 @@ hamburger.addEventListener("click", () => {
     //First time hamburger is clicked
     if (isHamburgerClickedOnce === false) {
 
-        //Hamburger shall not move on-scroll when menu is evident
-        hamburger.style.position = "fixed";
+        onFirstHamburgerClick();
 
-        //Set dark veil over background
+        //Wait for the menu to roll out
 
+        //Hide menu if evident, and user clicks outside menu or on menu link
+        // document.addEventListener('click', function (event) {
+        //     const menuDiv = document.getElementById('container-menu');
 
-        //Compensate vertical pos of rectB if js onHover is not activated yet
-        //It activates when user the first time hovers in/out of hamburger wrapper
-        if (!rectB.classList.contains("hamburgerJSHoverActivated")) {
-            rectB.style.marginRight = "0px";
-        }
+        //     //Wait for the menu to roll out
 
-        //Instruct rectB to staticly stay on the onHover position
-        rectB.classList.add("stop-rectB-on-right-position");
+        //     // Check if the clicked element is not the div or a descendant of the div
+        //     if (isHamburgerClickedOnce === true && !menuDiv.contains(event.target)) {
+        //         alert("clicked outside menu")
+        //     }
 
-        hamburger.removeEventListener("mouseover", mouseoverHandlerForBurger);
-        hamburger.removeEventListener("mouseout", mouseoutHandlerForBurger);
+        // });
 
-        setTimeout(function () {
-            rectA.classList.add("align-rectA");
-            rectC.classList.add("align-rectC");
-
-            //Make rectB invisible for the coming X-rotation
-            setTimeout(function () {
-                rectB.style.opacity = "0";
-            }, 300);
-
-            //Rotate rectA and rectC to form an X
-            setTimeout(function () {
-                rectA.style.transform = "rotate(45deg)";
-                rectC.style.transform = "rotate(-45deg)";
-            }, 300);
-
-        }, 200);
-
-        //Slide out the hamburger menu
-        slidingMenu.classList.remove("move-menu-out-of-view");
-        slidingMenu.classList.add("move-menu-in-view");
-
-        //Set boolean as true, so that it can be used for going back
-        isHamburgerClickedOnce = true;
     }
     //Second time hamburger is clicked
     else {
 
-        //Hamburger shall move on-scroll when menu is NOT evident
-        hamburger.style.position = "static";
+        onSecondHamburgerClick();
 
-        //Remove overlay styles to hide the dark overlay
+    }
+});
+
+//Logic that is runs, when hamburger has been clicked once
+function onFirstHamburgerClick() {
+
+    //Hamburger shall not move on-scroll when menu is evident
+    hamburger.style.position = "fixed";
+
+    //Set dark veil over background
 
 
-        //Remove class that indicates if hamburger JS onHover is activated
-        rectB.classList.remove("hamburgerJSHoverActivated");
+    //Compensate vertical pos of rectB if js onHover is not activated yet
+    //It activates when user the first time hovers in/out of hamburger wrapper
+    if (!rectB.classList.contains("hamburgerJSHoverActivated")) {
+        rectB.style.marginRight = "0px";
+    }
 
-        //Rotate back rectA & rectC from an X to a line
-        rectA.style.transform = "rotate(0deg)";
-        rectC.style.transform = "rotate(0deg)";
+    //Instruct rectB to staticly stay on the onHover position
+    rectB.classList.add("stop-rectB-on-right-position");
 
-        //Bring back opacity of rectB
+    hamburger.removeEventListener("mouseover", mouseoverHandlerForBurger);
+    hamburger.removeEventListener("mouseout", mouseoutHandlerForBurger);
+
+    setTimeout(function () {
+        rectA.classList.add("align-rectA");
+        rectC.classList.add("align-rectC");
+
+        //Make rectB invisible for the coming X-rotation
         setTimeout(function () {
-            rectB.style.opacity = "1";
+            rectB.style.opacity = "0";
         }, 300);
 
-        //Un-align rectA & rectC from rectB
+        //Rotate rectA and rectC to form an X
         setTimeout(function () {
-            rectA.classList.remove("align-rectA");
-            rectC.classList.remove("align-rectC");
+            rectA.style.transform = "rotate(45deg)";
+            rectC.style.transform = "rotate(-45deg)";
+        }, 300);
+
+    }, 200);
+
+    //Slide out the hamburger menu
+    slidingMenu.classList.remove("move-menu-out-of-view");
+    slidingMenu.classList.add("move-menu-in-view");
+
+    //Set boolean as true, so that it can be used for going back
+    isHamburgerClickedOnce = true;
+}
+
+//Logic that runs when hamburger has been clicked for the second time
+function onSecondHamburgerClick() {
+    //Hamburger shall move on-scroll when menu is NOT evident
+    hamburger.style.position = "static";
+
+    //Remove overlay styles to hide the dark overlay
 
 
-            setTimeout(function () {
-                //Bring back rectB to it´s mouseout position
-                rectB.style.marginRight = "10px";
+    //Remove class that indicates if hamburger JS onHover is activated
+    rectB.classList.remove("hamburgerJSHoverActivated");
 
-            }, 400);
+    //Rotate back rectA & rectC from an X to a line
+    rectA.style.transform = "rotate(0deg)";
+    rectC.style.transform = "rotate(0deg)";
+
+    //Bring back opacity of rectB
+    setTimeout(function () {
+        rectB.style.opacity = "1";
+    }, 300);
+
+    //Un-align rectA & rectC from rectB
+    setTimeout(function () {
+        rectA.classList.remove("align-rectA");
+        rectC.classList.remove("align-rectC");
+
+
+        setTimeout(function () {
+            //Bring back rectB to it´s mouseout position
+            rectB.style.marginRight = "10px";
 
         }, 400);
 
-
-        setTimeout(function () {
-            //Add Hover effect on hamburger
-            hamburger.addEventListener("mouseover", mouseoverHandlerForBurger);
-            hamburger.addEventListener("mouseout", mouseoutHandlerForBurger);
-        }, 1000);
+    }, 400);
 
 
-        //Slide back the hamburger menu, out of view
-        slidingMenu.classList.remove("move-menu-in-view");
-        slidingMenu.classList.add("move-menu-out-of-view");
+    setTimeout(function () {
+        //Add Hover effect on hamburger
+        hamburger.addEventListener("mouseover", mouseoverHandlerForBurger);
+        hamburger.addEventListener("mouseout", mouseoutHandlerForBurger);
+    }, 1000);
 
-        isHamburgerClickedOnce = false;
-    }
-});
+
+    //Slide back the hamburger menu, out of view
+    slidingMenu.classList.remove("move-menu-in-view");
+    slidingMenu.classList.add("move-menu-out-of-view");
+
+    isHamburgerClickedOnce = false;
+}
+
+
 
 function mouseoverHandlerForBurger() {
     //Add your mouseover event code here
