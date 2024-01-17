@@ -237,7 +237,7 @@ nav {
     position: absolute;
     left: 0;
     margin-left: 4vw;
-    z-index: 6;
+    z-index: 10;
 }
 
 .hamburger-wrapper {
@@ -450,7 +450,7 @@ nav {
     position: absolute;
     top: 160vw;
     margin-left: 8px;
-    background-color: green;
+    background-color: coral;
 }
 
 header h1 {
