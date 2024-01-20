@@ -1271,7 +1271,7 @@ footer hr {
 .github-container-for-footer svg {
     width: 25px;
     height: 25PX;
-    margin-right: 10px;
+    margin-right: 15px;
     margin-bottom: 0;
     cursor: pointer;
     transition: transform 0.35s;
@@ -1284,7 +1284,7 @@ footer hr {
 .linkedin-container-for-footer svg {
     width: 25px;
     height: 25px;
-    margin-right: 10px;
+    margin-right: 15px;
     margin-bottom: 0;
     cursor: pointer;
     transition: transform 0.35s;

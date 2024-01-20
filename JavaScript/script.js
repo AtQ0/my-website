@@ -182,6 +182,7 @@ function onFirstHamburgerClick() {
 
 //Logic that runs when hamburger has been clicked for the second time
 function onSecondHamburgerClick() {
+
     //Hamburger shall move on-scroll when menu is NOT evident
     hamburger.style.position = "static";
 
@@ -232,8 +233,6 @@ function onSecondHamburgerClick() {
     isHamburgerClickedOnce = false;
 }
 
-
-
 function mouseoverHandlerForBurger() {
     //Add your mouseover event code here
     rectB.style.marginRight = "0px";
@@ -247,6 +246,39 @@ function mouseoutHandlerForBurger() {
     // Add your mouseout event code here
     rectB.style.marginRight = "10px";
 }
+
+
+/*========================================*/
+/*================= MENU =================*/
+/*========================================*/
+
+const menuLinkAbout = document.querySelector(".menu-link-about");
+const menuLinkProjects = document.querySelector(".menu-link-projects");
+const menuLinkReferences = document.querySelector(".menu-link-references");
+const menuLinkContact = document.querySelector(".menu-link-contact");
+const menuLinkLocation = document.querySelector(".location-container-for-footer");
+
+//HIDE MENU ONCE ANY MENU LINK HAS BEEN CLICKED
+menuLinkAbout.addEventListener("click", () => {
+    onSecondHamburgerClick();
+});
+menuLinkProjects.addEventListener("click", () => {
+    onSecondHamburgerClick();
+});
+menuLinkReferences.addEventListener("click", () => {
+    onSecondHamburgerClick();
+});
+menuLinkContact.addEventListener("click", () => {
+    onSecondHamburgerClick();
+});
+menuLinkLocation.addEventListener("click", () => {
+    onSecondHamburgerClick();
+});
+localOverlayDiv.addEventListener("click", () => {
+    onSecondHamburgerClick();
+});
+
+
 
 
 /*=========================================*/
