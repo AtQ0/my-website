@@ -141,7 +141,7 @@ function onFirstHamburgerClick() {
     //Initiate opacity transition from 0 to 0.7
     setTimeout(function () {
         localOverlayDiv.classList.add("increase-overlay-opacity");
-    }, 300)
+    }, 500)
 
     //Compensate vertical pos of rectB if js onHover is not activated yet
     //It activates when user the first time hovers in/out of hamburger wrapper
