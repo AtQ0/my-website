@@ -391,6 +391,7 @@ nav {
     position: fixed;
     z-index: 6;
     width: 60%;
+    min-width: 270px;
     max-width: 280px;
     height: 100vh;
     top: 0;
@@ -447,9 +448,10 @@ nav {
     display: flex;
     width: fit-content;
     position: absolute;
-    top: 160vw;
+    top: 150vw;
+    /*top: 160vw;*/
     margin-left: 8px;
-    background-color: yellow;
+    background-color: red;
 }
 
 header h1 {
