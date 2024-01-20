@@ -391,7 +391,7 @@ nav {
     position: fixed;
     z-index: 6;
     width: 60%;
-    min-width: 270px;
+    min-width: 260px;
     max-width: 280px;
     height: 100vh;
     top: 0;
@@ -451,7 +451,6 @@ nav {
     top: 150vw;
     /*top: 160vw;*/
     margin-left: 8px;
-    background-color: red;
 }
 
 header h1 {
@@ -1312,7 +1311,7 @@ footer hr {
 @media screen and (min-width: 450px) {
 
     .social-media-container {
-        top: 720px;
+        top: 700px;
     }
 }
 
