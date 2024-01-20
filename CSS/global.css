@@ -398,7 +398,7 @@ nav {
     left: -320px;
     background-color: #A75D88;
     padding-left: 35px;
-    padding-top: 180px;
+    padding-top: 160px;
     /*Used for sliding animation prompted by JS*/
     transition: background-color 0.75s, left 1s;
 }
@@ -599,6 +599,9 @@ main {
     background-color: #F1A157;
 }
 
+/* .image-frame:active {
+    background-color: #D06474;
+} */
 
 .image-frame .profile-image-about {
     transition: transform 0.35s;
@@ -612,6 +615,10 @@ main {
     transition: transform 0.25s;
     transform: scale(0.93);
 }
+
+
+
+
 
 .profile-image-about {
     width: 100%;
@@ -1311,7 +1318,7 @@ footer hr {
 @media screen and (min-width: 450px) {
 
     .social-media-container {
-        top: 700px;
+        top: 720px;
     }
 }
 
