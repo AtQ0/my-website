@@ -69,6 +69,28 @@ document.addEventListener("DOMContentLoaded", function () {
 /*=== APPEARANCE/DISSAPEARANCE OF NAV ON SCROLL ===*/
 /*=================================================*/
 
+let prevScrollpos = window.pageYOffset;
+let scrollCounter = 0;
+let scrollThreshold = 20; // Set the number of scrolls before triggering transition
+let scrollEnabled = true; // Flag to enable or disable the scroll event
+
+window.onscroll = function () {
+    if (!scrollEnabled) return; // Check if scroll is enabled
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.transition = "top 0.75s, opacity 3s";
+        document.getElementById("navbar").style.top = "-5px";
+    } else {
+        if (scrollCounter >= scrollThreshold) {
+            document.getElementById("navbar").style.top = "-70px";
+            scrollCounter = 0; // Reset the scroll counter
+        } else {
+            scrollCounter++;
+        }
+    }
+    prevScrollpos = currentScrollPos;
+}
+
 
 
 /*==============================================*/
@@ -104,6 +126,7 @@ logoContainerFooter.addEventListener("click", () => {
 
 //GET ELEMENT FROM DOM
 const localOverlayDiv = document.querySelector(".local-overlay");
+const navbar = document.getElementById("navbar");
 const hamburger = document.querySelector(".hamburger-wrapper");
 const slidingMenu = document.getElementById("container-menu");
 const main = document.getElementById("theMain");
@@ -133,7 +156,7 @@ hamburger.addEventListener("click", () => {
 function onFirstHamburgerClick() {
 
     //Hamburger shall not move on-scroll when menu is evident
-    hamburger.style.position = "fixed";
+    scrollEnabled = false;
 
     //Set dark overlay over background
     localOverlayDiv.style.display = "block";
@@ -184,7 +207,7 @@ function onFirstHamburgerClick() {
 function onSecondHamburgerClick() {
 
     //Hamburger shall move on-scroll when menu is NOT evident
-    hamburger.style.position = "static";
+    scrollEnabled = true;
 
     //Transition opacity of overlay from 0.7 to 0
     localOverlayDiv.classList.remove("increase-overlay-opacity");

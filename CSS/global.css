@@ -209,7 +209,8 @@ nav {
     width: 100%;
     padding-top: 15px;
     padding-bottom: 5px;
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     top: -70px;
     z-index: 5;
     opacity: 0;
@@ -593,6 +594,8 @@ main {
     cursor: pointer;
     padding: 1.5vw;
     transition: background-color 0.35s;
+    background-color: #6F7353;
+    background-color: #BFBA6F;
 }
 
 .image-frame:hover {
@@ -659,6 +662,8 @@ main {
     justify-content: center;
     align-items: center;
     transition: background-color 0.35s, transform 0.1s;
+    background-color: #BFBA6F;
+    /* background-color: #837357; */
 }
 
 .lets-work-together-btn:hover {
@@ -953,8 +958,8 @@ main {
     max-width: 500px;
     height: fit-content;
     max-height: 500px;
-    background-color: #927598;
-    /* background-color: #6d8a67; */
+    /* background-color: #927598; */
+    background-color: #D06474;
     padding-bottom: 3vw;
 }
 
@@ -1134,18 +1139,22 @@ main {
     padding: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #F6AE2D;
+    /* background-color: #F6AE2D; */
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     cursor: pointer;
     user-select: none;
-    transition: background-color 0.35s, transform 0.75s;
+    transition: background-color 0.35s, transform 0.35s;
+    /* background-color: #BFBA6F;
+    background-color: #D06474; */
+    border: 2px black solid;
 }
 
 .send-contact-btn:hover {
     background-color: #F1A157;
+    background-color: #927598;
 }
 
 .send-contact-btn:active {
