@@ -604,6 +604,101 @@ const projectsSwiper = new Swiper('.projects-swiper', {
     },
 
 
+    on: {
+        slideChangeTransitionStart: function () {
+
+            // Get the index of the currently active slide
+            const activeIndex = this.activeIndex;
+
+            // Define an array of details for each slide
+            const slideDetails = [
+                {
+                    projectType: "API WEB SITE",
+                    projectTitle: "TRAVEL EZ: EXPLORE CITIES BY API",
+                    projectDescription: "Embark on an artistic journey through diverse interpretations of faces, from classic paintings to immersive installations and sculptures.",
+                    projectLink: "https://example.com/project1",
+                },
+                {
+                    projectType: "Another Type",
+                    projectTitle: "Project Title 2",
+                    projectDescription: "Description for the second slide.",
+                    projectLink: "https://example.com/project2",
+                },
+                {
+                    projectType: "Another Type",
+                    projectTitle: "Project Title 3",
+                    projectDescription: "Description for the third slide.",
+                    projectLink: "https://example.com/project3",
+                },
+                {
+                    projectType: "Another Type",
+                    projectTitle: "Project Title 4",
+                    projectDescription: "Description for the forth slide.",
+                    projectLink: "https://example.com/project4",
+                },
+                {
+                    projectType: "Another Type",
+                    projectTitle: "Project Title 5",
+                    projectDescription: "Description for the fifth slide.",
+                    projectLink: "https://example.com/project5",
+                },
+                {
+                    projectType: "Another Type",
+                    projectTitle: "Project Title 6",
+                    projectDescription: "Description for the sixth slide.",
+                    projectLink: "https://example.com/project6",
+                },
+                {
+                    projectType: "Another Type",
+                    projectTitle: "Project Title 7",
+                    projectDescription: "Description for the seventh slide.",
+                    projectLink: "https://example.com/project7",
+                },
+                {
+                    projectType: "Another Type",
+                    projectTitle: "Project Title 8",
+                    projectDescription: "Description for the eigth slide.",
+                    projectLink: "https://example.com/project8",
+                },
+                {
+                    projectType: "Another Type",
+                    projectTitle: "Project Title 9",
+                    projectDescription: "Description for the ninth slide.",
+                    projectLink: "https://example.com/project9",
+                },
+                // Add descriptions for all slides
+            ];
+
+            // Get the details for the currently active slide
+            const activeSlideDetails = slideDetails[activeIndex];
+
+            // Update the wrapperContentBelowSwiper innerHTML with the active slide's details
+            wrapperContentBelowSwiper.innerHTML = `
+                <h5 class="activity">${activeSlideDetails.projectType}</h5>
+                <h5 id="swiper-description-header">${activeSlideDetails.projectTitle}</h5>
+                <p id="swiper-description">
+                    ${activeSlideDetails.projectDescription}
+                </p>
+                <a href="${activeSlideDetails.projectLink}" target="_blank">Learn More</a>
+            `;
+
+            this.slides.forEach((slide, index) => {
+                // Check if the current slide is not the active slide
+                if (index !== activeIndex) {
+                    // Add the inactive class to this slide
+                    slide.classList.remove("active-slide")
+                    slide.classList.add('inactive-slide');
+
+                } else {
+                    // Remove the inactive class from the active slide
+                    slide.classList.remove('inactive-slide');
+                    slide.classList.add("active-slide")
+                }
+            });
+
+
+        },
+    }
 });
 
 
