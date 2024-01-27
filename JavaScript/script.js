@@ -603,6 +603,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
         prevEl: '.swiper-button-prev',
     },
 
+
 });
 
 
@@ -628,75 +629,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-
-//OLD STUFF BELOW NEEDS TO BE DELTED ONCE THE ABOVE IS DONE
-
-const swiperBtnNext = document.querySelector(".swiper-button-next");
-const swiperBtnPrev = document.querySelector(".swiper-button-prev");
-const activity = document.querySelector(".activity");
-const swiperHeader = document.getElementById("swiper-description-header");
-const swiperDescription = document.getElementById("swiper-description");
-
-
-swiperBtnNext.addEventListener("click", nextDescription);
-let counter = 1;
-function nextDescription() {
-
-
-    console.log(counter);
-
-    if (counter === 1) {
-        activity.innerHTML = "ACTIVITY";
-        swiperHeader.innerHTML = '"CANVAS CONNECTIONS: PAINTING SOCIAL"';
-        swiperDescription.innerHTML = "Join our welcoming community of art enthusiasts! Whether you're starting or perfecting your skills, connect, learn, and create together";
-        counter++;
-    }
-    else if (counter === 2) {
-        activity.innerHTML = "EXHIBITION";
-        swiperHeader.innerHTML = '"RADIANT PERSPECTIVES: LIGHT, GEOMETRY AND ART"';
-        swiperDescription.innerHTML = "A compelling exhibition which focus on the interplay between light, geometry, and artistic expression.";
-        counter++;
-    }
-    else if (counter === 3) {
-        activity.innerHTML = "EVENT";
-        swiperHeader.innerHTML = '"RADIANT PERSPECTIVES: LIGHT, GEOMETRY AND ART"';
-        swiperDescription.innerHTML = "A compelling exhibition which focus on the interplay between light, geometry, and artistic expression.";
-        counter++;
-    }
-    else if (counter === 4) {
-        activity.innerHTML = "ACTIVITY";
-        swiperHeader.innerHTML = '"SCULPTURE SPLENDOR: TOUR THROUGH TIME AND FORM "';
-        swiperDescription.innerHTML = "GUIDED TOUR";
-        counter++;
-    }
-
-    console.log(counter);
-}
-
-swiperBtnPrev.addEventListener("click", previousDescription);
-
-function previousDescription() {
-    if (counter === 1) {
-        activity.innerHTML = "EXHIBITION";
-        swiperHeader.innerHTML = '"RADIANT PERSPECTIVES: LIGHT, GEOMETRY AND ART"';
-        swiperDescription.innerHTML = "A compelling exhibition which focus on the interplay between light, geometry, and artistic expression.";
-        counter--;
-    }
-    else if (counter === 3) {
-        swiperHeader.innerHTML = '"CANVAS CONNECTIONS: PAINTING SOCIAL"';
-        swiperDescription.innerHTML = "Join our welcoming community of art enthusiasts! Whether you're starting or perfecting your skills, connect, learn, and create together";
-        counter--;
-    }
-    else if (counter === 2) {
-        swiperHeader.innerHTML = '"VISAGE VISIONS: EXPLORING THE ART OF FACES"';
-        swiperDescription.innerHTML = "Embark on an artistic journey through diverse interpretations of faces, from classic paintings to immersive installations and sculptures.";
-        counter--;
-    }
-}
-
-//OLD STUFF ABOVE; NEEDS TO BE DELETED ONCE ANOTHER SOLUTION IS FOUND
 
 
 /*=============================================*/

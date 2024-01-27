@@ -857,6 +857,23 @@ main {
     overflow: hidden;
 }
 
+.swiper-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-top-right-radius: 80vw;
+    border-top-left-radius: 80vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    transition: opacity 0.75s;
+}
+
+.focus-swiper {
+    opacity: 0;
+}
+
 .swiper-slide img {
     width: 100%;
     height: 100%;
@@ -868,7 +885,7 @@ main {
 .swiper-button-prev,
 .swiper-button-next {
     color: black;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .swiper-pagination-bullet-active {
