@@ -594,8 +594,6 @@ main {
     cursor: pointer;
     padding: 1.5vw;
     transition: background-color 0.35s;
-    background-color: #6F7353;
-    background-color: #BFBA6F;
 }
 
 .image-frame:hover {
@@ -618,10 +616,6 @@ main {
     transition: transform 0.25s;
     transform: scale(0.93);
 }
-
-
-
-
 
 .profile-image-about {
     width: 100%;
@@ -662,8 +656,7 @@ main {
     justify-content: center;
     align-items: center;
     transition: background-color 0.35s, transform 0.1s;
-    background-color: #BFBA6F;
-    /* background-color: #837357; */
+    /* background-color: #BFBA6F; */
 }
 
 .lets-work-together-btn:hover {
