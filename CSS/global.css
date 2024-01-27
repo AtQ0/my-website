@@ -675,6 +675,7 @@ main {
     padding-bottom: 3vw;
     width: 80%;
     justify-content: center;
+    margin-left: 2.5vw;
 }
 
 .wrapper-regular-text,
@@ -1634,7 +1635,7 @@ footer hr {
         height: 100%;
         display: flex;
         justify-content: flex-end;
-        padding-right: 2.5vw;
+        padding-right: 0;
     }
 
     .image-frame {
@@ -1643,6 +1644,7 @@ footer hr {
         border-radius: 100%;
         padding: 0.75vw;
         margin: 0;
+        margin-right: 2vw;
     }
 
     .profile-image-about {
@@ -1656,13 +1658,15 @@ footer hr {
         align-items: flex-start;
         justify-content: center;
         text-align: left;
-        padding-left: 2.5vw;
+        padding-left: 0vw;
+
     }
 
     .second-paragraph-in-intro {
         padding-left: 0;
         padding-right: 0;
         margin-top: 2vw;
+        margin-left: 2.5vw;
         font-size: 3vw;
     }
 
@@ -1689,6 +1693,7 @@ footer hr {
     .lets-work-together-btn {
         margin-top: 4vw;
         margin-bottom: 5vw;
+        margin-left: 2.5vw;
     }
 
 
@@ -1787,7 +1792,6 @@ footer hr {
 
     .technical-info h4 {
         background-color: blue;
-
     }
 
     .technical-info p {
