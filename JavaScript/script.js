@@ -465,121 +465,133 @@ const projectsSwiper = new Swiper('.projects-swiper', {
             spaceBetween: 50,
         },
         // When window width is greater than 520px and less than or equal to 560px
+        530: {
+            slidesPerView: 1.6,
+            spaceBetween: 50.5,
+        },
+        540: {
+            slidesPerView: 1.65,
+            spaceBetween: 51.0,
+        },
+        550: {
+            slidesPerView: 1.7,
+            spaceBetween: 51.5,
+        },
         560: {
-            slidesPerView: 1.58,
-            spaceBetween: 55,
+            slidesPerView: 1.8,
+            spaceBetween: 52.5,
         },
         // When window width is greater than 560px and less than or equal to 600px
         600: {
-            slidesPerView: 1.6,
-            spaceBetween: 60,
+            slidesPerView: 1.9,
+            spaceBetween: 55,
         },
         // When window width is greater than 600px and less than or equal to 640px
         640: {
-            slidesPerView: 1.65,
-            spaceBetween: 65,
+            slidesPerView: 2.0,
+            spaceBetween: 57.5,
         },
         // When window width is greater than 640px and less than or equal to 680px
         680: {
-            slidesPerView: 1.7,
-            spaceBetween: 70,
+            slidesPerView: 2.1,
+            spaceBetween: 60,
         },
         // When window width is greater than 680px and less than or equal to 720px
         720: {
-            slidesPerView: 1.75,
-            spaceBetween: 75,
+            slidesPerView: 2.2,
+            spaceBetween: 62.5,
         },
         // When window width is greater than 720px and less than or equal to 760px
         760: {
-            slidesPerView: 1.8,
-            spaceBetween: 80,
+            slidesPerView: 2.3,
+            spaceBetween: 65.0,
         },
         // When window width is greater than 760px and less than or equal to 800px
         800: {
-            slidesPerView: 1.85,
-            spaceBetween: 85,
+            slidesPerView: 2.4,
+            spaceBetween: 67.5,
         },
         // When window width is greater than 800px and less than or equal to 840px
         840: {
-            slidesPerView: 1.9,
-            spaceBetween: 90,
+            slidesPerView: 2.5,
+            spaceBetween: 70,
         },
         // When window width is greater than 840px and less than or equal to 880px
         880: {
-            slidesPerView: 1.95,
-            spaceBetween: 95,
+            slidesPerView: 2.6,
+            spaceBetween: 72.5,
         },
         // When window width is greater than 880px and less than or equal to 920px
         920: {
-            slidesPerView: 2.0,
-            spaceBetween: 100,
+            slidesPerView: 2.7,
+            spaceBetween: 75.0,
         },
         // When window width is greater than 920px and less than or equal to 960px
         960: {
-            slidesPerView: 2.1,
-            spaceBetween: 105,
+            slidesPerView: 2.8,
+            spaceBetween: 77.5,
         },
         // When window width is greater than 960px and less than or equal to 1000px
         1000: {
-            slidesPerView: 2.2, // Maximum slidesPerView at 3.0
-            spaceBetween: 110,
+            slidesPerView: 2.9, // Maximum slidesPerView at 3.0
+            spaceBetween: 80,
         },
         // When window width is greater than 1000px and less than or equal to 1040px
         1040: {
-            slidesPerView: 2.25,
-            spaceBetween: 115,
+            slidesPerView: 3.0,
+            spaceBetween: 82.5,
         },
 
         1080: {
-            slidesPerView: 2.3,
-            spaceBetween: 120,
+            slidesPerView: 3.1,
+            spaceBetween: 85.0,
         },
 
         1120: {
-            slidesPerView: 2.35,
-            spaceBetween: 125,
+            slidesPerView: 3.2,
+            spaceBetween: 87.5,
         },
 
         1160: {
-            slidesPerView: 2.4,
-            spaceBetween: 130,
+            slidesPerView: 3.3,
+            spaceBetween: 90.0,
         },
 
         1200: {
-            slidesPerView: 2.45,
-            spaceBetween: 135,
+            slidesPerView: 3.4,
+            spaceBetween: 92.5,
         },
 
         1240: {
-            slidesPerView: 2.5,
-            spaceBetween: 140,
+            slidesPerView: 3.5,
+            spaceBetween: 95.0,
         },
 
 
         1280: {
-            slidesPerView: 2.55,
-            spaceBetween: 145,
+            slidesPerView: 3.6,
+            spaceBetween: 97.5,
         },
 
         1320: {
-            slidesPerView: 2.6,
-            spaceBetween: 150,
+            slidesPerView: 3.7,
+            spaceBetween: 100,
         },
 
 
         1360: {
-            slidesPerView: 2.65,
-            spaceBetween: 155,
+            slidesPerView: 3.8,
+            spaceBetween: 102.5,
         },
 
         1400: {
-            slidesPerView: 2.7,
-            spaceBetween: 160,
+            slidesPerView: 3.9,
+            spaceBetween: 105.0,
         },
 
         1440: {
-            slidesPerView: 2.75,
-            spaceBetween: 165,
+            slidesPerView: 4.0,
+            spaceBetween: 107.5,
         },
 
 
