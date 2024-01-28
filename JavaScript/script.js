@@ -615,7 +615,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
             const slideDetails = [
 
                 {
-                    projectType: "Type of project",
+                    projectType: "Website",
                     projectTitle: "Project Title 1",
                     projectDescription: `
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis vitae felis dictum fermentum. Ut facilisis metus nec nisl posuere, ac interdum tellus rhoncus. Pellentesque lacinia orci sed vehicula sagittis. Nulla facilisi.
@@ -623,7 +623,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectLink: "https://example.com/project1",
                 },
                 {
-                    projectType: "Type of project",
+                    projectType: "E-commerce App",
                     projectTitle: "Project Title 2",
                     projectDescription: `
                         Lorem ipsum dolor sit amet, etiam nec lectus in turpis lacinia commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed bibendum, mi vitae tincidunt ullamcorper, sapien libero dictum sem.
@@ -631,7 +631,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectLink: "https://example.com/project2",
                 },
                 {
-                    projectType: "Type of project",
+                    projectType: "Game",
                     projectTitle: "Project Title 3",
                     projectDescription: `
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper, ante a consectetur congue, elit lacus feugiat justo, ac euismod tellus urna sit amet neque. Curabitur vitae justo id libero scelerisque tincidunt.
@@ -639,7 +639,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectLink: "https://example.com/project3",
                 },
                 {
-                    projectType: "Type of project",
+                    projectType: "Website",
                     projectTitle: "Project Title 4",
                     projectDescription: `
                         Lorem ipsum dolor sit amet, adipiscing elit. Suspendisse at orci vel urna semper ultrices. Nunc gravida libero in risus tristique, non ultricies ligula fermentum. Suspendisse potenti. Integer quis vehicula purus.
@@ -647,7 +647,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectLink: "https://example.com/project4",
                 },
                 {
-                    projectType: "Type of project",
+                    projectType: "E-commerce App",
                     projectTitle: "Project Title 5",
                     projectDescription: `
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel fermentum tortor. Integer sit amet luctus orci. Quisque in convallis dolor. Sed eu purus euismod, vestibulum lectus eu, pharetra massa. Sed efficitur elit nec justo.
@@ -655,7 +655,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectLink: "https://example.com/project5",
                 },
                 {
-                    projectType: "Type of project",
+                    projectType: "Game",
                     projectTitle: "Project Title 6",
                     projectDescription: `
                         Lorem ipsum dolor sit amet, etiam nec lectus in turpis lacinia commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed bibendum, mi vitae tincidunt ullamcorper, sapien libero dictum sem.
@@ -663,7 +663,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectLink: "https://example.com/project6",
                 },
                 {
-                    projectType: "Type of project",
+                    projectType: "Website",
                     projectTitle: "Project Title 7",
                     projectDescription: `
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec pulvinar metus, at efficitur metus. Aenean fermentum, ante ac luctus lacinia, justo orci venenatis. Maecenas ut laoreet odio.
@@ -671,7 +671,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectLink: "https://example.com/project7",
                 },
                 {
-                    projectType: "Type of project",
+                    projectType: "E-commerce App",
                     projectTitle: "Project Title 8",
                     projectDescription: `
                         Lorem ipsum dolor sit amet, adipiscing elit. Fusce tristique justo in eros faucibus, non rhoncus eros tincidunt. Sed nec leo vel ex malesuada lacinia. Nullam ut fermentum neque, vel facilisis libero. Etiam non eros in sapien.
@@ -679,7 +679,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectLink: "https://example.com/project8",
                 },
                 {
-                    projectType: "Type of project",
+                    projectType: "Game",
                     projectTitle: "Project Title 9",
                     projectDescription: `
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet urna nec odio cursus ullamcorper. Integer eu felis vel tellus sollicitudin efficitur. Aliquam nec efficitur turpis. In hac habitasse platea dictumst.
@@ -698,7 +698,11 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                 <p id="swiper-description">
                     ${activeSlideDetails.projectDescription}
                 </p>
-                <a href="${activeSlideDetails.projectLink}" target="_blank">Learn More</a>
+                <div class="wrapper-view-project">
+                    <a href="${activeSlideDetails.projectLink}" target="_blank"><b>View project</b></a>
+                    <div class="left-view-project-underline"></div>
+                    <div class="right-view-project-underline"></div>
+                </div>
             `;
 
 
@@ -715,14 +719,6 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     slide.classList.add("active-slide");
                 }
             });
-
-
-            wrapperContentBelowSwiper.classList.add("fade-in-swiper-project-details");
-            setTimeout(() => {
-                wrapperContentBelowSwiper.classList.add("fade-in");
-            }, 10); // Adding a small delay to ensure the class is applied after the initial rendering
-
-
 
         },
     }
@@ -745,10 +741,14 @@ function updateContent(slideDetails) {
         <p id="swiper-description">
             ${slideDetails.projectDescription}
         </p>
-        <a href="${slideDetails.projectLink}" target="_blank">Learn More</a>
+        <div class="wrapper-view-project">
+            <a href="${slideDetails.projectLink}" target="_blank"><b>View project</b></a>
+            <div class="left-view-project-underline"></div>
+            <div class="right-view-project-underline"></div>
+        </div>
     `;
 
-    // Apply classes to slides
+    //Apply active/inactive classes to slides when called (On Start)
     projectsSwiper.slides.forEach((slide, index) => {
         if (index === projectsSwiper.activeIndex) {
             slide.classList.remove("inactive-slide");
@@ -763,7 +763,7 @@ function updateContent(slideDetails) {
 document.addEventListener('DOMContentLoaded', () => {
     // Define slide details for the first slide
     const firstSlideDetails = {
-        projectType: "Type of project",
+        projectType: "Website",
         projectTitle: "Project Title 1",
         projectDescription: `
 

@@ -769,7 +769,6 @@ main {
     transform: translateX(0);
 }
 
-
 /*Adjust vertical space between span elements*/
 
 .third-paragraph-in-intro span:first-child {
@@ -801,7 +800,6 @@ main {
 
 .projects h2 {
     font-size: 13.5vw;
-
 }
 
 .projects-paragraph1 {
@@ -827,6 +825,37 @@ main {
     width: 80vw;
     max-width: 800px;
 }
+
+.wrapper-view-project {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: bolder;
+}
+
+.left-view-project-underline {
+    background-color: black;
+    height: 1.5px;
+    width: 50.25%;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+
+.right-view-project-underline {
+    background-color: black;
+    height: 1.5px;
+    width: 50.25%;
+    float: right;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+}
+
+.wrapper-view-project:hover .left-view-project-underline,
+.wrapper-view-project:hover .right-view-project-underline {
+    transform: translateX(0);
+}
+
 
 
 
@@ -1436,11 +1465,6 @@ footer hr {
         margin-bottom: 30px;
     }
 
-
-
-    .fade-in-swiper-project-details.fade-in {
-        opacity: 1;
-    }
 
     /*=====================*/
     /*======= ABOUT =======*/
