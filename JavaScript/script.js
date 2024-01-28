@@ -603,74 +603,93 @@ const projectsSwiper = new Swiper('.projects-swiper', {
         prevEl: '.swiper-button-prev',
     },
 
-
     on: {
         slideChangeTransitionStart: function () {
 
-            // Get the index of the currently active slide
+            // Get the REAL index of the currently active slide
+            const activeRealIndex = this.realIndex;
+
             const activeIndex = this.activeIndex;
 
             // Define an array of details for each slide
             const slideDetails = [
+
                 {
-                    projectType: "API WEB SITE",
-                    projectTitle: "TRAVEL EZ: EXPLORE CITIES BY API",
-                    projectDescription: "Embark on an artistic journey through diverse interpretations of faces, from classic paintings to immersive installations and sculptures.",
+                    projectType: "Type of project",
+                    projectTitle: "Project Title 1",
+                    projectDescription: `
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis vitae felis dictum fermentum. Ut facilisis metus nec nisl posuere, ac interdum tellus rhoncus. Pellentesque lacinia orci sed vehicula sagittis. Nulla facilisi.
+                    `,
                     projectLink: "https://example.com/project1",
                 },
                 {
-                    projectType: "Another Type",
+                    projectType: "Type of project",
                     projectTitle: "Project Title 2",
-                    projectDescription: "Description for the second slide.",
+                    projectDescription: `
+                        Lorem ipsum dolor sit amet, etiam nec lectus in turpis lacinia commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed bibendum, mi vitae tincidunt ullamcorper, sapien libero dictum sem.
+                    `,
                     projectLink: "https://example.com/project2",
                 },
                 {
-                    projectType: "Another Type",
+                    projectType: "Type of project",
                     projectTitle: "Project Title 3",
-                    projectDescription: "Description for the third slide.",
+                    projectDescription: `
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper, ante a consectetur congue, elit lacus feugiat justo, ac euismod tellus urna sit amet neque. Curabitur vitae justo id libero scelerisque tincidunt.
+                    `,
                     projectLink: "https://example.com/project3",
                 },
                 {
-                    projectType: "Another Type",
+                    projectType: "Type of project",
                     projectTitle: "Project Title 4",
-                    projectDescription: "Description for the forth slide.",
+                    projectDescription: `
+                        Lorem ipsum dolor sit amet, adipiscing elit. Suspendisse at orci vel urna semper ultrices. Nunc gravida libero in risus tristique, non ultricies ligula fermentum. Suspendisse potenti. Integer quis vehicula purus.
+                    `,
                     projectLink: "https://example.com/project4",
                 },
                 {
-                    projectType: "Another Type",
+                    projectType: "Type of project",
                     projectTitle: "Project Title 5",
-                    projectDescription: "Description for the fifth slide.",
+                    projectDescription: `
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel fermentum tortor. Integer sit amet luctus orci. Quisque in convallis dolor. Sed eu purus euismod, vestibulum lectus eu, pharetra massa. Sed efficitur elit nec justo.
+                    `,
                     projectLink: "https://example.com/project5",
                 },
                 {
-                    projectType: "Another Type",
+                    projectType: "Type of project",
                     projectTitle: "Project Title 6",
-                    projectDescription: "Description for the sixth slide.",
+                    projectDescription: `
+                        Lorem ipsum dolor sit amet, etiam nec lectus in turpis lacinia commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed bibendum, mi vitae tincidunt ullamcorper, sapien libero dictum sem.
+                    `,
                     projectLink: "https://example.com/project6",
                 },
                 {
-                    projectType: "Another Type",
+                    projectType: "Type of project",
                     projectTitle: "Project Title 7",
-                    projectDescription: "Description for the seventh slide.",
+                    projectDescription: `
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec pulvinar metus, at efficitur metus. Aenean fermentum, ante ac luctus lacinia, justo orci venenatis. Maecenas ut laoreet odio.
+                    `,
                     projectLink: "https://example.com/project7",
                 },
                 {
-                    projectType: "Another Type",
+                    projectType: "Type of project",
                     projectTitle: "Project Title 8",
-                    projectDescription: "Description for the eigth slide.",
+                    projectDescription: `
+                        Lorem ipsum dolor sit amet, adipiscing elit. Fusce tristique justo in eros faucibus, non rhoncus eros tincidunt. Sed nec leo vel ex malesuada lacinia. Nullam ut fermentum neque, vel facilisis libero. Etiam non eros in sapien.
+                    `,
                     projectLink: "https://example.com/project8",
                 },
                 {
-                    projectType: "Another Type",
+                    projectType: "Type of project",
                     projectTitle: "Project Title 9",
-                    projectDescription: "Description for the ninth slide.",
+                    projectDescription: `
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet urna nec odio cursus ullamcorper. Integer eu felis vel tellus sollicitudin efficitur. Aliquam nec efficitur turpis. In hac habitasse platea dictumst.
+                    `,
                     projectLink: "https://example.com/project9",
                 },
-                // Add descriptions for all slides
             ];
 
             // Get the details for the currently active slide
-            const activeSlideDetails = slideDetails[activeIndex];
+            const activeSlideDetails = slideDetails[activeRealIndex];
 
             // Update the wrapperContentBelowSwiper innerHTML with the active slide's details
             wrapperContentBelowSwiper.innerHTML = `
@@ -682,45 +701,80 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                 <a href="${activeSlideDetails.projectLink}" target="_blank">Learn More</a>
             `;
 
+
+            //Assigns filter on active/inactive slides
             this.slides.forEach((slide, index) => {
                 // Check if the current slide is not the active slide
                 if (index !== activeIndex) {
                     // Add the inactive class to this slide
-                    slide.classList.remove("active-slide")
+                    slide.classList.remove("active-slide");
                     slide.classList.add('inactive-slide');
-
                 } else {
                     // Remove the inactive class from the active slide
                     slide.classList.remove('inactive-slide');
-                    slide.classList.add("active-slide")
+                    slide.classList.add("active-slide");
                 }
             });
 
 
+            wrapperContentBelowSwiper.classList.add("fade-in-swiper-project-details");
+            setTimeout(() => {
+                wrapperContentBelowSwiper.classList.add("fade-in");
+            }, 10); // Adding a small delay to ensure the class is applied after the initial rendering
+
+
+
         },
     }
+
 });
 
 
-/*=====================================================*/
-/*==== POPULATE EXHIBITION SWIPER WITH DESCRIPTION ====*/
-/*=====================================================*/
+/*=============================================*/
+/*==== POPULATE EXHIBITION SWIPER ON START ====*/
+/*=============================================*/
 
-let stringForCreatingDynamicDivs;
+
 const wrapperContentBelowSwiper = document.querySelector(".wrapper-content-below-swiper");
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    stringForCreatingDynamicDivs = `
-    <h5 class="activity">API WEB SITE</h5>
-    <h5 id="swiper-description-header">"TRAVEL EZ: EXPLORE CITIES BY API"</h5>
-    <p id="swiper-description">
-        Embark on an artistic journey through diverse interpretations of faces, from classic paintings to immersive installations and sculptures.
-    </p>
+// Function to update the content ON START, based on slide details
+function updateContent(slideDetails) {
+    wrapperContentBelowSwiper.innerHTML = `
+        <h5 class="activity">${slideDetails.projectType}</h5>
+        <h5 id="swiper-description-header">${slideDetails.projectTitle}</h5>
+        <p id="swiper-description">
+            ${slideDetails.projectDescription}
+        </p>
+        <a href="${slideDetails.projectLink}" target="_blank">Learn More</a>
     `;
 
-    wrapperContentBelowSwiper.innerHTML = stringForCreatingDynamicDivs;
+    // Apply classes to slides
+    projectsSwiper.slides.forEach((slide, index) => {
+        if (index === projectsSwiper.activeIndex) {
+            slide.classList.remove("inactive-slide");
+            slide.classList.add("active-slide");
+        } else {
+            slide.classList.remove("active-slide");
+            slide.classList.add("inactive-slide");
+        }
+    });
+}
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Define slide details for the first slide
+    const firstSlideDetails = {
+        projectType: "Type of project",
+        projectTitle: "Project Title 1",
+        projectDescription: `
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis vitae felis dictum fermentum. Ut facilisis metus nec nisl posuere, ac interdum tellus rhoncus. Pellentesque lacinia orci sed vehicula sagittis. Nulla facilisi.
+
+        `,
+        projectLink: "https://example.com/project1",
+    };
+
+    // Call the updateContent function with the details of the first slide
+    updateContent(firstSlideDetails);
 });
 
 

@@ -825,7 +825,7 @@ main {
 #swiper-description {
     margin-bottom: 5vw;
     width: 80vw;
-    max-width: 500px;
+    max-width: 800px;
 }
 
 
@@ -861,13 +861,13 @@ main {
 /* Add the brightness filter and transition to active slides */
 .swiper-slide.active-slide {
     filter: brightness(100%);
-    transition: filter 2.5s ease;
+    transition: filter 1.5s;
 }
 
 /* Add the brightness filter and transition to inactive slides */
 .swiper-slide.inactive-slide {
-    filter: brightness(20%);
-    transition: filter 1s ease;
+    filter: brightness(40%);
+    transition: filter 1s;
 }
 
 .swiper-slide img {
@@ -1434,6 +1434,12 @@ footer hr {
 
     #swiper-description {
         margin-bottom: 30px;
+    }
+
+
+
+    .fade-in-swiper-project-details.fade-in {
+        opacity: 1;
     }
 
     /*=====================*/
