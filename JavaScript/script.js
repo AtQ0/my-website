@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let prevScrollpos = window.pageYOffset;
 let scrollCounter = 0;
-let scrollThreshold = 20; // Set the number of scrolls before triggering transition
+let scrollThreshold = 10; // Set the number of scrolls before triggering transition
 let scrollEnabled = true; // Flag to enable or disable the scroll event
 
 window.onscroll = function () {
