@@ -721,6 +721,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
             });
 
         },
+
     }
 
 });

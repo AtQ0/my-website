@@ -913,6 +913,15 @@ main {
     margin-top: 0;
 }
 
+.swiper-button-prev {
+    left: calc(50% - 177px);
+}
+
+.swiper-button-next {
+    right: calc(50% - 177px);
+}
+
+
 .swiper-pagination-bullet-active {
     background-color: #000 !important;
 }
@@ -1386,6 +1395,38 @@ footer hr {
     }
 }
 
+@media screen and (min-width: 460px) {
+    .swiper-button-prev {
+        left: calc(50% - 180px);
+    }
+
+    .swiper-button-next {
+        right: calc(50% - 180px);
+    }
+}
+
+@media screen and (min-width: 475px) {
+    .swiper-button-prev {
+        left: calc(50% - 185px);
+    }
+
+    .swiper-button-next {
+        right: calc(50% - 185px);
+    }
+}
+
+@media screen and (min-width: 485px) {
+    .swiper-button-prev {
+        left: calc(50% - 190px);
+    }
+
+    .swiper-button-next {
+        right: calc(50% - 190px);
+    }
+}
+
+
+
 @media screen and (min-width: 501px) {
 
     header h1 {
@@ -1422,6 +1463,14 @@ footer hr {
 
     .swiper {
         max-height: 400px;
+    }
+
+    .swiper-button-prev {
+        left: calc(50% - 193px);
+    }
+
+    .swiper-button-next {
+        right: calc(50% - 193px);
     }
 
     /*=====================*/
@@ -1483,6 +1532,8 @@ footer hr {
     #swiper-description {
         margin-bottom: 30px;
     }
+
+
 
 
     /*=====================*/
@@ -1767,6 +1818,14 @@ footer hr {
         margin-bottom: 45px;
     }
 
+    .swiper-button-prev {
+        left: calc(50% - 200px);
+    }
+
+    .swiper-button-next {
+        right: calc(50% - 200px);
+    }
+
     /*===============*/
     /*==== ABOUT ====*/
     /*===============*/
@@ -1826,6 +1885,14 @@ footer hr {
     /*===================*/
     /*===== PROJECTS ====*/
     /*===================*/
+
+    .swiper-button-prev {
+        left: calc(50% - 202px);
+    }
+
+    .swiper-button-next {
+        right: calc(50% - 202px);
+    }
 }
 
 
