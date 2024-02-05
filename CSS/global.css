@@ -448,9 +448,10 @@ nav {
 
 .social {
     background-color: orange;
-    padding-top: 160px;
+    padding-top: 120px;
     background-color: orangered;
     display: flex;
+    background-color: pink;
 }
 
 .social-media-container {
