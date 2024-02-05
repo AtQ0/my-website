@@ -844,8 +844,48 @@ messageTbx.addEventListener("focusout", (e) => {
     }
 });
 
-/*============== SEND BTN ===============*/
+/*=========== CONTACT SEND BTN ============*/
 
+//SELECT ELEMENTS FROM DOM
+const conactSendBtn = document.querySelector(".send-contact-btn");
+const contactErrorContainer = document.querySelector(".contact-error-container");
+const nameInputTbx = document.querySelector(".name-input");
+const emailInputTbx = document.querySelector(".email-input");
+const messageInputTbx = document.querySelector(".message-input");
+
+conactSendBtn.addEventListener("click", function () {
+
+    //Clear all field on button-click
+    nameInputTbx.value = "";
+    emailInputTbx.value = "";
+    messageInputTbx.value = "";
+
+
+
+    contactErrorContainer.style.visibility = "visible";
+    contactErrorContainer.classList.add("contact-error-visible")
+
+    // Set a timeout to remove the 'visible' class after 5 seconds
+    setTimeout(function () {
+        contactErrorContainer.classList.remove('contact-error-visible');
+
+
+        setTimeout(function () {
+            contactErrorContainer.style.visibility = "hidden";
+        }, 1500);
+
+
+    }, 20000);
+
+})
+
+//Clear all input fieldson page-reload
+document.addEventListener("DOMContentLoaded", function () {
+    //Clear all field on button-click
+    nameInputTbx.value = "";
+    emailInputTbx.value = "";
+    messageInputTbx.value = "";
+})
 
 
 

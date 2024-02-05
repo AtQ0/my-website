@@ -1069,7 +1069,6 @@ main {
 
 
 .contact {
-    background-color: #C5A79C;
     height: fit-content;
     padding: 5vw;
     padding-top: 10vw;
@@ -1210,15 +1209,37 @@ main {
     /* Add !important to override other height settings */
 }
 
+.contact-error-container {
+    margin-top: 4vw;
+    font-size: 0.8rem;
+    user-select: text;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.contact-error-visible {
+    opacity: 1;
+}
+
+.contact-error-not-visible {
+    opacity: 0;
+}
+
+
+.contact-error-container span::after {
+    content: "\a";
+    white-space: pre;
+}
+
 .send-contact-btn {
-    margin-top: 14vw;
+    margin-top: 5vw;
     margin-bottom: 16vw;
     height: fit-content;
     width: fit-content;
     padding: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    /* background-color: #F6AE2D; */
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
@@ -1226,13 +1247,10 @@ main {
     cursor: pointer;
     user-select: none;
     transition: background-color 0.35s, transform 0.35s;
-    /* background-color: #BFBA6F;
-    background-color: #D06474; */
     border: 2px black solid;
 }
 
 .send-contact-btn:hover {
-    background-color: #F1A157;
     background-color: #927598;
 }
 
@@ -1406,12 +1424,10 @@ footer hr {
 @media screen and (min-width: 375px) {
     .swiper-button-prev {
         left: calc(50% - 150px);
-        background-color: orange;
     }
 
     .swiper-button-next {
         right: calc(50% - 150px);
-        background-color: orange;
     }
 }
 
@@ -1419,6 +1435,14 @@ footer hr {
 
     .social-media-container {
         top: 720px;
+    }
+
+    .swiper-button-prev {
+        left: calc(50% - 175px);
+    }
+
+    .swiper-button-next {
+        right: calc(50% - 175px);
     }
 }
 
@@ -1633,8 +1657,14 @@ footer hr {
         font-size: 80px;
     }
 
+    .contact-error-container {
+        margin-top: 28.5px;
+
+    }
+
+
     .send-contact-btn {
-        margin-top: 84px;
+        margin-top: 28.5px;
         margin-bottom: 95px;
     }
 
