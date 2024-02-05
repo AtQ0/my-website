@@ -57,12 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(function () {
         navbar.classList.add("animateNavOnPageLoad")
-        // navbar.style.top = "-10px"
-        // navbar.style.opacity = "1";
     }, delayForAppearenceOfNavbar)
 
 });
-
 
 
 /*=================================================*/
@@ -77,12 +74,16 @@ let scrollEnabled = true; // Flag to enable or disable the scroll event
 window.onscroll = function () {
     if (!scrollEnabled) return; // Check if scroll is enabled
     let currentScrollPos = window.pageYOffset;
+    let navbar = document.getElementById("navbar");
+    let transitionDuration = 0.5; // Set the initial transition duration
+
     if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.transition = "top 0.75s, opacity 3s";
-        document.getElementById("navbar").style.top = "-5px";
+        navbar.style.transition = `top ${transitionDuration}s, opacity 3s`;
+        navbar.style.top = "-5px";
     } else {
         if (scrollCounter >= scrollThreshold) {
-            document.getElementById("navbar").style.top = "-70px";
+            navbar.style.transition = `top ${transitionDuration}s, opacity 3s`;
+            navbar.style.top = "-70px";
             scrollCounter = 0; // Reset the scroll counter
         } else {
             scrollCounter++;
