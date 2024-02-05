@@ -911,14 +911,15 @@ main {
 .swiper-button-next {
     color: black;
     margin-top: 0;
+
 }
 
 .swiper-button-prev {
-    left: calc(50% - 177px);
+    left: calc(50% - 175px);
 }
 
 .swiper-button-next {
-    right: calc(50% - 177px);
+    right: calc(50% - 175px);
 }
 
 
@@ -926,6 +927,10 @@ main {
     background-color: #000 !important;
 }
 
+/*Rule used to change size of swiper.js buttons*/
+.projects-swiper [class^="swiper-button-"]::after {
+    font-size: 30px;
+}
 
 /*=====================*/
 /*======= ABOUT =======*/
@@ -1489,6 +1494,16 @@ footer hr {
     }
 }
 
+@media screen and (min-width: 560px) {
+    .swiper-button-prev {
+        left: calc(50% - 185px);
+    }
+
+    .swiper-button-next {
+        right: calc(50% - 185px);
+    }
+}
+
 
 
 @media screen and (min-width: 601px) {
@@ -1534,7 +1549,13 @@ footer hr {
     }
 
 
+    .swiper-button-prev {
+        left: calc(50% - 188px);
+    }
 
+    .swiper-button-next {
+        right: calc(50% - 188px);
+    }
 
     /*=====================*/
     /*======= ABOUT =======*/
