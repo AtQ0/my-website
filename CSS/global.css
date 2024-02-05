@@ -411,6 +411,7 @@ nav {
     position: absolute;
     font-size: 35px;
     width: fit-content;
+    background-color: orange;
 }
 
 .menu-links {
@@ -443,6 +444,13 @@ nav {
 
 .menu-link-contact:hover {
     font-family: Raisonne-italic;
+}
+
+.social {
+    background-color: orange;
+    padding-top: 160px;
+    background-color: orangered;
+    display: flex;
 }
 
 .social-media-container {
@@ -1897,6 +1905,14 @@ footer hr {
         content: "\a";
         white-space: pre;
     }
+
+    /*===================*/
+    /*====== MENU =======*/
+    /*===================*/
+    .menu-links {
+        row-gap: max(10px, min((100vw - 600px) / 20, 20px));
+    }
+
 
     /*===================*/
     /*====== ABOUT ======*/
