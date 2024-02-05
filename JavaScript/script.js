@@ -866,7 +866,8 @@ conactSendBtn.addEventListener("click", function () {
     //Disable button temporarily
     conactSendBtn.disabled = true;
 
-    //Change border color to resemle disabled
+    //Change border color to resemble disabled
+    conactSendBtn.style.transition = "background-color 0.35s, transform 0.35s, border-color 0.35s";
     conactSendBtn.style.borderColor = "#6D6D6D";
 
     //Turn off hover and active effect
@@ -881,7 +882,8 @@ conactSendBtn.addEventListener("click", function () {
         //Enable button again
         conactSendBtn.disabled = false;
 
-        //Change border color to resemle disabled
+        //Change back border color to resemble able
+        conactSendBtn.style.transition = "background-color 0.35s, transform 0.35s, border-color 3s";
         conactSendBtn.style.borderColor = "black";
 
         //Turn on hover and active effect
