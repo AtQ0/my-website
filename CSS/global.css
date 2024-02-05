@@ -1431,6 +1431,17 @@ footer hr {
     }
 }
 
+
+@media screen and (min-width: 400px) {
+    .swiper-button-prev {
+        left: calc(50% - 165px);
+    }
+
+    .swiper-button-next {
+        right: calc(50% - 165px);
+    }
+}
+
 @media screen and (min-width: 450px) {
 
     .social-media-container {
