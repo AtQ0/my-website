@@ -411,7 +411,6 @@ nav {
     position: absolute;
     font-size: 35px;
     width: fit-content;
-    background-color: orange;
 }
 
 .menu-links {
@@ -447,9 +446,7 @@ nav {
 }
 
 .social {
-    background-color: orange;
     padding-top: 100px;
-    background-color: yellow;
     display: flex;
 }
 
