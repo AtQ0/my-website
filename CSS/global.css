@@ -448,10 +448,9 @@ nav {
 
 .social {
     background-color: orange;
-    padding-top: 120px;
-    background-color: orangered;
+    padding-top: 100px;
+    background-color: yellow;
     display: flex;
-    background-color: pink;
 }
 
 .social-media-container {
@@ -1908,14 +1907,6 @@ footer hr {
     }
 
     /*===================*/
-    /*====== MENU =======*/
-    /*===================*/
-    .menu-links {
-        row-gap: max(10px, min((100vw - 600px) / 20, 20px));
-    }
-
-
-    /*===================*/
     /*====== ABOUT ======*/
     /*===================*/
 
@@ -1934,12 +1925,16 @@ footer hr {
 }
 
 
-/* @media screen and (min-width: 1265px) {
-    .image-frame {
-        height: 470px;
-        width: 470px;
+@media screen and (min-width: 1265px) {
+
+    /*===================*/
+    /*====== MENU =======*/
+    /*===================*/
+    .menu-links {
+        row-gap: min(25.5px, max(2vw, calc((100vw - 600px) / 20)));
     }
-} */
+
+}
 
 @media screen and (min-width: 1621px) {
 
