@@ -856,37 +856,52 @@ const messageInputTbx = document.querySelector(".message-input");
 conactSendBtn.addEventListener("click", function () {
 
     //Clear all field on button-click
-    nameInputTbx.value = "";
-    emailInputTbx.value = "";
-    messageInputTbx.value = "";
-
-
+    nameInputTbx.value = null;
+    emailInputTbx.value = null;
+    messageInputTbx.value = null;
 
     contactErrorContainer.style.visibility = "visible";
     contactErrorContainer.classList.add("contact-error-visible")
+
+    //Disable button temporarily
+    conactSendBtn.disabled = true;
+
+    //Change border color to resemle disabled
+    conactSendBtn.style.borderColor = "#6D6D6D";
+
+    //Turn off hover and active effect
+    conactSendBtn.classList.add('no-hover');
+    conactSendBtn.classList.add('no-active');
+
 
     // Set a timeout to remove the 'visible' class after 5 seconds
     setTimeout(function () {
         contactErrorContainer.classList.remove('contact-error-visible');
 
+        //Enable button again
+        conactSendBtn.disabled = false;
+
+        //Change border color to resemle disabled
+        conactSendBtn.style.borderColor = "black";
+
+        //Turn on hover and active effect
+        conactSendBtn.classList.remove('no-hover', 'no-active');
 
         setTimeout(function () {
             contactErrorContainer.style.visibility = "hidden";
         }, 1500);
 
-
     }, 20000);
 
 })
 
-//Clear all input fieldson page-reload
+//Clear all input fields on page-reload
 document.addEventListener("DOMContentLoaded", function () {
     //Clear all field on button-click
-    nameInputTbx.value = "";
-    emailInputTbx.value = "";
-    messageInputTbx.value = "";
+    nameInputTbx.value = null;
+    emailInputTbx.value = null;
+    messageInputTbx.value = null;
 })
-
 
 
 
