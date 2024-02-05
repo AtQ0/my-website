@@ -1254,6 +1254,8 @@ main {
     user-select: none;
     transition: background-color 0.35s, transform 0.35s, border-color 0.35s;
     border: 2px black solid;
+    color: black;
+    font-size: 5vw;
 }
 
 .send-contact-btn:hover {
