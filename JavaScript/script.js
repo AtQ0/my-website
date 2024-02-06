@@ -868,12 +868,14 @@ conactSendBtn.addEventListener("click", function () {
     conactSendBtn.disabled = true;
 
     //Change border color to resemble disabled
-    conactSendBtn.style.transition = "background-color 0.35s, transform 0.35s, border-color 0.35s";
+    conactSendBtn.style.transition = "background-color 0.35s, transform 0.35s, border-color 0.35s, color 0.5s";
     conactSendBtn.style.borderColor = "#6D6D6D";
+    conactSendBtn.style.color = "#6D6D6D";
 
     //Turn off hover and active effect
     conactSendBtn.classList.add('no-hover');
     conactSendBtn.classList.add('no-active');
+    conactSendBtn.style.cursor = "auto";
 
 
     // Set a timeout to remove the 'visible' class after 5 seconds
@@ -884,11 +886,13 @@ conactSendBtn.addEventListener("click", function () {
         conactSendBtn.disabled = false;
 
         //Change back border color to resemble able
-        conactSendBtn.style.transition = "background-color 0.35s, transform 0.35s, border-color 3s";
+        conactSendBtn.style.transition = "background-color 0.35s, transform 0.35s, border-color 3s, color 2s";
         conactSendBtn.style.borderColor = "black";
+        conactSendBtn.style.color = "black";
 
         //Turn on hover and active effect
         conactSendBtn.classList.remove('no-hover', 'no-active');
+        conactSendBtn.style.cursor = "pointer";
 
         setTimeout(function () {
             contactErrorContainer.style.visibility = "hidden";
