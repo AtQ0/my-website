@@ -303,8 +303,6 @@ localOverlayDiv.addEventListener("click", () => {
 });
 
 
-
-
 /*=========================================*/
 /*================ SLOGAN =================*/
 /*=========================================*/
@@ -627,7 +625,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectType: "E-commerce App",
                     projectTitle: "Project Title 2",
                     projectDescription: `
-                        Lorem ipsum dolor sit amet, etiam nec lectus in turpis lacinia commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed bibendum, mi vitae tincidunt ullamcorper, sapien libero dictum sem.
+                        Lorem ipsum dolor sit amet, etiam nec lectus in turpis lacinia commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed bibendum, mi vitae tincidunt ullamcorper.
                     `,
                     projectLink: "https://example.com/project2",
                 },
@@ -651,7 +649,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectType: "E-commerce App",
                     projectTitle: "Project Title 5",
                     projectDescription: `
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel fermentum tortor. Integer sit amet luctus orci. Quisque in convallis dolor. Sed eu purus euismod, vestibulum lectus eu, pharetra massa. Sed efficitur elit nec justo.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel fermentum tortor. Integer sit amet luctus orci. Quisque in convallis dolor. Sed eu purus euismod, vestibulum lectus eu, pharetra massa.
                     `,
                     projectLink: "https://example.com/project5",
                 },
@@ -659,7 +657,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
                     projectType: "Game",
                     projectTitle: "Project Title 6",
                     projectDescription: `
-                        Lorem ipsum dolor sit amet, etiam nec lectus in turpis lacinia commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed bibendum, mi vitae tincidunt ullamcorper, sapien libero dictum sem.
+                        Lorem ipsum dolor sit amet, etiam nec lectus in turpis lacinia commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Sed bibendum, mi vitae tincidunt ullamcorper.
                     `,
                     projectLink: "https://example.com/project6",
                 },
