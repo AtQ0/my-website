@@ -1,2 +1,2 @@
 # my-website
- Another personal website of mine, that is a work in progress.
+ My personal website, made in native JS, HTML and CSS
