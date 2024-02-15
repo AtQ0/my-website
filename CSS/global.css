@@ -402,6 +402,7 @@ nav {
     padding-top: 160px;
     /*Used for sliding animation prompted by JS*/
     transition: background-color 0.75s, left 1s;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.4);
 }
 
 .wrapper-menu {
